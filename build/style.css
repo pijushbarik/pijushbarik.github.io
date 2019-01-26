@@ -88,7 +88,8 @@ body {
   flex-direction: column;
   justify-content: center;
   margin: 1rem;
-  transition: all 0.3s; }
+  transition: all 0.3s;
+  position: relative; }
   .card__image {
     height: 5rem;
     fill: #422363; }
@@ -101,12 +102,27 @@ body {
     font-size: 3.75rem;
     font-weight: 200; }
   .card__text {
-    margin-top: 1.5rem;
     font-size: 1.75rem;
     font-weight: 300; }
   .card:hover {
-    transform: scale(1.1);
-    box-shadow: 3rem 1rem 3rem rgba(0, 0, 0, 0.5); }
+    transform: scale(1.05);
+    box-shadow: 2.5rem 1rem 3rem rgba(0, 0, 0, 0.4); }
+  .card--works {
+    height: 20rem; }
+  .card--front {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 1s; }
+  .card--back {
+    display: none; }
+  .card--works:hover .card--front {
+    display: none; }
+  .card--works:hover .card--back {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
 
 .btn,
 .btn:link,
