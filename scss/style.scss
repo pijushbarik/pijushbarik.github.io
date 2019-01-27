@@ -46,6 +46,7 @@ html {
 }
 
 body {
+  mask: none;
   box-sizing: border-box;
   height: 100vh;
   // padding: 1.75rem;
@@ -247,6 +248,11 @@ body {
     height: 20rem;
 
     @media only screen and (max-width: $bp-mediam) {
+      flex: 0 0 65%;
+      padding: 2rem;
+    }
+
+    @media (hover: none) {
       flex: 0 0 65%;
       padding: 2rem;
     }

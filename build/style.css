@@ -28,6 +28,8 @@ html {
       font-size: 50%; } }
 
 body {
+  -webkit-mask: none;
+          mask: none;
   box-sizing: border-box;
   height: 100vh;
   font-family: 'Raleway', sans-serif;
@@ -169,15 +171,21 @@ body {
       .card__text {
         font-size: 1.5rem; } }
   .card:hover {
-    transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
     box-shadow: 2.5rem 1rem 3rem rgba(0, 0, 0, 0.4); }
     @media (hover: none) {
       .card:hover {
-        transform: none;
+        -webkit-transform: none;
+                transform: none;
         box-shadow: 1rem 0 3rem rgba(0, 0, 0, 0.2); } }
   .card--works {
     height: 20rem; }
     @media only screen and (max-width: 43.75em) {
+      .card--works {
+        flex: 0 0 65%;
+        padding: 2rem; } }
+    @media (hover: none) {
       .card--works {
         flex: 0 0 65%;
         padding: 2rem; } }

@@ -1,6 +1,9 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-// const CleanWebpckPlugin = require('clean-webpack-plugin');
+const CleanWebpckPlugin = require('clean-webpack-plugin');
+const webpack = require('webpack');
+const autoprefixer = require('autoprefixer');
+
 
 module.exports = {
   entry: {
@@ -28,7 +31,8 @@ module.exports = {
       },
       {
         test: /\.scss$/,
-        use: ['style-loader', MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
+        exclude: /node_modules/,
+        use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader', 'sass-loader']
       },
       {
         test: /\.svg$/,
@@ -42,6 +46,13 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin({ filename: 'style.css' }),
-    // new CleanWebpckPlugin('build/', {})
+    new CleanWebpckPlugin('build/', {}),
+    new webpack.LoaderOptionsPlugin({
+      options: {
+        postcss: [
+          autoprefixer()
+        ]
+      }
+    })
   ]
 };
