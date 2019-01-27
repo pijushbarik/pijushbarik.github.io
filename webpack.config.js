@@ -1,6 +1,7 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CleanWebpckPlugin = require('clean-webpack-plugin');
+const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const webpack = require('webpack');
 const autoprefixer = require('autoprefixer');
 
@@ -43,6 +44,11 @@ module.exports = {
   devServer: {
     watchContentBase: true,
     publicPath: '/build/'
+  },
+  optimization: {
+    minimizer: [
+      new OptimizeCssAssetsPlugin({})
+    ]
   },
   plugins: [
     new MiniCssExtractPlugin({ filename: 'style.css' }),
