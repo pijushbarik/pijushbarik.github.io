@@ -36,7 +36,7 @@
 
 		<main>
 			<section class="section-about">
-				<div class="about">
+				<div class="section-info">
 					<h2 class="heading-secondary">
 						Hi, I'm Pijush Barik. Nice to meet you.
 					</h2>
@@ -254,79 +254,130 @@
 				</div>
 			</section>
 
-			<!-- <section class="section-projects">
-				<div class="about">
+			<section class="section-projects">
+				<div class="section-info">
 					<h2 class="heading-secondary">Projects</h2>
-					<p class="paragraph--main margin-top-small">
-						Here are some of my projects
-					</p>
+					<!-- <p class="paragraph--main margin-top-small">Here are some of my personal projects</p> -->
 				</div>
 
 				<div class="projects margin-top-mediam">
 					<div class="list">
-						<div class="card card--link">
-							<a href="https://codepen.io/heisenberg-pb/full/ajvmoq" class="card--link__link" target="_blank">
-								<img src="assets/rand-quote-generator.png" alt="Random Quote Generator" class="card--link__photo">
-								<div class="card--link__info">
-									<h1 class="heading-tertiary">Quote Machine</h1>
-									<p class="paragraph--main">A random quote generator (React app)</p>
-								</div>
-							</a>
+						<div class="card card--projects">
+							<div class="card--projects__photo">
+								<img src="assets/pomodoro-clock.png" alt="">
+							</div>
+							<div class="card--projects__description card--projects__description--1">
+								<p class="card__title">Pomodoro Clock</p>
+								<p class="card__text">A simpple pomodoro clock built with React JS</p>
+							</div>
+							<div class="card--projects__link card--projects__link--1">
+								<a href="https://codepen.io/heisenberg-pb/pen/NBaZGy" class="btn btn--white" target="_blank">View</a>
+							</div>
+						</div>
+
+						<div class="card card--projects">
+							<div class="card--projects__photo">
+								<img src="assets/calculator.png" alt="">
+							</div>
+							<div class="card--projects__description card--projects__description--2">
+								<p class="card__title">Javascript Calculator</p>
+								<p class="card__text">A simple JavasScript calculator built with React JS</p>
+							</div>
+							<div class="card--projects__link card--projects__link--2">
+								<a href="https://codepen.io/heisenberg-pb/pen/NBgPEg" class="btn btn--white" target="_blank">View</a>
+							</div>
+						</div>
+
+						<div class="card card--projects">
+							<div class="card--projects__photo">
+								<img src="assets/rand-quote-generator.png" alt="">
+							</div>
+							<div class="card--projects__description card--projects__description--3">
+								<p class="card__title">Quote Machine</p>
+								<p class="card__text">A random quote generator built with React JS</p>
+							</div>
+							<div class="card--projects__link card--projects__link--3">
+								<a href="https://codepen.io/heisenberg-pb/pen/ajvmoq" class="btn btn--white" target="_blank">View</a>
+							</div>
 						</div>
 					</div>
 				</div>
-			</section> -->
+			</section>
 
-			<!-- <section class="section-contact"></section> -->
+			<section class="section-contact" id="contact">
+				<div class="section-info">
+					<h2 class="heading-secondary">Thanks for taking the time to reach out. What can I do for you?</h2>
+				</div>
 
-			<footer class="footer">
-				<p class="paragraph--main">Living, learning, &amp; leveling up <br> everyday a little bit.</p>
-				<div class="social-icons margin-top-mediam">
-					<div class="icon">
-						<a href="https://github.com/pijushbarik" target="_blank">
-							<svg class="icon__image">
-								<use xlink:href="assets/symbol-defs.svg#icon-github"></use>
-							</svg>
-						</a>
+				<div class="contact margin-top-mediam">
+					<div class="contact__section">
+						<div class="contact__mail">
+								<p class="paragraph--main">Have somethig to say? Mail me at</p>
+								<p><span>
+									<svg class="inline-icon">
+										<use xlink:href="assets/symbol-defs.svg#icon-mail"></use>
+									</svg>
+								</span><span><a href="mailto: pijush.barik8@gmail.com" class="btn btn--inline">pijush.barik8@gmail.com</a></span></p>
+							</div>
+							<div class="contact__location paragraph--main">
+								<span>
+									<svg class="inline-icon">
+										<use xlink:href="assets/symbol-defs.svg#icon-location"></use>
+									</svg>
+								</span>
+								Kolkata, West Bengal, India
+							</div>
 					</div>
-					<div class="icon">
-						<a href="https://codepen.io/heisenberg-pb" target="_blank">
-							<svg class="icon__image">
-								<use xlink:href="assets/symbol-defs.svg#icon-codepen"></use>
-							</svg>
-						</a>
-					</div>
-					<div class="icon">
-						<a href="https://twitter.com/pijushbarik" target="_blank">
-							<svg class="icon__image">
-								<use xlink:href="assets/symbol-defs.svg#icon-twitter"></use>
-							</svg>
-						</a>
-					</div>
-					<div class="icon">
-						<a href="https://www.linkedin.com/in/pijushbarik/" target="_blank">
-							<svg class="icon__image">
-								<use xlink:href="assets/symbol-defs.svg#icon-linkedin"></use>
-							</svg>
-						</a>
-					</div>
-					<div class="icon">
-						<a href="https://www.facebook.com/barikpijush" target="_blank">
-							<svg class="icon__image">
-								<use xlink:href="assets/symbol-defs.svg#icon-facebook"></use>
-							</svg>
-						</a>
+					<div class="contact__section">
+						<a href="https://drive.google.com/open?id=1Nxqt3OIl-oWIkerR01Le51DcvdIR9_Sw" class="btn btn--primary" target="_blank">Get my Résumé</a>
 					</div>
 				</div>
-				<div class="copyright margin-top-mediam">
-					<p>Hosted with <span>
-						<svg class="inline-icon">
-							<use xlink:href="assets/symbol-defs.svg#icon-love"></use>
-						</svg>
-					</span> by GitHub</p>
-					<p>Handcrafted by me. &copy; 2019</p>
-				</div>
-			</footer>
+			</section>
 		</main>
+
+		<footer class="footer">
+			<p class="paragraph--main">Living, learning, &amp; leveling up <br> everyday a little bit.</p>
+			<div class="social-icons margin-top-mediam">
+				<div class="icon">
+					<a href="https://github.com/pijushbarik" target="_blank">
+						<svg class="icon__image">
+							<use xlink:href="assets/symbol-defs.svg#icon-github"></use>
+						</svg>
+					</a>
+				</div>
+				<div class="icon">
+					<a href="https://codepen.io/heisenberg-pb" target="_blank">
+						<svg class="icon__image">
+							<use xlink:href="assets/symbol-defs.svg#icon-codepen"></use>
+						</svg>
+					</a>
+				</div>
+				<div class="icon">
+					<a href="https://twitter.com/pijushbarik" target="_blank">
+						<svg class="icon__image">
+							<use xlink:href="assets/symbol-defs.svg#icon-twitter"></use>
+						</svg>
+					</a>
+				</div>
+				<div class="icon">
+					<a href="https://www.linkedin.com/in/pijushbarik/" target="_blank">
+						<svg class="icon__image">
+							<use xlink:href="assets/symbol-defs.svg#icon-linkedin"></use>
+						</svg>
+					</a>
+				</div>
+				<div class="icon">
+					<a href="https://www.facebook.com/barikpijush" target="_blank">
+						<svg class="icon__image">
+							<use xlink:href="assets/symbol-defs.svg#icon-facebook"></use>
+						</svg>
+					</a>
+				</div>
+			</div>
+			<div class="copyright margin-top-mediam">
+				<p>Hosted with <span style="color: #e34c26">&hearts;</span> by GitHub</p>
+				<p>Handcrafted by me. &copy; 2019</p>
+			</div>
+		</footer>
 	</body>
 </html>
