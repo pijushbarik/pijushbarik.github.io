@@ -125,8 +125,8 @@ body {
   }
 }
 
-.section-about {
-  color: $color-primary;
+@mixin section($color) {
+  color: $color;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -142,26 +142,22 @@ body {
   }
 }
 
+.section-about {
+  color: $color-primary;
+  @include section($color-primary);
+}
+
 .section-projects {
-  color: $color-white;
   background-image: linear-gradient(
     to right bottom,
     $color-primary-dark,
     $color-primary-light
   );
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 5rem 10rem;
-  text-align: center;
+  @include section($color-white);
+}
 
-  @media only screen and (max-width: $bp-largest) {
-    padding: 4rem;
-  }
-
-  @media only screen and (max-width: $bp-mediam) {
-    padding: 3rem 0;
-  }
+.section-contact {
+  @include section($color-primary);
 }
 
 .section-info {
@@ -173,6 +169,40 @@ body {
 
   @media only screen and (max-width: $bp-mediam) {
     padding: 0 5rem;
+  }
+}
+
+.contact {
+  margin: 10rem;
+  margin-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__section {
+    display: flex;
+
+    &:not(:last-child) {
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__mail {
+    margin-right: 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    text-align: left;
+  }
+
+  &__location {
+    text-align: left;
+  }
+
+  @media only screen and (max-width: $bp-mediam) {
+    margin-left: 3rem;
+    margin-right: 3rem;
   }
 }
 
@@ -381,7 +411,7 @@ body {
     }
 
     @media only screen and (max-width: $bp-mediam) {
-      flex: 0 0 60%;
+      flex: 0 0 70%;
     }
   }
 }
@@ -415,6 +445,16 @@ body {
     &:hover {
       color: $color-white;
       background-color: $color-primary;
+    }
+  }
+
+  &--inline {
+    color: $color-primary;
+    padding: 0 !important;
+    text-decoration: underline !important;
+
+    @media only screen and (max-width: $bp-mediam) {
+      font-size: 1.5rem !important;
     }
   }
 }
@@ -515,5 +555,10 @@ body {
 .inline-icon {
   height: 1.5rem;
   width: 1.5rem;
-  fill: #e34c26;
+  fill: $color-primary;
+
+  @media only screen and (max-width: $bp-mediam) {
+    height: 1.2rem;
+    width: 1.2rem;
+  }
 }
