@@ -374,10 +374,6 @@ body {
       background-image: url(./../assets/dreamityevents.png);
     }
 
-    &--2 {
-      background-image: url(./../assets/updatebeldanews.png);
-    }
-
     &--3 {
       background-image: url(./../assets/pomodoro-clock.png);
     }
@@ -404,13 +400,6 @@ body {
         rgba(#353e65, 0.5),
         #fff
       );
-    }
-
-    &--2 {
-      color: #4b004b;
-      background-image: linear-gradient(to top left,
-        rgba(#a900a9, 0.5),
-        #fff);
     }
 
     &--3 {
@@ -463,16 +452,6 @@ body {
 
       &:hover {
         background-color: #1a1f35;
-        color: $color-white;
-      }
-    }
-
-    &--2 {
-      color: #4b004b;
-      border: 2px solid #4b004b;
-
-      &:hover {
-        background-color: #4b004b;
         color: $color-white;
       }
     }
@@ -533,17 +512,17 @@ body {
   }
 
   &--primary {
-    color: $color-primary;
-    border: 2px solid $color-primary;
+    color: $color-primary-dark;
+    border: 2px solid $color-primary-dark;
 
     &:hover {
       color: $color-white;
-      background-color: $color-primary;
+      background-color: $color-primary-dark;
     }
   }
 
   &--inline {
-    color: $color-primary;
+    color: $color-primary-dark;
     padding: 0 !important;
     text-decoration: underline !important;
 
@@ -666,7 +645,6 @@ body {
 
 .animated-heading {
   font-family: 'Fira Mono', monospace;
-  // width: 10ch;
   display: flex;
   justify-content: flex-start;
   align-items: center
@@ -725,7 +703,7 @@ body {
     border-radius: 3px;
     font-family: inherit;
     font-size: 1.5rem;
-    padding: 5px 3px;
+    padding: 5px;
   }
 
   & .textarea {
@@ -738,7 +716,7 @@ body {
     font-size: 2rem;
     font-family: inherit;
     font-size: 1.5rem;
-    padding: 5px 3px;
+    padding: 5px;
   }
 
   & .button {
