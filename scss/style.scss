@@ -374,6 +374,10 @@ body {
       background-image: url(./../assets/dreamityevents.png);
     }
 
+    &--2 {
+      background-image: url(./../assets/proficientvision.jpg);
+    }
+
     &--3 {
       background-image: url(./../assets/pomodoro-clock.png);
     }
@@ -398,6 +402,15 @@ body {
       background-image: linear-gradient(
         to top left,
         rgba(#353e65, 0.5),
+        #fff
+      );
+    }
+
+    &--2 {
+      color: #1565c0;
+      background-image: linear-gradient(
+        to top left,
+        rgba(#90caf9, 0.5),
         #fff
       );
     }
@@ -452,6 +465,16 @@ body {
 
       &:hover {
         background-color: #1a1f35;
+        color: $color-white;
+      }
+    }
+
+    &--2 {
+      color: #1565c0;
+      border: 2px solid #1565c0;
+
+      &:hover {
+        background-color: #1565c0;
         color: $color-white;
       }
     }
