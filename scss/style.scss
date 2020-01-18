@@ -5,6 +5,7 @@
 /* primary colors */
 $color-primary: #422363;
 $color-primary-dark: 	#26133a;
+$color-primary-darker: 	#170d22;
 $color-primary-light: #705290;
 
 /* fonts */
@@ -55,6 +56,7 @@ body {
   line-height: 1.2;
   color: $color-grey-light-2;
   background-color: #ffffff;
+  position: relative;
   @include body-bg-svg;
 
   &::-webkit-scrollbar {
@@ -80,7 +82,8 @@ body {
     rgba($color-primary-dark, 0.8),
     rgba($color-primary-light, 0.8)
   ), url(./../assets/header-background.jpg);
-  height: 70vh;
+  height: 50rem;
+  max-height: 70vh;
   padding: 0 8rem;
   background-size: cover;
   display: flex;
@@ -157,7 +160,6 @@ body {
 }
 
 .section-about {
-  color: $color-primary;
   @include section($color-primary);
 }
 
@@ -212,6 +214,10 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+
+    & a { 
+      width: 100%;
+    }
   }
 
   @media only screen and (max-width: $bp-mediam) {
@@ -244,7 +250,7 @@ body {
   width: 22rem;
   background-color: $color-white;
   border-radius: 3px;
-  box-shadow: 1rem 0 3rem rgba($color-black, 0.2);
+  box-shadow: 0.8rem 0.8rem 1.8rem rgba($color-black, 0.5);
   margin: 2rem 0;
   padding: 1.75rem;
   display: flex;
@@ -300,11 +306,11 @@ body {
 
   &:hover {
     transform: scale(1.01);
-    box-shadow: 2rem 0.5rem 5rem rgba($color-black, 0.4);
+    box-shadow: 1.2rem 1.2rem 1.8rem rgba($color-black, 0.6);
 
     @media (hover: none) {
       transform: none;
-      box-shadow: 1rem 0 3rem rgba($color-black, 0.2);
+      box-shadow: 0.8rem 0.8rem 1.8rem rgba($color-black, 0.5);
     }
   }
 
@@ -362,6 +368,154 @@ body {
       display: flex;
       justify-content: center;
       align-items: center;
+    }
+  }
+}
+
+.language-card {
+  margin: 2rem;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0.8rem 0.8rem 1.8rem rgba($color-black, 0.5);
+  transition: all 0.2s;
+
+  &:hover {
+    transform: scale(1.01);
+    box-shadow: 1.2rem 1.2rem 1.8rem rgba($color-black, 0.6);
+
+    @media (hover: none) {
+      transform: none;
+      box-shadow: 0.8rem 0.8rem 1.8rem rgba($color-black, 0.5);
+    }
+  }
+
+  &__title {
+    font-size: 2.75rem;
+    font-weight: 300;
+
+    @media only screen and (max-width: $bp-mediam) {
+      font-size: 2rem;
+    }
+  }
+
+  &__progress {
+    position: relative;
+    border-radius: 50%;
+    width: 25rem;
+    height: 25rem;
+    border: 2px solid $color-primary-dark;
+    box-shadow: 0 0.5rem 2rem rgba($color-primary-light, 0.5);
+    transition: all 1s ease;
+    
+    &-inner {
+      position: absolute;
+      overflow: hidden;
+      z-index: 2;
+      border-radius: 50%;
+      width: 24rem;
+      height: 24rem;
+      border: 5px solid transparent;
+      transition: all 1s ease;
+    }
+    
+    &-water {
+      position: absolute;
+      z-index: 1;
+      width: 200%;
+      height: 200%;
+      left: -50%;
+      border-radius: 40%;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+      animation-name: spin;
+      top: 25%;  // percentage of water wave
+      // 100% - (percentage we want)
+      background-color: rgba($color-primary-dark, 0.7);
+      transition: all 1s ease;
+      animation-duration: 10s;
+      box-shadow: 0 0 3px $color-primary-dark;
+
+      @mixin water-bg($color) {
+        background-color: rgba($color, 0.7);
+        box-shadow: 0 0 3px $color;
+      }
+
+      &--js { 
+        top: calc(100% - 75%);
+        @include water-bg(#F5DE19);
+      }
+
+      &--nodejs { 
+        top: calc(100% - 55%); 
+        @include water-bg(#026E00);
+        animation-delay: 0.5s;
+      }
+
+      &--html { 
+        top: calc(100% - 80%); 
+        @include water-bg(#E44D26);
+        animation-delay: 0.1s;
+      }
+
+      &--css { 
+        top: calc(100% - 70%); 
+        @include water-bg(#264DE4);
+      }
+
+      &--scss { 
+        top: calc(100% - 65%); 
+        @include water-bg(#CF649A);
+        animation-delay: 0.9s;
+      }
+
+      &--java { 
+        top: calc(100% - 45%); 
+        @include water-bg(#ED2024);
+        animation-delay: 0.8s;
+      }
+
+      &--python { 
+        top: calc(100% - 45%); 
+        @include water-bg(#366F9E);
+        animation-delay: 0.2s;
+      }
+
+      &--cpp { 
+        top: calc(100% - 65%); 
+        @include water-bg(#659AD2);
+        animation-delay: 0.2s;
+      }
+
+      &--cuda { 
+        top: calc(100% - 25%); 
+        @include water-bg(#77B900);
+        animation-delay: 0.8s;
+      }
+    }
+  
+    &-logo {
+      position: absolute;
+      top: 60%;
+      width: 100%;
+      height: 85%;
+      text-shadow: 0 0 1rem $color-primary-darker;
+      transition: all 1s ease;
+      z-index: 3;
+
+      & svg {
+        height: 5rem;
+        width: 5rem;
+        fill: $color-primary-dark;
+      }
+    }
+    
+    @keyframes spin {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
     }
   }
 }
@@ -702,25 +856,25 @@ body {
   background-color: #fff;
   margin-left: 2px;
   animation: blink 1s infinite;
-}
 
-@keyframes typing-text {
-  0% {
-    width: 0ch;
+  @keyframes typing-text {
+    0% {
+      width: 0ch;
+    }
+  
+    100% {
+      width: 10ch;
+    }
   }
-
-  100% {
-    width: 10ch;
-  }
-}
-
-@keyframes blink {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
+  
+  @keyframes blink {
+    0% {
+      opacity: 0;
+    }
+  
+    100% {
+      opacity: 1;
+    }
   }
 }
 
@@ -760,7 +914,7 @@ body {
     background-color: $color-primary-dark;
     color: $color-white;
     margin: 5px 0;
-    width: 100%;
+    width: calc(100% + 13px);
     border: none;
     border-radius: 5px;
     padding: 5px 0;
