@@ -81,7 +81,7 @@ body {
     to right bottom,
     rgba($color-primary-dark, 0.8),
     rgba($color-primary-light, 0.8)
-  ), url(./../assets/header-background.webp);
+  ), url(./../assets/header-background.jpg);
   padding: 8rem;
   background-size: cover;
   display: flex;
@@ -577,23 +577,23 @@ body {
     }
 
     &--1 {
-      background-image: url(./../assets/dreamityevents.webp);
+      background-image: url(./../assets/dreamityevents.png);
     }
 
     &--2 {
-      background-image: url(./../assets/proficientvision.webp);
+      background-image: url(./../assets/proficientvision.jpg);
     }
 
     &--3 {
-      background-image: url(./../assets/pomodoro-clock.webp);
+      background-image: url(./../assets/pomodoro-clock.png);
     }
 
     &--4 {
-      background-image: url(./../assets/calculator.webp);
+      background-image: url(./../assets/calculator.png);
     }
 
     &--5 {
-      background-image: url(./../assets/rand-quote-generator.webp);
+      background-image: url(./../assets/rand-quote-generator.png);
     }
   }
 
@@ -914,9 +914,10 @@ body {
     color: $color-white;
     margin: 5px 0;
     width: calc(100% + 13px);
-    padding: 0.8rem 0;
+    height: 5rem;
     border: none;
     border-radius: 5px;
+    padding: 5px 0;
     font-size: 2rem;
     font-family: 'Raleway', sans-serif;
     font-weight: 300;
