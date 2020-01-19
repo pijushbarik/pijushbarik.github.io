@@ -41,7 +41,5 @@
     "not ie <= 11",
     "not op_mini all"
   ],
-  "dependencies": {
-    "jquery": "^3.4.1"
-  }
+  "dependencies": {}
 }
