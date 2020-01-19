@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,700|Dancing+Script|Fira+Mono');
+@import url('https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,700|Dancing+Script|Fira+Mono&display=swap');
 @import 'body-bg';
 
 /* COLORS */
@@ -214,7 +214,7 @@ body {
     justify-content: center;
 
     & a { 
-      width: 100%;
+      width: 18rem;
     }
   }
 
@@ -246,7 +246,7 @@ body {
 
 .card {
   width: 22rem;
-  background-color: $color-white;
+  height: 22rem;
   border-radius: 3px;
   box-shadow: 0.8rem 0.8rem 1.8rem rgba($color-black, 0.5);
   margin: 2rem 0;
@@ -258,9 +258,15 @@ body {
   transition: all 0.2s;
   position: relative;
 
-  @media only screen and (max-width: $bp-mediam) {
-    width: 10rem;
+  @media only screen and (max-width: $bp-large) {
+    width: 19rem;
+    height: 19rem;
     padding: 1rem 0;
+  }
+
+  @media only screen and (max-width: $bp-mediam) {
+    width: 17rem;
+    height: 17rem;
   }
 
   &__image {
@@ -377,6 +383,11 @@ body {
   box-shadow: 0.8rem 0.8rem 1.8rem rgba($color-black, 0.5);
   transition: all 0.2s;
 
+  @media only screen and (max-width: $bp-mediam) {
+    margin: 1rem;
+    padding: 1rem;
+  }
+
   &:hover {
     transform: scale(1.01);
     box-shadow: 1.2rem 1.2rem 1.8rem rgba($color-black, 0.6);
@@ -404,6 +415,16 @@ body {
     border: 2px solid $color-primary-dark;
     box-shadow: 0 0.5rem 2rem rgba($color-primary-light, 0.5);
     transition: all 1s ease;
+
+    @media only screen and (max-width: $bp-mediam) {
+      width: 18rem;
+      height: 18rem;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+      width: 15rem;
+      height: 15rem;
+    }
     
     &-inner {
       position: absolute;
@@ -414,6 +435,16 @@ body {
       height: 24rem;
       border: 5px solid transparent;
       transition: all 1s ease;
+
+      @media only screen and (max-width: $bp-mediam) {
+        width: 17rem;
+        height: 17rem;
+      }
+  
+      @media only screen and (max-width: $bp-small) {
+        width: 14rem;
+        height: 14rem;
+      }
     }
     
     &-water {
@@ -523,8 +554,11 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-
   margin: 2rem;
+
+  @media only screen and (max-width: $bp-small) {
+    margin: 1rem;
+  }
 
   &__photo {
     height: 15rem;
@@ -535,6 +569,12 @@ body {
     background-size: cover;
     margin-bottom: -10rem;
     box-shadow: 0 15px 20px rgba(#000, 0.5);
+
+    @media only screen and (max-width: $bp-small) {
+      height: 10rem;
+      width: 20rem;
+      margin-bottom: -5rem;
+    }
 
     &--1 {
       background-image: url(./../assets/dreamityevents.png);
@@ -562,6 +602,11 @@ body {
     width: 26.25rem; // 105% of the width of the photo
     border-radius: 5px;
     z-index: 99;
+
+    @media only screen and (max-width: $bp-small) {
+      width: 21rem;
+      padding-top: 6rem;
+    }
 
     &--1 {
       color: #101320;
@@ -832,50 +877,6 @@ body {
   }
 }
 
-.animated-heading {
-  font-family: 'Fira Mono', monospace;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center
-}
-
-.animate-text {
-  animation: typing-text 3s steps(10) 3s infinite alternate;
-  overflow: hidden;
-  white-space: nowrap;
-  max-width: 10ch;
-  display: inline-block;
-}
-
-.cursor {
-  display: inline-block;
-  height: 6.5rem;
-  width: 2px;
-  background-color: #fff;
-  margin-left: 2px;
-  animation: blink 1s infinite;
-
-  @keyframes typing-text {
-    0% {
-      width: 0ch;
-    }
-  
-    100% {
-      width: 10ch;
-    }
-  }
-  
-  @keyframes blink {
-    0% {
-      opacity: 0;
-    }
-  
-    100% {
-      opacity: 1;
-    }
-  }
-}
-
 .form {
   display: flex;
   flex-direction: column;
@@ -913,6 +914,7 @@ body {
     color: $color-white;
     margin: 5px 0;
     width: calc(100% + 13px);
+    height: 5rem;
     border: none;
     border-radius: 5px;
     padding: 5px 0;
