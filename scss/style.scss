@@ -914,10 +914,10 @@ body {
     color: $color-white;
     margin: 5px 0;
     width: calc(100% + 13px);
-    height: 5rem;
+    // height: rem;
+    padding: 0.8rem 0;
     border: none;
     border-radius: 5px;
-    padding: 5px 0;
     font-size: 2rem;
     font-family: 'Raleway', sans-serif;
     font-weight: 300;
