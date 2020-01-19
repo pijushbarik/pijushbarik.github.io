@@ -31,7 +31,7 @@ module.exports = {
                 exclude: /node_modules/
             },
             {
-                test: /\.(jpg|png)$/,
+                test: /\.(jpg|png|webp)$/,
                 use: [
                 {
                     loader: 'file-loader',

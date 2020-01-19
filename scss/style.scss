@@ -81,7 +81,7 @@ body {
     to right bottom,
     rgba($color-primary-dark, 0.8),
     rgba($color-primary-light, 0.8)
-  ), url(./../assets/header-background.jpg);
+  ), url(./../assets/header-background.webp);
   padding: 8rem;
   background-size: cover;
   display: flex;
@@ -577,23 +577,23 @@ body {
     }
 
     &--1 {
-      background-image: url(./../assets/dreamityevents.png);
+      background-image: url(./../assets/dreamityevents.webp);
     }
 
     &--2 {
-      background-image: url(./../assets/proficientvision.jpg);
+      background-image: url(./../assets/proficientvision.webp);
     }
 
     &--3 {
-      background-image: url(./../assets/pomodoro-clock.png);
+      background-image: url(./../assets/pomodoro-clock.webp);
     }
 
     &--4 {
-      background-image: url(./../assets/calculator.png);
+      background-image: url(./../assets/calculator.webp);
     }
 
     &--5 {
-      background-image: url(./../assets/rand-quote-generator.png);
+      background-image: url(./../assets/rand-quote-generator.webp);
     }
   }
 
@@ -914,7 +914,6 @@ body {
     color: $color-white;
     margin: 5px 0;
     width: calc(100% + 13px);
-    // height: rem;
     padding: 0.8rem 0;
     border: none;
     border-radius: 5px;
