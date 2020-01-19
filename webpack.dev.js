@@ -6,6 +6,6 @@ module.exports = merge(common, {
     mode: 'development',
     devtool: 'inline-source-map',
     devServer: {
-        publicPath: 'build'
+        publicPath: '/build/'
     }
 });

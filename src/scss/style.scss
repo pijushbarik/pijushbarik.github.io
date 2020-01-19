@@ -884,6 +884,12 @@ body {
   align-items: center;
   width: 100%;
 
+  & label {
+    margin-right: auto;
+    margin-top: 1rem;
+    font-size: 1rem;
+  }
+
   & .input {
     display: inline-block;
     height: 3rem;
