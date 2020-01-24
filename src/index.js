@@ -1,4 +1,5 @@
 import './scss/style.scss';
+// import './'
 
 if(document.readyState === "complete") {
     documentOnReady();

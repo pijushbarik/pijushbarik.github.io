@@ -3,17 +3,21 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const webpack = require('webpack');
 const autoprefixer = require('autoprefixer');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
     entry: {
         app: './src/index.js'
     },
     output: {
-        path: path.resolve(__dirname, 'build/'),
+        path: path.resolve(__dirname, 'dist/'),
         filename: 'bundle.js'
     },
     plugins: [
-        new MiniCssExtractPlugin({ filename: 'style.css' }),
+        new MiniCssExtractPlugin({ 
+            filename: '[name].css',
+            chunkFilename: '[id].css'
+        }),
         new CleanWebpackPlugin(),
         new webpack.LoaderOptionsPlugin({
             options: {
@@ -21,22 +25,23 @@ module.exports = {
                     autoprefixer()
                 ]
             }
-        })
+        }),
+        new CopyWebpackPlugin([
+            {
+                from: './src/assets/symbol-defs.svg',
+                to: './'
+            },
+            {
+                from: './src/favicon.ico',
+                to: './'
+            }
+        ])
     ],
     module: {
         rules: [
             {
                 test: /\js$/,
                 exclude: /node_modules/
-            },
-            {
-                test: /\.(jpg|png|webp)$/,
-                use: [
-                {
-                    loader: 'file-loader',
-                    options: {}
-                }
-                ]
             },
             {
                 test: /\.scss$/,
@@ -49,8 +54,11 @@ module.exports = {
                 ]
             },
             {
-                test: /\.svg$/,
-                use: 'svg-inline-loader'
+                test: /\.(html)$/,
+                loader: 'html-loader',
+                options: {
+                    attributes: false
+                }
             }
         ]
     }
