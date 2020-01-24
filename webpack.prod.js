@@ -1,12 +1,7 @@
 const merge = require("webpack-merge");
 const common = require("./webpack.common");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const CreateFileWebpack = require('create-file-webpack');
-
-const readMeFileContent = `# pijushbarik.github.io (pijushbarik.ml)
-This branch contains the build for the hosting in GitHub. The source code \
-can be found in the \`dev\` branch
-`;
+const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 module.exports = merge(common, {
     mode: 'production',
@@ -23,11 +18,12 @@ module.exports = merge(common, {
             },
             hash: true
         }),
-        new CreateFileWebpack({
-            path: './dist',
-            fileName: 'README.md',
-            content: readMeFileContent
-        })
+        new CopyWebpackPlugin([
+            {
+                from: './src/extras',
+                to: './'
+            }
+        ])
     ],
     module: {
         rules: [
