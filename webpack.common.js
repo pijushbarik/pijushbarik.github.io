@@ -14,7 +14,7 @@ module.exports = {
         filename: 'bundle.js'
     },
     plugins: [
-        new MiniCssExtractPlugin({ 
+        new MiniCssExtractPlugin({
             filename: '[name].css',
             chunkFilename: '[id].css'
         }),
@@ -29,7 +29,7 @@ module.exports = {
         new CopyWebpackPlugin([
             {
                 from: './src/assets/symbol-defs.svg',
-                to: './'
+                to: './assets'
             },
             {
                 from: './src/favicon.ico',
