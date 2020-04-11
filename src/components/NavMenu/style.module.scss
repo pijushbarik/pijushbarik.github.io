@@ -1,0 +1,91 @@
+.nav {
+  ul {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+  }
+
+  li {
+    margin: 0 0.5rem;
+    position: relative;
+    padding: 1rem 1.75rem 1rem 0.1rem;
+
+    span {
+      position: relative;
+      z-index: 1;
+      letter-spacing: -1.2px;
+      text-transform: lowercase;
+    }
+
+    &::before {
+      content: "";
+      display: block;
+      height: 3px;
+      width: 100%;
+      background-image: linear-gradient(
+        to right,
+        var(--color-red),
+        var(--color-primary)
+      );
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+      z-index: 0;
+      transition: all 0.2s;
+    }
+
+    &:hover::before {
+      height: 100%;
+    }
+  }
+
+  a {
+    text-decoration: none;
+    overflow: hidden;
+
+    &.active {
+      li::before {
+        height: 100%;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 640px) {
+    height: auto;
+    display: block;
+    position: relative;
+    width: 100%;
+
+    a {
+      margin: 1rem 0;
+    }
+
+    ul.collapsed {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      overflow: hidden;
+      max-height: 0;
+      transition-duration: 0.75s;
+      transition-timing-function: cubic-bezier(0.25, 1, 0.5, 1);
+
+      &.isExpanded {
+        overflow: hidden;
+        max-height: 50rem;
+        transition-duration: 0.75s;
+        transition-timing-function: cubic-bezier(0.25, 1, 0.5, 1);
+      }
+
+      li {
+        padding: 1.5rem 0.3rem;
+        margin: 0px 0px;
+        width: 100%;
+
+        &::before {
+          transition: none;
+        }
+      }
+    }
+  }
+}

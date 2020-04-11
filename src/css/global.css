@@ -1,0 +1,48 @@
+/* Reset CSS */
+@import "./reset.css";
+
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ultra&display=swap");
+
+/* Tailwind CSS */
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+/* Global CSS variables */
+:root {
+  --color-primary: #ffab00;
+  --color-red: #ff5851;
+  --color-white: #fff;
+
+  --font-ultra: "Ultra", serif;
+}
+
+/* Custom rules */
+*,
+*::after,
+*::before {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+::selection {
+  background: var(--color-primary);
+  color: var(--color-white);
+}
+
+html {
+  font-family: "Quicksand", sans-serif;
+  font-size: 56.25%;
+}
+
+@media only screen and (min-width: 768px) {
+  html {
+    font-size: 62.5%;
+  }
+}
+
+body {
+  overflow: hidden auto;
+}
