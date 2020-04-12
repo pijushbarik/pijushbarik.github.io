@@ -13,7 +13,6 @@
 :root {
   --color-primary: #ffab00;
   --color-red: #ff5851;
-  --color-white: #fff;
 
   --font-ultra: "Ultra", serif;
 }
@@ -45,4 +44,18 @@ html {
 
 body {
   overflow: hidden auto;
+}
+
+.light {
+  --color-white: #fff;
+  --color-black: #000;
+
+  background-color: #fff;
+}
+
+.dark {
+  --color-white: #333;
+  --color-black: #fff;
+
+  background-color: #333;
 }

@@ -14,7 +14,7 @@ const NavMenu = ({ menuLinks, isExpanded, className }) => (
           key={idx}
           to={menuLink.link}
           activeClassName={styles.active}
-          className="text-3xl font-semibold capitalize flex content-center items-center"
+          className="text-3xl font-semibold flex content-center items-center"
         >
           <li>
             <span>{menuLink.name}</span>

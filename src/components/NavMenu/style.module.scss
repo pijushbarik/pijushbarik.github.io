@@ -1,4 +1,6 @@
 .nav {
+  background-color: var(--color-white);
+
   ul {
     display: flex;
     justify-content: space-between;
@@ -15,6 +17,7 @@
       z-index: 1;
       letter-spacing: -1.2px;
       text-transform: lowercase;
+      color: var(--color-black);
     }
 
     &::before {

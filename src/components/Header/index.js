@@ -19,7 +19,7 @@ const Header = ({ menuLinks, className }) => {
       sm:items-center content-start flex-col sm:flex-row shadow-md ${className ||
         ""}`}
     >
-      <div className="flex items-center flex-shrink-0 text-black mr-2">
+      <div className="flex items-center flex-shrink-0 mr-2">
         <Branding logo={logoSVG} title="pijush barik" />
         <Hamburger
           onClick={handleMenuButton}

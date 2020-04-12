@@ -11,14 +11,15 @@ $stroke-5: 42px;
 $stroke-6: 302px;
 
 $lightgrey: #eaeaea;
+$white: #fff;
 
 .helloParent {
   display: flex;
-  background: var(--color-white);
-  background: -webkit-radial-gradient(var(--color-white), $lightgrey);
-  background: -o-radial-gradient(var(--color-white), $lightgrey);
-  background: -moz-radial-gradient(var(--color-white), $lightgrey);
-  background: radial-gradient(var(--color-white), $lightgrey);
+  background: $white;
+  background: -webkit-radial-gradient($white, $lightgrey);
+  background: -o-radial-gradient($white, $lightgrey);
+  background: -moz-radial-gradient($white, $lightgrey);
+  background: radial-gradient($white, $lightgrey);
 }
 
 .helloWord {
