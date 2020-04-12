@@ -1,8 +1,8 @@
 .switch {
   position: relative;
   display: inline-block;
-  width: 5.5rem;
-  height: 2.4rem;
+  width: 4.2rem;
+  height: 2rem;
 }
 
 /* Hide default HTML checkbox */
@@ -28,8 +28,8 @@
 .slider:before {
   position: absolute;
   content: "";
-  height: 3.3rem;
-  width: 3.3rem;
+  height: 3rem;
+  width: 3rem;
   left: 0px;
   bottom: 4px;
   top: 0;
@@ -44,17 +44,15 @@
 }
 
 input[id="theme-slider-btn"]:checked + .slider {
-  background-color: #2196f3;
+  background-color: var(--color-red);
 }
 
 input[id="theme-slider-btn"]:focus + .slider {
-  box-shadow: 0 0 1px #2196f3;
+  box-shadow: 0 0 1px var(--color-red);
 }
 
 input[id="theme-slider-btn"]:checked + .slider:before {
-  -webkit-transform: translateX(2.4rem);
-  -ms-transform: translateX(2.4rem);
-  transform: translateX(2.4rem);
+  transform: translateX(1.5rem);
   background: white url("../../images/theme-button-day.png");
   background-repeat: no-repeat;
   background-position: center;

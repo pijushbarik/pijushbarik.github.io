@@ -49,10 +49,7 @@ body {
   }
 }
 
-/* body {
-  overflow: hidden auto;
-} */
-
+/* Theme customizations */
 .light {
   --color-white: #fff;
   --color-black: #000;
@@ -65,4 +62,13 @@ body {
   --color-black: #fff;
 
   background-color: #333;
+}
+
+/* React custom scrollbar customization */
+.rcs-custom-scroll .rcs-custom-scrollbar {
+  width: 0.5rem !important;
+}
+
+.rcs-custom-scroll .rcs-inner-handle {
+  background-color: var(--color-red) !important;
 }

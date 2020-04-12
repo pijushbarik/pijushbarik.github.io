@@ -2,7 +2,10 @@ import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
+// Global CSS
 import "../../css/global.css"
+// React custom scroll CSS
+import "react-custom-scroll/dist/customScroll.css"
 
 import ThemeContext from "../../context/ThemeContext"
 import Header from "../Header"
@@ -34,10 +37,9 @@ const Layout = ({ children }) => {
           }`}
         >
           <ThemeSwitcher
-            className="fixed"
+            className={`fixed ${styles.themeSwitcher}`}
             onClick={theme.toggleDark}
             isDarkMode={theme.isDarkMode}
-            style={{ top: "2.1rem", right: "2rem", zIndex: 1 }}
           />
           <Header
             menuLinks={data.site.siteMetadata.menuLinks}
