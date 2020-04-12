@@ -40,11 +40,11 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Portfolio and blog of Pijush Barik`,
+        name: `Pijush Barik`,
         short_name: `Pijush Barik`,
         start_url: `/`,
-        background_color: `#36006d`,
-        theme_color: `#36006d`,
+        background_color: `#ffab00`,
+        theme_color: `#ffab00`,
         display: `minimal-ui`,
         icon: `src/images/icon.png`,
       },
