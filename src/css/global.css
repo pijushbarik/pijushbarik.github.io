@@ -36,15 +36,22 @@ html {
   font-size: 56.25%;
 }
 
+html,
+body {
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+}
+
 @media only screen and (min-width: 768px) {
   html {
     font-size: 62.5%;
   }
 }
 
-body {
+/* body {
   overflow: hidden auto;
-}
+} */
 
 .light {
   --color-white: #fff;

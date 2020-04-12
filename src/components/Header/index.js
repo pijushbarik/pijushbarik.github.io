@@ -6,6 +6,8 @@ import Branding from "../Branding"
 import NavMenu from "../NavMenu"
 import Hamburger from "../ui/Hamburger"
 
+import styles from "./style.module.scss"
+
 const Header = ({ menuLinks, className }) => {
   const [isExpanded, toggleExpand] = useState(false)
 
@@ -17,13 +19,14 @@ const Header = ({ menuLinks, className }) => {
     <header
       className={`px-5 py-5 flex w-screen items-start
       sm:items-center content-start flex-col sm:flex-row shadow-md ${className ||
-        ""}`}
+        ""} ${styles.header}`}
     >
       <div className="flex items-center flex-shrink-0 mr-2">
         <Branding logo={logoSVG} title="pijush barik" />
         <Hamburger
           onClick={handleMenuButton}
           className="block sm:hidden ml-6 sm:ml-2"
+          color="#ff5851"
         />
       </div>
       <NavMenu menuLinks={menuLinks} isExpanded={isExpanded} />
