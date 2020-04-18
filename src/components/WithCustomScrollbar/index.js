@@ -2,11 +2,9 @@ import React from "react"
 import PropTypes from "prop-types"
 import CustomScroll from "react-custom-scroll"
 
-import styles from "./style.module.scss"
-
 const WithCustomScrollbar = props => (
   <CustomScroll heightRelativeToParent="100%">
-    <div className={styles.innerContent}>{props.children}</div>
+    <div className="py-4 px-6">{props.children}</div>
   </CustomScroll>
 )
 
