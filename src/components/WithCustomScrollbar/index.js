@@ -5,7 +5,7 @@ import CustomScroll from "react-custom-scroll"
 import styles from "./style.module.scss"
 
 const WithCustomScrollbar = props => (
-  <CustomScroll heightRelativeToParent="100%">
+  <CustomScroll flex="1">
     <div className={styles.innerContent}>{props.children}</div>
   </CustomScroll>
 )
