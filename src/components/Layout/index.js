@@ -4,6 +4,7 @@ import { useStaticQuery, graphql } from "gatsby"
 
 // Global CSS
 import "../../css/global.css"
+import "./custom.global.scss"
 // React custom scroll CSS
 import "react-custom-scroll/dist/customScroll.css"
 

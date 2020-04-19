@@ -1,0 +1,21 @@
+.profileImg {
+  max-width: 20rem;
+
+  @media only screen and (min-width: 640px) {
+    max-width: 30rem;
+  }
+}
+
+.socialIcons {
+  max-width: 100%;
+
+  @media only screen and (min-width: 640px) {
+    max-width: 30rem;
+  }
+
+  @media all and (hover: hover) {
+    a:hover img {
+      transform: rotate(45deg);
+    }
+  }
+}
