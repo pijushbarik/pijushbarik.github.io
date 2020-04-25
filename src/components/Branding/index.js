@@ -1,18 +1,17 @@
 import React from "react"
-import PropTypes from "prop-types"
 
-import styles from "./style.module.scss"
+import BrandName from "../../images/brand-name.svg"
+import Logo from "../../images/logo.svg"
 
-const Branding = ({ logo, title }) => (
-  <div className="flex items-center flex-shrink-0 text-black">
-    <img src={logo} alt="" className="h-16 w-16 mr-2" />
-    <span className={`font-bold text-5xl ${styles.brandText}`}>{title}</span>
+const Branding = () => (
+  <div className="h-16 flex items-center">
+    <div className="h-full mr-5">
+      <img src={Logo} alt="" className="h-full" />
+    </div>
+    <div className="h-full">
+      <img src={BrandName} alt="Pijush Barik" className="h-full" />
+    </div>
   </div>
 )
-
-Branding.propTypes = {
-  logo: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
-}
 
 export default Branding

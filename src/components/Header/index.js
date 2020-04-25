@@ -1,7 +1,6 @@
 import PropTypes from "prop-types"
 import React, { useState } from "react"
 
-import logoSVG from "../../images/logo.svg"
 import Branding from "../Branding"
 import NavMenu from "../NavMenu"
 import Hamburger from "../ui/Hamburger"
@@ -22,7 +21,7 @@ const Header = ({ menuLinks, className }) => {
         ""} ${styles.header}`}
     >
       <div className="flex items-center flex-shrink-0 mr-2">
-        <Branding logo={logoSVG} title="pijush barik" />
+        <Branding />
         <Hamburger
           onClick={handleMenuButton}
           className="block sm:hidden ml-6 sm:ml-2"
