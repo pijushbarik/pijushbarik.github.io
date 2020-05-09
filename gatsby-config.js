@@ -8,10 +8,11 @@ module.exports = {
         name: "home",
         link: "/",
       },
-      {
-        name: "blog",
-        link: "/blog",
-      },
+      // turn off blog for now
+      // {
+      //   name: "blog",
+      //   link: "/blog",
+      // },
       {
         name: "about",
         link: "/about",
@@ -54,7 +55,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-sass`,
       options: {
-        sassRuleTest: /\.global\.s(a|c)ss$/,
+        sassRuleTest: /\.s(a|c)ss$/,
         sassRuleModulesTest: /\.(mod|module)\.s(a|c)ss$/,
       },
     },

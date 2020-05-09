@@ -29,7 +29,7 @@ const AboutPage = () => {
   return (
     <Layout>
       <SEO title="About" />
-      <WithCustomScrollbar>
+      <WithCustomScrollbar topPadded sidePadded>
         <div className="w-full flex flex-wrap">
           <div className="w-full mb-8">
             <h1

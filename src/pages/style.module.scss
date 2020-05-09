@@ -1,26 +1,104 @@
-.name {
-  color: var(--color-red);
-  font-family: var(--font-ultra);
-  font-size: 8rem;
-  margin-top: -4rem;
-  transform: translateX(50%);
-  letter-spacing: -0.5rem;
-  line-height: 0.8;
-  opacity: 0;
+$stroke-anim-duration: 1.5s;
+$fill-anim-duration: 0.5s;
+$fill-anim-delay: 2s;
+
+.home {
+  background-color: #212121;
 }
 
-.animate {
-  animation: slideIn 0.75s cubic-bezier(0.25, 1, 0.5, 1) 1.5s 1 forwards;
+.container {
+  width: 75%;
+  max-width: max-content;
 }
 
-@keyframes slideIn {
-  from {
-    opacity: 0;
-    transform: translateX(50%);
+.hiThere {
+  width: 75%;
+
+  path {
+    stroke: var(--color-red);
+    stroke-width: 5px;
+    fill: transparent;
+
+    &:nth-child(1) {
+      stroke-dasharray: 1415;
+      stroke-dashoffset: 1415;
+      animation: stroke-animation $stroke-anim-duration forwards linear 0s;
+    }
+
+    &:nth-child(2) {
+      stroke-dasharray: 577;
+      stroke-dashoffset: 577;
+      animation: stroke-animation $stroke-anim-duration forwards linear 0.2s;
+    }
+
+    &:nth-child(3) {
+      stroke-dasharray: 696;
+      stroke-dashoffset: 696;
+      animation: stroke-animation $stroke-anim-duration forwards linear 0.4s;
+    }
+
+    &:nth-child(4) {
+      stroke-dasharray: 1143;
+      stroke-dashoffset: 1143;
+      animation: stroke-animation $stroke-anim-duration forwards linear 0.6s;
+    }
+
+    &:nth-child(5) {
+      stroke-dasharray: 848;
+      stroke-dashoffset: 848;
+      animation: stroke-animation $stroke-anim-duration forwards linear 0.8s;
+    }
+
+    &:nth-child(6) {
+      stroke-dasharray: 700;
+      stroke-dashoffset: 700;
+      animation: stroke-animation $stroke-anim-duration forwards linear 0s;
+    }
+
+    &:nth-child(7) {
+      stroke-dasharray: 848;
+      stroke-dashoffset: 848;
+      animation: stroke-animation $stroke-anim-duration forwards linear 0.18s;
+    }
+
+    &:last-child {
+      stroke: none;
+      fill: transparent;
+      animation: dot-fill-animation $fill-anim-duration forwards ease-out
+        $fill-anim-delay;
+    }
   }
+}
 
+.iAmPijush {
+  width: 100%;
+
+  path {
+    opacity: 0;
+    fill: var(--color-primary);
+    animation: name-fill-animation ($fill-anim-duration + 0.7s) forwards
+      ease-out ($fill-anim-delay + 0.5s);
+  }
+}
+
+.copyright {
+  color: var(--color-primary);
+}
+
+@keyframes stroke-animation {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes dot-fill-animation {
+  to {
+    fill: var(--color-red);
+  }
+}
+
+@keyframes name-fill-animation {
   to {
     opacity: 1;
-    transform: translateX(0%);
   }
 }

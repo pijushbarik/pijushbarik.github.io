@@ -5,7 +5,11 @@ import { Link } from "gatsby"
 import styles from "./style.module.scss"
 
 const NavMenu = ({ menuLinks, isExpanded, className }) => (
-  <nav className={[styles.nav].concat(className || "").join(" ")}>
+  <nav
+    className={`${[styles.nav]
+      .concat(className || "")
+      .join(" ")} flex items-center`}
+  >
     <ul
       className={`${styles.collapsed} ${isExpanded ? styles.isExpanded : ""}`}
     >

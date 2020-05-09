@@ -11,6 +11,10 @@
   &-max-content {
     width: max-content;
   }
+
+  &-min-screen {
+    min-width: 100vw;
+  }
 }
 
 // Font sizes

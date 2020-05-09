@@ -1,4 +1,16 @@
 .header {
   background-color: var(--color-white);
-  z-index: 999 !important;
+  z-index: 999;
+  width: calc(100vw - 2rem);
+  position: fixed;
+  top: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  min-height: 6rem;
+}
+
+.themeSwitcher {
+  position: fixed;
+  top: 2rem;
+  right: 1.5rem;
 }

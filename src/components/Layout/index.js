@@ -1,6 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
+import Helmet from "react-helmet"
 
 // Global CSS
 import "../../css/global.css"
@@ -10,7 +11,6 @@ import "react-custom-scroll/dist/customScroll.css"
 
 import ThemeContext from "../../context/ThemeContext"
 import Header from "../Header"
-import ThemeSwitcher from "../ThemeSwitcher"
 
 import styles from "./style.module.scss"
 
@@ -37,20 +37,17 @@ const Layout = ({ children }) => {
             theme.isDarkMode ? "dark" : "light"
           }`}
         >
-          <ThemeSwitcher
-            className={`fixed ${styles.themeSwitcher}`}
-            onClick={theme.toggleDark}
-            isDarkMode={theme.isDarkMode}
-          />
+          <Helmet>
+            <script src="/js/pace.min.js"></script>
+          </Helmet>
           <Header
             menuLinks={data.site.siteMetadata.menuLinks}
-            className="absolute top-0 left-0"
+            themeSwitcherOnClick={theme.toggleDark}
+            themeSwitcherMode={theme.isDarkMode}
           />
-          <div className="w-screen h-screen flex items-stretch">
-            <main className={`h-full w-full flex items-strecth ${styles.main}`}>
-              {children}
-            </main>
-          </div>
+          <main className={`h-screen w-screen flex ${styles.main}`}>
+            {children}
+          </main>
         </div>
       )}
     </ThemeContext.Consumer>
