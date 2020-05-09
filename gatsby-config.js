@@ -15,15 +15,15 @@ module.exports = {
       // },
       {
         name: "about",
-        link: "/about",
+        link: "/about/",
       },
       {
         name: "portfolio",
-        link: "/portfolio",
+        link: "/portfolio/",
       },
       {
         name: "resume",
-        link: "/resume",
+        link: "/resume/",
       },
     ],
   },
