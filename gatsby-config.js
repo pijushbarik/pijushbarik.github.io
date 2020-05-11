@@ -18,8 +18,12 @@ module.exports = {
         link: "/about/",
       },
       {
-        name: "portfolio",
-        link: "/portfolio/",
+        name: "projects",
+        link: "/projects/",
+      },
+      {
+        name: "contact",
+        link: "/contact/",
       },
       {
         name: "resume",

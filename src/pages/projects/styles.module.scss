@@ -1,0 +1,13 @@
+.projects {
+  display: grid;
+  max-width: 100%;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  align-items: start;
+  justify-items: center;
+  gap: 13rem 3rem;
+  padding: 2rem 1.5rem 13rem 0.5rem;
+
+  @media screen and (max-width: 400px) {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+}
