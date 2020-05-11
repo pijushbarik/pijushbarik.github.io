@@ -13,35 +13,35 @@ const ProjectPage = () => {
       pvs: file(relativePath: { eq: "proficientvision.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 600, maxHeight: 300) {
-            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
       dreamity: file(relativePath: { eq: "dreamityevents.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 600, maxHeight: 300) {
-            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
       pomodoro: file(relativePath: { eq: "pomodoro-clock.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 600, maxHeight: 300) {
-            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
       calculator: file(relativePath: { eq: "calculator.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 600, maxHeight: 300) {
-            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
       quotemachine: file(relativePath: { eq: "rand-quote-generator.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 600, maxHeight: 300) {
-            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
