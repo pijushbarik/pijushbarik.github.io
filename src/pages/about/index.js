@@ -131,14 +131,13 @@ const AboutPage = () => {
             </p>
 
             <p className="mt-12">
-              Previously I did intership and worked for a little time in the
-              prestigious{" "}
+              I did intership and worked for a short time in the prestigious{" "}
               <strong>Indian Institute of Technology Kharagpur</strong>. I was
               there responsible for developing a software product for{" "}
               <strong>real time image processing with NVIDIA GPUs</strong>. I
               have written codes in <strong>C++</strong> &amp;{" "}
               <strong>CUDA</strong>. Implemented cross-OS C++ build tool with{" "}
-              <strong>CMake</strong>. I also created a website for the product.
+              <strong>CMake</strong>.
             </p>
 
             <p className="mt-12">
