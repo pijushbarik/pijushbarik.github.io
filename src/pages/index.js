@@ -168,7 +168,13 @@ const IndexPage = () => {
             <HiThere className={`h-auto ${styles.hiThere}`} />
             <IAmPijush className={`mt-6 h-auto ${styles.iAmPijush}`} />
           </div>
-          <p className={`mt-auto text-lg ${styles.copyright}`}>&copy; 2020</p>
+          <footer className="inline-block mt-auto w-full p-3 flex justify-center">
+            <p className={`text-lg ${styles.footerText}`}>
+              Handcrafted with{" "}
+              <span style={{ color: "var(--color-red)" }}>&hearts;</span> by me.
+              &copy; 2020
+            </p>
+          </footer>
         </div>
       </div>
     </Layout>
