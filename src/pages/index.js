@@ -102,15 +102,17 @@ class Particle {
 }
 
 const IndexPage = () => {
-  const [particleCount, setParticleCount] = useState(
-    Math.floor(window.innerWidth / 25)
-  )
+  const [particleCount, setParticleCount] = useState(0)
+  const [isMounted, setIsMounted] = useState(false)
 
   const particlesCanvas = useRef(null)
-  let intervalId = null
+  const intervalId = useRef(null)
 
-  const drawParticles = (particles, ctx) => {
-    ctx.clearRect(0, 0, ctx.canvas.clientWidth, ctx.canvas.clientHeight)
+  const drawParticles = particles => {
+    const canvas = particlesCanvas.current
+    const ctx = canvas.getContext("2d")
+
+    ctx.clearRect(0, 0, canvas.width, canvas.height)
 
     particles.forEach((particle, idx) => {
       particle.draw()
@@ -124,34 +126,40 @@ const IndexPage = () => {
 
   // to draw & update canvas
   useEffect(() => {
+    if (!isMounted) return
+
     const canvas = particlesCanvas.current
+
     canvas.width = window.innerWidth
     canvas.height = window.innerHeight
 
     const ctx = canvas.getContext("2d")
 
-    ctx.clearRect(0, 0, ctx.canvas.clientWidth, ctx.canvas.clientHeight)
+    ctx.clearRect(0, 0, canvas.width, canvas.height)
 
     const particles = []
     for (let i = 0; i < particleCount; i++) {
       particles.push(new Particle(ctx, 5, 3, 3))
     }
 
-    intervalId = setInterval(() => drawParticles(particles, ctx), 1000 / 20) // 25fps
+    clearInterval(intervalId.current)
+    intervalId.current = setInterval(() => drawParticles(particles), 1000 / 20) // 25fps
   }, [particleCount])
 
   // to add, remove event listeners
   useEffect(() => {
-    window.addEventListener("resize", updateParticleCount)
+    window.addEventListener("resize", updateParticleCount, false)
+
+    setParticleCount(Math.floor(window.innerWidth / 25))
+    setIsMounted(true)
 
     return () => {
-      clearInterval(intervalId)
-      window.removeEventListener("resize", updateParticleCount)
+      clearInterval(intervalId.current)
+      window.removeEventListener("resize", updateParticleCount, false)
     }
   }, [])
 
   const updateParticleCount = () => {
-    clearInterval(intervalId)
     setParticleCount(Math.floor(window.innerWidth / 25))
   }
 
@@ -169,7 +177,7 @@ const IndexPage = () => {
             <IAmPijush className={`mt-6 h-auto ${styles.iAmPijush}`} />
           </div>
           <footer className="inline-block mt-auto w-full p-3 flex justify-center">
-            <p className={`text-lg ${styles.footerText}`}>
+            <p className={`text-lg text-center ${styles.footerText}`}>
               Handcrafted with{" "}
               <span style={{ color: "var(--color-red)" }}>&hearts;</span> by me.
               &copy; 2020
