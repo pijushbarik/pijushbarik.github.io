@@ -1,0 +1,149 @@
+.projectCard {
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  &:hover::after {
+    clip-path: inset(0 0 0 0 round 10px);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: -10rem;
+    left: 0;
+    margin: -1rem;
+    border-radius: 1rem;
+    overflow: hidden;
+    clip-path: inset(2rem 0 10rem 2rem round 10px);
+    transition: clip-path 0.4s ease 0.1s;
+    background-color: #eaeaea;
+    z-index: -1;
+  }
+
+  &__header {
+    margin-top: 1rem;
+    order: 3;
+    width: 90%;
+  }
+
+  &__footer {
+    order: 4;
+    position: absolute;
+    left: 0;
+    bottom: -9rem;
+    z-index: 1;
+    width: 90%;
+    transform: translateY(-50%);
+    opacity: 0;
+    transition: all 0.1s linear 0.2s;
+  }
+
+  &:hover &__footer {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  &__img {
+    border-radius: 6px;
+    padding-top: 56.25%;
+    overflow: hidden;
+    height: 15rem;
+    width: 100%;
+  }
+
+  &__tag {
+    background-color: #dadada;
+    display: inline-block;
+    transform: translateY(50%);
+    transition: all 0.3s ease-in-out;
+
+    $transitionDelay: 0.1s;
+
+    &:nth-child(1) {
+      transition-delay: $transitionDelay;
+    }
+
+    &:nth-child(2) {
+      transition-delay: $transitionDelay + 0.05s;
+    }
+
+    &:nth-child(3) {
+      transition-delay: $transitionDelay + 0.1s;
+    }
+
+    &:nth-child(4) {
+      transition-delay: $transitionDelay + 0.15s;
+    }
+
+    &:nth-child(5) {
+      transition-delay: $transitionDelay + 0.2s;
+    }
+
+    &:not(:last-child) {
+      margin-right: 1.2rem;
+    }
+  }
+
+  &:hover &__tag {
+    transform: translateY(0);
+  }
+
+  &__link {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    opacity: 0;
+    transform: translateX(50%);
+    transition: all 0.1s ease-out 0.15s;
+
+    svg {
+      fill: #cacaca;
+    }
+  }
+
+  &:hover &__link {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+:global(.dark) {
+  .projectCard {
+    &::after {
+      background-color: #414141;
+    }
+
+    &__tag {
+      background-color: #545454;
+    }
+  }
+}
+
+// If hover not available, like in touch screen devices
+@media all and (hover: none) {
+  .projectCard {
+    &::after {
+      clip-path: inset(0 0 0 0 round 10px);
+    }
+
+    &__footer {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    &__tag {
+      transform: translateY(0);
+    }
+
+    &__link {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+}

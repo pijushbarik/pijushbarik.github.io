@@ -1,48 +1,61 @@
 {
-  "name": "portfolio-pijush",
-  "version": "1.0.0",
-  "description": "A personal portfolio website",
-  "main": "index.js",
-  "scripts": {
-    "start": "webpack-dev-server --open --config webpack.dev.js",
-    "build": "webpack --config webpack.prod.js"
+  "name": "pijushbarik.github.io",
+  "private": true,
+  "description": "Portfolio and blog web app of Pijush Barik",
+  "version": "0.1.0",
+  "author": {
+    "name": "Pijush Barik",
+    "email": "pijush.barik8@gmail.com"
   },
-  "repository": {
-    "url": "https://github.com/pijushbarik/pijushbarik.github.io"
+  "dependencies": {
+    "autoprefixer": "^9.7.6",
+    "gatsby": "^2.19.45",
+    "gatsby-image": "^2.2.44",
+    "gatsby-plugin-manifest": "^2.2.48",
+    "gatsby-plugin-offline": "^3.0.41",
+    "gatsby-plugin-postcss": "^2.2.1",
+    "gatsby-plugin-react-helmet": "^3.1.24",
+    "gatsby-plugin-sass": "^2.2.1",
+    "gatsby-plugin-sharp": "^2.4.13",
+    "gatsby-source-filesystem": "^2.1.56",
+    "gatsby-transformer-sharp": "^2.3.19",
+    "prop-types": "^15.7.2",
+    "react": "^16.12.0",
+    "react-custom-scroll": "^4.2.0",
+    "react-dom": "^16.12.0",
+    "react-helmet": "^5.2.1",
+    "tailwindcss": "^1.2.0"
+  },
+  "devDependencies": {
+    "node-sass": "^4.13.1",
+    "prettier": "^1.19.1"
   },
   "keywords": [
+    "gatsby",
     "portfolio",
-    "html",
-    "css",
-    "scss"
+    "blog"
   ],
-  "author": "Pijush Barik",
   "license": "MIT",
-  "devDependencies": {
-    "autoprefixer": "^9.7.3",
-    "clean-webpack-plugin": "^3.0.0",
-    "copy-webpack-plugin": "^5.1.1",
-    "css-loader": "^3.4.2",
-    "file-loader": "^4.3.0",
-    "html-loader": "^0.5.5",
-    "html-webpack-plugin": "^3.2.0",
-    "image-webpack-loader": "^6.0.0",
-    "mini-css-extract-plugin": "^0.8.2",
-    "node-sass": "^4.13.1",
-    "optimize-css-assets-webpack-plugin": "^5.0.3",
-    "postcss-loader": "^3.0.0",
-    "sass-loader": "^7.3.1",
-    "style-loader": "^0.23.1",
-    "webpack": "^4.41.5",
-    "webpack-cli": "^3.3.10",
-    "webpack-dev-server": "^3.10.1",
-    "webpack-merge": "^4.2.2"
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pijushbarik/pijushbarik.github.io"
+  },
+  "bugs": {
+    "url": "https://github.com/pijushbarik/pijushbarik.github.io/issues"
   },
   "browserslist": [
     ">0.2%",
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ],
-  "dependencies": {}
+  ]
 }
