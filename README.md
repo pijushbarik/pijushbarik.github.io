@@ -1,3 +1,6 @@
-# pijushbarik.github.io (pijushbarik.ml)
-This branch contains the build for the hosting in GitHub. The source code
-can be found in the `dev` branch
+The hosting has been moved from GitHub pages to Netlify.
+
+All primary source code of the main websitr is available in the dev and prod branch.
+
+This branch contains a single html file just to serve the call to https://pijushbarik.github.io.
+This will automatically redirect to https://pijushbarik.ml
