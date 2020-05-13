@@ -21,9 +21,9 @@
     "gatsby-transformer-sharp": "^2.3.19",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
-    "react-custom-scroll": "^4.2.0",
     "react-dom": "^16.12.0",
     "react-helmet": "^5.2.1",
+    "simplebar-react": "^2.0.7-corejs2",
     "tailwindcss": "^1.2.0"
   },
   "devDependencies": {

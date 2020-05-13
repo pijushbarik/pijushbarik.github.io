@@ -6,8 +6,8 @@ import Helmet from "react-helmet"
 // Global CSS
 import "../../css/global.css"
 import "./custom.global.scss"
-// React custom scroll CSS
-import "react-custom-scroll/dist/customScroll.css"
+// SimpleBar custom scroll CSS
+import "simplebar/dist/simplebar.min.css"
 
 import ThemeContext from "../../context/ThemeContext"
 import Header from "../Header"
