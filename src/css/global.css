@@ -66,13 +66,17 @@ body {
   background-color: #333;
 }
 
-/* React custom scrollbar customization */
-.rcs-custom-scroll .rcs-custom-scrollbar {
-  width: 0.5rem !important;
+/* Simplebae customization */
+.simplebar-scrollbar {
+  width: 6px !important;
 }
-
-.rcs-custom-scroll .rcs-inner-handle {
-  background-color: var(--color-red) !important;
+.simplebar-scrollbar:before {
+  border: 3px solid var(--color-red) !important;
+  border-radius: 10px !important;
+  width: 0 !important;
+}
+.simplebar-scrollbar.simplebar-visible:before {
+  opacity: 1 !important;
 }
 
 /* Pace js progressbar CSS */
