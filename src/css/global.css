@@ -66,12 +66,13 @@ body {
   background-color: #333;
 }
 
-/* Simplebae customization */
+/* Simplebar customization */
 .simplebar-scrollbar {
   width: 6px !important;
 }
 .simplebar-scrollbar:before {
   border: 3px solid var(--color-red) !important;
+  background: var(--color-red) !important;
   border-radius: 10px !important;
   width: 0 !important;
 }
