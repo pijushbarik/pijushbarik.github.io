@@ -3,6 +3,7 @@ module.exports = {
     title: `Pijush Barik | Web Developer`,
     description: `Portfolio and blog website project of Pijush (httsps://pijushbarik.ml)`,
     author: `@pijushbarik`,
+    siteUrl: `https://pijushbarik.ml`,
     menuLinks: [
       {
         name: "home",
@@ -63,5 +64,6 @@ module.exports = {
         sassRuleModulesTest: /\.(mod|module)\.s(a|c)ss$/,
       },
     },
+    `gatsby-plugin-sitemap`,
   ],
 }
