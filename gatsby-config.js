@@ -3,6 +3,7 @@ module.exports = {
     title: `Pijush Barik | Web Developer`,
     description: `Portfolio and blog website project of Pijush (httsps://pijushbarik.ml)`,
     author: `@pijushbarik`,
+    siteUrl: `https://pijushbarik.ml`,
     menuLinks: [
       {
         name: "home",
@@ -48,9 +49,9 @@ module.exports = {
         name: `Pijush Barik`,
         short_name: `Pijush Barik`,
         start_url: `/`,
-        background_color: `#ffab00`,
-        theme_color: `#ffab00`,
-        display: `minimal-ui`,
+        background_color: `#333`,
+        theme_color: `#333`,
+        display: `fullscreen`,
         icon: `src/images/icon.png`,
       },
     },
@@ -63,5 +64,6 @@ module.exports = {
         sassRuleModulesTest: /\.(mod|module)\.s(a|c)ss$/,
       },
     },
+    `gatsby-plugin-sitemap`,
   ],
 }

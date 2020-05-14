@@ -66,7 +66,7 @@ const ProjectPage = () => {
             description="Company cum Product website of Proficient Vision Solutions"
             tags={["HTML", "SCSS", "jQuery"]}
             link="http://proficientvisionsolutions.com"
-            // className={`w-full sm:w-1/2 md:w-1/3 ${styles.projectCard}`}
+            className={styles.projectCard}
           />
 
           <ProjectCard
@@ -75,7 +75,7 @@ const ProjectPage = () => {
             description="An event management company portfolio website"
             tags={["React", "SCSS", "Firebase"]}
             link="https://dreamityevents.com/"
-            // className={`w-full sm:w-1/2 md:w-1/3 ${styles.projectCard}`}
+            className={styles.projectCard}
           />
 
           <ProjectCard
@@ -84,7 +84,7 @@ const ProjectPage = () => {
             description="A digital clock for Pomodomo Technique time management"
             tags={["React", "SCSS"]}
             link="https://codepen.io/heisenberg-pb/pen/NBaZGy"
-            // className={`w-full sm:w-1/2 md:w-1/3 ${styles.projectCard}`}
+            className={styles.projectCard}
           />
 
           <ProjectCard
@@ -93,7 +93,7 @@ const ProjectPage = () => {
             description="Simple calculator made in React"
             tags={["React", "SCSS"]}
             link="https://codepen.io/heisenberg-pb/pen/NBgPEg"
-            // className={`w-full sm:w-1/2 md:w-1/3 ${styles.projectCard}`}
+            className={styles.projectCard}
           />
 
           <ProjectCard
@@ -102,7 +102,7 @@ const ProjectPage = () => {
             description="Random quote generator made in React"
             tags={["React", "SCSS"]}
             link="https://codepen.io/heisenberg-pb/pen/ajvmoq"
-            // className={`w-full sm:w-1/2 lg:w-1/3 ${styles.projectCard}`}
+            className={styles.projectCard}
           />
         </div>
       </WithCustomScrollbar>

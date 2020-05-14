@@ -7,7 +7,10 @@ import ExternelLinkIcon from "../SVG/ExternelLinkIcon"
 
 const ProjectCard = props => {
   return (
-    <div className={`${styles.projectCard}`}>
+    <div
+      className={`${styles.projectCard} ${props.className || ""}`}
+      style={props.style || {}}
+    >
       <div className={`ml-12 ${styles.projectCard__header}`}>
         <h2 className="font-light text-4xl">{props.title}</h2>
       </div>
