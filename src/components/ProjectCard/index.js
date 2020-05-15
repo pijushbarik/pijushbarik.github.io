@@ -21,7 +21,7 @@ const ProjectCard = props => {
       />
       <a
         target="_blank"
-        rel="noopener"
+        rel="noopener noreferrer"
         href={props.link}
         className={`h-12 w-12 ${styles.projectCard__link}`}
       >
