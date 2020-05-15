@@ -8,11 +8,7 @@ import styles from "./style.module.scss"
  */
 
 const Spinner = props => (
-  <div
-    className={styles.foldingCube}
-    hidden={!props.visible}
-    onClick={e => e.stopPropagation()} // to prevent sclick propagating to parent
-  >
+  <div className={styles.foldingCube} hidden={!props.visible}>
     <div className={[styles.cube1, styles.cube].join(" ")}></div>
     <div className={[styles.cube2, styles.cube].join(" ")}></div>
     <div className={[styles.cube4, styles.cube].join(" ")}></div>

@@ -26,6 +26,7 @@ const ResumePage = () => {
           }`}
           title="resume pdf"
           src="https://docs.google.com/file/d/1pn4C2ktMFmJtBfdZCG8wdfS-2yNYuyKS1xTF-66pxQE/preview"
+          role="presentation" // to remove warning for onLoad event on a non-interactive element
           onLoad={() => {
             setLoading(false)
           }}
@@ -34,7 +35,7 @@ const ResumePage = () => {
           className={`rounded-full transition-all duration-500 ease-out p-8 fixed ${styles.downloadBtn}`}
           href="https://docs.google.com/document/export?format=pdf&id=1pn4C2ktMFmJtBfdZCG8wdfS-2yNYuyKS1xTF-66pxQE"
         >
-          <img className="w-10 h-10" src={DownloadIcon} />
+          <img className="w-10 h-10" src={DownloadIcon} alt="" />
         </LinkButton>
       </div>
     </Layout>

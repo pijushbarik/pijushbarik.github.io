@@ -9,9 +9,6 @@ const Backdrop = props => {
       className={`h-screen w-screen ${styles.backdrop} ${
         props.visible ? "flex" : "hidden"
       }`}
-      onClick={() => {
-        typeof props.onClick === "function" && props.onClick()
-      }}
     >
       {props.children}
     </div>
@@ -19,7 +16,6 @@ const Backdrop = props => {
 }
 
 Backdrop.propTypes = {
-  onClick: PropTypes.func,
   visible: PropTypes.bool.isRequired,
   children: PropTypes.node.isRequired,
 }
