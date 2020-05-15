@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://www.gatsbyjs.org">
+  <a href="https://pijushbarik.ml">
     <img alt="Brace Yourself" src="./src/images/logo.svg" width="60" />
   </a>
 </p>

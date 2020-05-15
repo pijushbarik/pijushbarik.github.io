@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useRef, useState } from "react"
+import React, { useEffect, useRef, useState } from "react"
 
 import Layout from "../components/Layout"
 import SEO from "../components/SEO"
@@ -144,7 +144,7 @@ const IndexPage = () => {
 
     clearInterval(intervalId.current)
     intervalId.current = setInterval(() => drawParticles(particles), 1000 / 20) // 25fps
-  }, [particleCount])
+  }, [particleCount, isMounted])
 
   // to add, remove event listeners
   useEffect(() => {
