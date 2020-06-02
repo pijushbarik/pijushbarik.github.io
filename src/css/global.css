@@ -2,7 +2,6 @@
 @import "./reset.css";
 
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Ultra&display=swap&text=I%27m%20Pijush");
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap");
 
 /* Tailwind CSS */
@@ -65,7 +64,6 @@ body {
 
   background-color: #333;
 }
-
 
 /* Simplebar customization */
 .simplebar-scrollbar {

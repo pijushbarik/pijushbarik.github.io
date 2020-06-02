@@ -14,6 +14,7 @@ const SliderSwitch = ({ className, style, onClick, isDarkMode }) => (
       />
       <span className={[styles.slider, styles.round].join(" ")}></span>
     </label>
+    <label for="theme-slider-btn"></label>
   </div>
 )
 
