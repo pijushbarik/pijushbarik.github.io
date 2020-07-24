@@ -30,7 +30,7 @@ const Header = ({
         <Branding />
         <Hamburger
           onClick={handleMenuButton}
-          className="block sm:hidden ml-2"
+          className="block sm:hidden ml-20"
           color="#ff5851"
         />
       </div>

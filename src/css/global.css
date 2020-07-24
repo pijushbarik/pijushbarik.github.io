@@ -55,17 +55,18 @@ body {
 .light {
   --color-white: #fff;
   --color-black: #000;
+  --header-color: #fbfbfb;
 
-  background-color: #fff;
+  background-color: #f1f1f1;
 }
 
 .dark {
   --color-white: #333;
   --color-black: #fff;
+  --header-color: #3a3a3a;
 
   background-color: #333;
 }
-
 
 /* Simplebar customization */
 .simplebar-scrollbar {

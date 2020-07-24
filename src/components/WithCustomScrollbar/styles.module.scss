@@ -1,0 +1,15 @@
+.customScroll::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Handle */
+.customScroll::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: var(--color-red);
+}
+
+.customScroll {
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-red) transparent;
+}
