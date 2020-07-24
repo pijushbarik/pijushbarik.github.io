@@ -54,29 +54,17 @@ body {
 .light {
   --color-white: #fff;
   --color-black: #000;
+  --header-color: #fbfbfb;
 
-  background-color: #fff;
+  background-color: #f1f1f1;
 }
 
 .dark {
   --color-white: #333;
   --color-black: #fff;
+  --header-color: #3a3a3a;
 
   background-color: #333;
-}
-
-/* Simplebar customization */
-.simplebar-scrollbar {
-  width: 6px !important;
-}
-.simplebar-scrollbar:before {
-  border: 3px solid var(--color-red) !important;
-  background: var(--color-red) !important;
-  border-radius: 10px !important;
-  width: 0 !important;
-}
-.simplebar-scrollbar.simplebar-visible:before {
-  opacity: 1 !important;
 }
 
 /* Pace js progressbar CSS */

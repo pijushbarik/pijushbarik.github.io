@@ -1,5 +1,5 @@
 .nav {
-  background-color: var(--color-white);
+  background-color: var(--header-color);
 
   ul {
     display: flex;
@@ -80,7 +80,7 @@
       &.isExpanded {
         overflow: hidden;
         max-height: 50rem;
-        transition-duration: 0.75s;
+        transition-duration: 1.5s;
         transition-timing-function: cubic-bezier(0.25, 1, 0.5, 1);
       }
 
