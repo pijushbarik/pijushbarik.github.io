@@ -1,15 +1,16 @@
 import React from "react"
 import PropTypes from "prop-types"
-import CustomScroll from "simplebar-react"
 
 import Container from "../Container"
 
+import styles from "./styles.module.scss"
+
 const WithCustomScrollbar = props => (
-  <CustomScroll className="h-full w-full">
+  <div className={`h-full w-full overflow-auto ${styles.customScroll}`}>
     <Container topPadded={props.topPadded} sidePadded={props.sidePadded}>
       {props.children}
     </Container>
-  </CustomScroll>
+  </div>
 )
 
 WithCustomScrollbar.propTypes = {
