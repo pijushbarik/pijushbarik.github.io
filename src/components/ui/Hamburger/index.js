@@ -9,7 +9,7 @@ const Hamburger = ({ onClick, className }) => (
     onClick={onClick}
     className={`h-12 w-12 ${className ? className : ""}`}
     src={MenuIcon}
-    alt=""
+    alt="menu"
   />
 )
 

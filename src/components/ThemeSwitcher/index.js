@@ -5,16 +5,16 @@ import styles from "./style.module.scss"
 
 const SliderSwitch = ({ className, style, onClick, isDarkMode }) => (
   <div className={className || ""} style={style}>
-    <label id="switch" className={styles.switch}>
+    <label htmlFor="theme-slider-btn" id="switch" className={styles.switch}>
       <input
         onChange={onClick}
         checked={isDarkMode}
         type="checkbox"
         id="theme-slider-btn"
+        name="theme-slider-btn"
       />
       <span className={[styles.slider, styles.round].join(" ")}></span>
     </label>
-    <label for="theme-slider-btn"></label>
   </div>
 )
 
