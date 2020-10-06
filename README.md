@@ -7,6 +7,8 @@
   pijushbarik.ml
 </h1>
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/2c1ecc46-f66c-44d8-a460-1eb583fa23d1/deploy-status)](https://app.netlify.com/sites/pijushbarik/deploys)
+
 This repo contains the codebase for my personal website <a href="https://pijushbarik.ml">https://pijushbarik.ml</a>. The built code is served from `Netlify` from the `prod` branch. Any new features or changes will be merged and tested on `dev` branch before merging to `prod`.
 
 ## 🚀 Quick start
