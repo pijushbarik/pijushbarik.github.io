@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Pijush Barik | Web Developer`,
-    description: `Portfolio and blog website project of Pijush (httsps://pijushbarik.ml)`,
+    description: `Portfolio and blog website project of Pijush (https://pijushbarik.ml)`,
     author: `@pijushbarik`,
     siteUrl: `https://pijushbarik.ml`,
     menuLinks: [
@@ -9,11 +9,10 @@ module.exports = {
         name: "home",
         link: "/",
       },
-      // turn off blog for now
-      // {
-      //   name: "blog",
-      //   link: "/blog",
-      // },
+      {
+        name: "blog",
+        link: "/blog/",
+      },
       {
         name: "about",
         link: "/about/",

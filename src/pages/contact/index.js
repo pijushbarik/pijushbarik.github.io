@@ -55,7 +55,7 @@ const ContactPage = () => {
       <WithCustomScrollbar sidePadded topPadded>
         <h1
           className="text-7xl block w-max-content mx-auto sm:mx-0 \
-          capitalize font-playfair font-bold left-outline mb-8"
+          capitalize font-david-libre font-bold left-outline mb-8"
         >
           <span>contact</span>
         </h1>

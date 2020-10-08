@@ -1,0 +1,13 @@
+.title {
+  background-repeat: repeat-x;
+  
+  &Underline {
+    background-image: linear-gradient(
+      to right,
+      var(--color-primary),
+      var(--color-red)
+    );
+    background-position: 0 0.9em;
+    background-size: auto 6px;
+  }
+}

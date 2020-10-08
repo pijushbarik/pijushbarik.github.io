@@ -34,7 +34,7 @@ const AboutPage = () => {
           <div className="w-full mb-8">
             <h1
               className="text-7xl block w-max-content mx-auto sm:mx-0 \
-              capitalize font-playfair font-bold left-outline"
+              capitalize font-david-libre font-bold left-outline"
             >
               <span>about me</span>
             </h1>
@@ -112,7 +112,7 @@ const AboutPage = () => {
             className="w-full sm:w-7/12 md:w-6/12 lg:w-5/12 text-3xl mt-5 \
             sm:mt-0 ml-0 sm:ml-5 leading-snug"
           >
-            <h2 className="text-6xl font-playfair">
+            <h2 className="text-6xl font-david-libre">
               Hi there. I am Pijush Barik. I am a web developer.
             </h2>
 
@@ -162,19 +162,19 @@ const AboutPage = () => {
               I never give up. I never stop learning &amp; improving myself.
             </p>
 
-            <p className="mt-12 font-playfair italic">
+            <p className="mt-12 font-david-libre italic">
               Living, learning &amp; levelling up everyday a little bit.
             </p>
           </div>
           <div className="w-full flex flex-col column justify-center items-center mt-16">
             <div className="w-full mb-5">
-              <p className="text-5xl capitalize font-playfair text-center">
+              <p className="text-5xl capitalize font-david-libre text-center">
                 my skills
               </p>
             </div>
             <div className="max-w-6xl w-full sm:flex shadow-lg">
               <div
-                className="w-full sm:w-1/4 px-5 py-12 sm:p-5 font-playfair text-4xl flex \
+                className="w-full sm:w-1/4 px-5 py-12 sm:p-5 font-david-libre text-4xl flex \
                 justify-center items-center break-words  border border-red-500 border-solid \
                 rounded-t-lg sm:rounded-t-none sm:rounded-l-lg"
               >
@@ -205,7 +205,7 @@ const AboutPage = () => {
 
             <div className="max-w-6xl w-full sm:flex sm:flex-row-reverse mt-12 mb-12 shadow-lg">
               <div
-                className="w-full sm:w-1/4 px-5 py-12 sm:p-5 font-playfair text-4xl flex \
+                className="w-full sm:w-1/4 px-5 py-12 sm:p-5 font-david-libre text-4xl flex \
                 justify-center items-center break-words  border border-red-500 \
                 sm:border-yellow-500 border-solid rounded-t-lg sm:rounded-t-none sm:rounded-r-lg"
               >

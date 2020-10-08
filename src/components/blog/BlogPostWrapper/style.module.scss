@@ -1,0 +1,21 @@
+.blogPostWrapper {
+  a {
+    text-decoration: underline;
+    color: var(--color-primary);
+  }
+
+  section:not(:last-child) {
+    margin-bottom: 3rem;
+    text-align: justify;
+  }
+
+  section {
+    h3 {
+      margin-bottom: 1.5rem;
+    }
+
+    p, h3 {
+      line-height: 1.3;
+    }
+  }
+}
