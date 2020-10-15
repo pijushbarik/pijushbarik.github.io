@@ -5,6 +5,8 @@ import Layout from "../../../components/Layout"
 import WithCustomScrollbar from "../../../components/WithCustomScrollbar"
 import BlogTitle from "../../../components/blog/BlogTitle"
 import BlogPostWrapper from "../../../components/blog/BlogPostWrapper"
+import BlogFooter from "../../../components/blog/BlogFooter"
+import BlogHeader from "../../../components/blog/BlogHeader"
 
 const BlogPost = () => {
   const data = useStaticQuery(graphql`
@@ -19,27 +21,28 @@ const BlogPost = () => {
     }
   `)
 
+  const timestamp = 1602305400000
+
   return (
     <Layout>
       <WithCustomScrollbar sidePadded topPadded>
         <BlogPostWrapper>
-          <header>
-            <BlogTitle underlined title="Hello World!" />
-            <Img
-              className="w-full mx-auto"
-              fluid={data.header.childImageSharp.fluid}
-            />
-            <p className="text-center text-xl my-5 font-quicksand">
-              Photo by{" "}
-              <a href="https://unsplash.com/@miriamemiles?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">
-                Miriam Miles
-              </a>{" "}
-              on{" "}
-              <a href="https://unsplash.com/s/photos/hello-world?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">
-                Unsplash
-              </a>
-            </p>
-          </header>
+          <BlogHeader
+            title="Hello World!"
+            imgFluid={data.header.childImageSharp.fluid}
+            copyright={
+              <p className="text-center text-xl mt-5 font-quicksand">
+                Photo by{" "}
+                <a href="https://unsplash.com/@miriamemiles?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">
+                  Miriam Miles
+                </a>{" "}
+                on{" "}
+                <a href="https://unsplash.com/s/photos/hello-world?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">
+                  Unsplash
+                </a>
+              </p>
+            }
+          />
 
           <section>
             <p>
@@ -83,12 +86,12 @@ const BlogPost = () => {
               facilisis eleifend. Donec scelerisque condimentum orci, sed mattis
               tellus aliquet nec. In ut odio egestas, vulputate ante nec,
               egestas leo. Ut id elit sit amet libero ullamcorper blandit.{" "}
-              <a href="https://google.com">Click here!</a>
-              Nullam id eros vel mauris venenatis commodo in sit amet mi.
-              Praesent placerat ullamcorper rutrum. Vestibulum ante ipsum primis
-              in faucibus orci luctus et ultrices posuere cubilia curae; Mauris
-              vulputate auctor augue, vitae imperdiet eros. In eu lobortis urna,
-              id vestibulum dui.
+              <a href="https://google.com">Click here!</a>&nbsp; Nullam id eros
+              vel mauris venenatis commodo in sit amet mi. Praesent placerat
+              ullamcorper rutrum. Vestibulum ante ipsum primis in faucibus orci
+              luctus et ultrices posuere cubilia curae; Mauris vulputate auctor
+              augue, vitae imperdiet eros. In eu lobortis urna, id vestibulum
+              dui.
             </p>
           </section>
 
@@ -123,6 +126,11 @@ const BlogPost = () => {
               ac lobortis purus sem eget tellus. Aliquam a porttitor risus.
             </p>
           </section>
+
+          <BlogFooter
+            timestamp={timestamp}
+            tags={["blog", "hello-world", "first-blog", "introduction-to-blog"]}
+          />
         </BlogPostWrapper>
       </WithCustomScrollbar>
     </Layout>
