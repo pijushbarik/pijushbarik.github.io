@@ -1,9 +1,9 @@
 .header {
-  background-color: var(--header-color);
+  background-color: var(--background-color);
   z-index: 999;
-  width: calc(100vw - 2rem);
+  width: 100vw;
   position: fixed;
-  top: 1.5rem;
+  top: 0;
   left: 50%;
   transform: translateX(-50%);
   min-height: 6rem;

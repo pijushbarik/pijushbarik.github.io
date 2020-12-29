@@ -3,7 +3,7 @@ $fill-anim-duration: 0.5s;
 $fill-anim-delay: 2s;
 
 .home {
-  background-color: #212121;
+  background-color: var(--background-color);
 }
 
 .container {
@@ -82,7 +82,7 @@ $fill-anim-delay: 2s;
 }
 
 .footerText {
-  color: var(--color-primary);
+  color: var(--color-black);
 }
 
 @keyframes stroke-animation {
