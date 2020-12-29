@@ -23,8 +23,9 @@ const Header = ({
   return (
     <header
       className={`px-5 flex items-start sm:items-center justify-center 
-      sm:justify-start flex-col sm:flex-row shadow-md rounded-lg ${className ||
-        ""} ${styles.header}`}
+      sm:justify-start flex-col sm:flex-row shadow-md ${className || ""} ${
+        styles.header
+      }`}
     >
       <div className="flex items-center flex-shrink-0 mr-2 h-24">
         <Branding />

@@ -7,12 +7,14 @@ import Helmet from "react-helmet"
 import "../../css/global.css"
 import "./custom.global.scss"
 
-import ThemeContext from "../../context/ThemeContext"
 import Header from "../Header"
+import useDarkMode from "../../hooks/useDarkMode"
 
 import styles from "./style.module.scss"
 
 const Layout = ({ children }) => {
+  const [isDarkMode, toggleDarkMode] = useDarkMode()
+
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -28,27 +30,19 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <ThemeContext.Consumer>
-      {theme => (
-        <div
-          className={`min-h-screen relative ${
-            theme.isDarkMode ? "dark" : "light"
-          }`}
-        >
-          <Helmet>
-            <script src="/js/pace.min.js"></script>
-          </Helmet>
-          <Header
-            menuLinks={data.site.siteMetadata.menuLinks}
-            themeSwitcherOnClick={theme.toggleDark}
-            themeSwitcherMode={theme.isDarkMode}
-          />
-          <main className={`h-screen w-screen flex ${styles.main}`}>
-            {children}
-          </main>
-        </div>
-      )}
-    </ThemeContext.Consumer>
+    <div className="min-h-screen relative">
+      <Helmet>
+        <script src="/js/pace.min.js"></script>
+      </Helmet>
+      <Header
+        menuLinks={data.site.siteMetadata.menuLinks}
+        themeSwitcherOnClick={() => toggleDarkMode(!isDarkMode)}
+        themeSwitcherMode={isDarkMode}
+      />
+      <main className={`h-screen w-screen flex ${styles.main}`}>
+        {children}
+      </main>
+    </div>
   )
 }
 
