@@ -6,9 +6,9 @@ import SEO from "../../components/SEO"
 import WithCustomScrollbar from "../../components/WithCustomScrollbar"
 import styles from "./styles.module.scss"
 
-const encode = data =>
+const encode = (data) =>
   Object.keys(data)
-    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .map((key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
     .join("&")
 
 const ContactPage = () => {
@@ -19,11 +19,11 @@ const ContactPage = () => {
     "bot-field": "",
   })
 
-  const handleChange = e => {
+  const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value })
   }
 
-  const handleSubmit = e => {
+  const handleSubmit = (e) => {
     e.preventDefault()
 
     const form = e.target
@@ -51,7 +51,11 @@ const ContactPage = () => {
 
   return (
     <Layout>
-      <SEO title="Contact" />
+      <SEO
+        title="Contact"
+        description="Thanks for taking the time to reach out. What can I do for you? Leave a message."
+        keywords={["Contact"]}
+      />
       <WithCustomScrollbar sidePadded topPadded>
         <h1
           className="text-7xl block w-max-content mx-auto sm:mx-0 \

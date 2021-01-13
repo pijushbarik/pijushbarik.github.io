@@ -1,9 +1,10 @@
 module.exports = {
   siteMetadata: {
     title: `Pijush Barik | Web Developer`,
-    description: `Portfolio and blog website project of Pijush (httsps://pijushbarik.ml)`,
+    description: `Full Stack Web Developer. Passionate on creating performant and beautiful Web Applications. Working on React, React Native, Next.js, Node.js, Gatsby, GraphQL, CSS.`,
     author: `@pijushbarik`,
-    siteUrl: `https://pijushbarik.ml`,
+    keywords: `Web Developer, Full Stack Web Developer, Pijush Barik, pijushbarik, pijushbarik.com, Reactjs developer, Nextjs developer, Portfolio Website`,
+    siteUrl: `https://pijushbarik.com`,
     menuLinks: [
       {
         name: "home",
