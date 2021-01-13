@@ -10,7 +10,7 @@ import styles from "./style.module.scss"
 const IndexPage = () => {
   return (
     <Layout>
-      <SEO title="Home" />
+      <SEO title="Home" description="Hi there. Welcome to my website." />
       <div className={`h-screen w-screen relative ${styles.home}`}>
         <div
           className="absolute top-0 left-0 h-screen w-screen flex \
@@ -20,7 +20,7 @@ const IndexPage = () => {
             <HiThere className={`h-auto ${styles.hiThere}`} />
             <IAmPijush className={`mt-6 h-auto ${styles.iAmPijush}`} />
           </div>
-          <footer className="inline-block mt-auto w-full p-3 flex flex-col items-center justify-center">
+          <footer className="mt-auto w-full p-3 flex flex-col items-center justify-center">
             <p className={`text-xl text-center ${styles.footerText}`}>
               Handcrafted with{" "}
               <span style={{ color: "var(--color-red)" }}>&hearts;</span> by me.

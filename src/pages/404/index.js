@@ -7,7 +7,10 @@ import styles from "./style.module.scss"
 
 const NotFoundPage = () => (
   <Layout>
-    <SEO title="404: Not found" />
+    <SEO
+      title="404 Not found"
+      meta={[{ name: "robots", content: "noindex" }]}
+    />
     <div
       className={`h-screen w-screen flex flex-col justify-center 
       items-center text-center ${styles.container}`}

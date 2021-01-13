@@ -2,9 +2,12 @@ import React from "react"
 import { Link } from "gatsby"
 
 import Layout from "../../../components/Layout"
+import SEO from "../../../components/SEO"
 
 const FormSuccessPage = () => (
   <Layout>
+    <SEO title="Success" meta={[{ name: "robots", content: "noindex" }]} />
+
     <div className="flex justify-center items-center h-screen w-screen">
       <div
         className="w-3/4 max-w-5xl px-6 py-24 rounded-lg shadow-lg text-center"
