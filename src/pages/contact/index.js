@@ -51,11 +51,7 @@ const ContactPage = () => {
 
   return (
     <Layout>
-      <SEO
-        title="Contact"
-        description="Thanks for taking the time to reach out. What can I do for you? Leave a message."
-        keywords={["Contact"]}
-      />
+      <SEO title="Contact" keywords={["Contact"]} />
       <WithCustomScrollbar sidePadded topPadded>
         <h1
           className="text-7xl block w-max-content mx-auto sm:mx-0 \
