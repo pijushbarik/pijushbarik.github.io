@@ -50,11 +50,7 @@ const ProjectPage = () => {
 
   return (
     <Layout>
-      <SEO
-        title="Projects"
-        description="Some of my live projects in production"
-        keywords={["Projects", "Websites"]}
-      />
+      <SEO title="Projects" keywords={["Projects", "Websites"]} />
       <WithCustomScrollbar sidePadded topPadded>
         <h1
           className="text-7xl block w-max-content mx-auto sm:mx-0 \

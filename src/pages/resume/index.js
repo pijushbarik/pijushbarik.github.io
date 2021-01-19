@@ -15,11 +15,7 @@ const ResumePage = () => {
 
   return (
     <Layout>
-      <SEO
-        title="Resume"
-        description="View or download my latest Resume"
-        keywords={["Resume", "CV", "Portfolio"]}
-      />
+      <SEO title="Resume" keywords={["Resume", "CV", "Portfolio"]} />
       <div className={styles.container}>
         <Backdrop visible={loading}>
           <Spinner visible={loading} />

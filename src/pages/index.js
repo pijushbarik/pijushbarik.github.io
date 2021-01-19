@@ -10,7 +10,7 @@ import styles from "./style.module.scss"
 const IndexPage = () => {
   return (
     <Layout>
-      <SEO title="Home" description="Hi there. Welcome to my website." />
+      <SEO title="Home" />
       <div className={`h-screen w-screen relative ${styles.home}`}>
         <div
           className="absolute top-0 left-0 h-screen w-screen flex \

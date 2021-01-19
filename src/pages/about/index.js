@@ -28,11 +28,7 @@ const AboutPage = () => {
 
   return (
     <Layout>
-      <SEO
-        title="About"
-        description="Hi there. I am Pijush Barik. I am a web developer."
-        keywords={["About", "About me"]}
-      />
+      <SEO title="About" keywords={["About", "About me"]} />
       <WithCustomScrollbar topPadded sidePadded>
         <div className="w-full flex flex-wrap">
           <div className="w-full mb-8">
