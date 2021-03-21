@@ -1,0 +1,12 @@
+.linkBtn {
+  @apply p-2 rounded-sm bg-transparent hover:bg-ternary30 transition-all duration-200;
+
+  &.active {
+    @apply bg-ternary30;
+  }
+}
+
+.footer {
+  background-color: #383838;
+  @apply mt-20 py-28;
+}

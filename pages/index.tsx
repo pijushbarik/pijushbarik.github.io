@@ -1,58 +1,36 @@
-import Container from '../components/container'
-import MoreStories from '../components/more-stories'
-import HeroPost from '../components/hero-post'
-import Intro from '../components/intro'
-import Layout from '../components/layout'
-import { getAllPosts } from '../lib/api'
-import Head from 'next/head'
-import { CMS_NAME } from '../lib/constants'
-import Post from '../types/post'
+import Container from "@components/Container";
+import { getAllPosts } from "@lib/api";
+import Head from "next/head";
+import HiThere from "@components/SVGs/HiThere";
+import IAmPijush from "@components/SVGs/IAmPijush";
+import styles from "./styles.module.scss";
+import { NextPage } from "next";
 
-type Props = {
-  allPosts: Post[]
-}
+type PageProps = {};
 
-const Index = ({ allPosts }: Props) => {
-  const heroPost = allPosts[0]
-  const morePosts = allPosts.slice(1)
+const Index: NextPage<PageProps> = props => {
   return (
     <>
-      <Layout>
-        <Head>
-          <title>Next.js Blog Example with {CMS_NAME}</title>
-        </Head>
-        <Container>
-          <Intro />
-          {heroPost && (
-            <HeroPost
-              title={heroPost.title}
-              coverImage={heroPost.coverImage}
-              date={heroPost.date}
-              author={heroPost.author}
-              slug={heroPost.slug}
-              excerpt={heroPost.excerpt}
-            />
-          )}
-          {morePosts.length > 0 && <MoreStories posts={morePosts} />}
+      <Head>
+        <title>Pijush Barik</title>
+      </Head>
+      <Container>
+        <Container fluid>
+          <div className="my-24">
+            <HiThere className={styles.hiThere} />
+            <IAmPijush className={styles.iAmPijush} />
+            <p className={styles.subtitle}>
+              Helping people to make the world better through quality softwares.
+            </p>
+          </div>
+
+          <div>
+            <span className="font-serif text-5xl">Recent articles</span>
+          </div>
         </Container>
-      </Layout>
+      </Container>
     </>
-  )
-}
+  );
+};
 
-export default Index
-
-export const getStaticProps = async () => {
-  const allPosts = getAllPosts([
-    'title',
-    'date',
-    'slug',
-    'author',
-    'coverImage',
-    'excerpt',
-  ])
-
-  return {
-    props: { allPosts },
-  }
-}
+export default Index;

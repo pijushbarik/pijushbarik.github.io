@@ -1,35 +1,55 @@
-# A statically generated blog example using Next.js, Markdown, and TypeScript
+<p align="center">
+  <a href="https://pijushbarik.com">
+    <img alt="Brace Yourself" src="./src/images/logo.svg" width="60" />
+  </a>
+</p>
+<h1 align="center">
+  pijushbarik.com
+</h1>
 
-This is the existing [blog-starter](https://github.com/vercel/next.js/tree/canary/examples/blog-starter) plus TypeScript.
+[![Netlify Status](https://api.netlify.com/api/v1/badges/2c1ecc46-f66c-44d8-a460-1eb583fa23d1/deploy-status)](https://app.netlify.com/sites/pijushbarik/deploys)
 
-This example showcases Next.js's [Static Generation](https://nextjs.org/docs/basic-features/pages) feature using Markdown files as the data source.
+This repo contains the codebase for my personal website <a href="https://pijushbarik.com">https://pijushbarik.com</a>. The built code is served from `Netlify` from the `prod` branch. Any new features or changes will be merged and tested on `dev` branch before merging to `prod`.
 
-The blog posts are stored in `/_posts` as Markdown files with front matter support. Adding a new Markdown file in there will create a new blog post.
+## 🚀 Quick start
 
-To create the blog posts we use [`remark`](https://github.com/remarkjs/remark) and [`remark-html`](https://github.com/remarkjs/remark-html) to convert the Markdown files into an HTML string, and then send it down as a prop to the page. The metadata of every post is handled by [`gray-matter`](https://github.com/jonschlinkert/gray-matter) and also sent in props to the page.
+1.  **Start developing**
 
-## How to use
+    ```shell
+    npm run develop
+    # or
+    npm start
+    ```
 
-## Deploy your own
+    Webpack will start with hot reloading in `http://localhost:8000`
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example):
+<br />
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/blog-starter-typescript&project-name=blog-starter-typescript&repository-name=blog-starter-typescript)
+2.  **Make a production build**
 
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init) or [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) to bootstrap the example:
+    ```shell
+    npm run build
+    ```
 
-```bash
-npx create-next-app --example blog-starter-typescript blog-starter-typescript-app
-# or
-yarn create next-app --example blog-starter-typescript blog-starter-typescript-app
-```
+    A production build will be created in `public` directory
 
-Your blog should be up and running on [http://localhost:3000](http://localhost:3000)! If it doesn't work, post on [GitHub discussions](https://github.com/vercel/next.js/discussions).
+    <br />
 
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+3.  **Other `NPM` commands**
 
-# Notes
+    ```shell
+    # to clean the cache and build directory
+    npm run clean
 
-This blog-starter-typescript uses [Tailwind CSS](https://tailwindcss.com). To control the generated stylesheet's filesize, this example uses Tailwind CSS' v2.0 [`purge` option](https://tailwindcss.com/docs/controlling-file-size/#removing-unused-css) to remove unused CSS.
+    # to format the codebase with Prettier
+    npm run format
 
-[Tailwind CSS v2.0 no longer supports Node.js 8 or 10](https://tailwindcss.com/docs/upgrading-to-v2#upgrade-to-node-js-12-13-or-higher). To build your CSS you'll need to ensure you are running Node.js 12.13.0 or higher in both your local and CI environments.
+    # to serve a compiled production build
+    npm run serve
+    ```
+
+## 💡 Future plans
+
+- Add blog to the website
+
+<br />
