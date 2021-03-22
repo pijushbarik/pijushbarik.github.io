@@ -79,7 +79,7 @@ $color-secondary: #feaa00;
 }
 
 .subtitle {
-  @apply mt-6 text-3xl font-serif opacity-0;
+  @apply mt-6 text-3xl font-mono opacity-0 max-w-2xl;
   animation: name-fill-animation ($fill-anim-duration + 0.5s) forwards ease-out
     ($fill-anim-delay + 0.5s + 0.5s);
 }

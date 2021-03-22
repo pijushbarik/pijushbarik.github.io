@@ -33,46 +33,48 @@ const Header: React.FC<{}> = () => {
           </a>
         </Link>
 
-        <ul className="flex space-x-2 text-ternary font-mono tracking-tighter">
-          <li>
-            <Link href="/blog">
-              <a
-                className={classNames(
-                  styles.linkBtn,
-                  activeMenuItem === "blog" && styles.active
-                )}
-              >
-                Blog
-              </a>
-            </Link>
-          </li>
+        <nav>
+          <ul className="flex space-x-2 text-ternary font-mono tracking-tighter">
+            <li>
+              <Link href="/blog">
+                <a
+                  className={classNames(
+                    styles.linkBtn,
+                    activeMenuItem === "blog" && styles.active
+                  )}
+                >
+                  Blog
+                </a>
+              </Link>
+            </li>
 
-          <li>
-            <Link href="/projects">
-              <a
-                className={classNames(
-                  styles.linkBtn,
-                  activeMenuItem === "projects" && styles.active
-                )}
-              >
-                Projects
-              </a>
-            </Link>
-          </li>
+            <li>
+              <Link href="/projects">
+                <a
+                  className={classNames(
+                    styles.linkBtn,
+                    activeMenuItem === "projects" && styles.active
+                  )}
+                >
+                  Projects
+                </a>
+              </Link>
+            </li>
 
-          <li>
-            <Link href="/about">
-              <a
-                className={classNames(
-                  styles.linkBtn,
-                  activeMenuItem === "about" && styles.active
-                )}
-              >
-                About Me
-              </a>
-            </Link>
-          </li>
-        </ul>
+            <li>
+              <Link href="/about">
+                <a
+                  className={classNames(
+                    styles.linkBtn,
+                    activeMenuItem === "about" && styles.active
+                  )}
+                >
+                  About Me
+                </a>
+              </Link>
+            </li>
+          </ul>
+        </nav>
       </Container>
     </header>
   );

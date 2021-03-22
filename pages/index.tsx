@@ -1,5 +1,4 @@
 import Container from "@components/Container";
-import { getAllPosts } from "@lib/api";
 import Head from "next/head";
 import HiThere from "@components/SVGs/HiThere";
 import IAmPijush from "@components/SVGs/IAmPijush";
@@ -20,7 +19,7 @@ const Index: NextPage<PageProps> = props => {
             <HiThere className={styles.hiThere} />
             <IAmPijush className={styles.iAmPijush} />
             <p className={styles.subtitle}>
-              Helping people to make the world better through quality softwares.
+              I help people make the world better through quality softwares.
             </p>
           </div>
 
