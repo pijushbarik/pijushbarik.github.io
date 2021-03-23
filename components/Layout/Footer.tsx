@@ -10,7 +10,7 @@ const Footer: React.FC<{}> = () => {
           <ContactCard />
         </div>
         <div className="w-1/3">
-          <ul className="flex space-x-6 font-mono">
+          <ul className="flex flex-wrap space-x-6 font-mono">
             <li>
               <a
                 className="text-secondary hover:text-primary transition-colors"

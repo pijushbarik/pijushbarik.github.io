@@ -1,7 +1,8 @@
 .profileImg {
+  width: 100%;
   max-width: 15rem;
 
-  @media only screen and (min-width: 640px) {
+  @media only screen and (min-width: 768px) {
     max-width: 20rem;
   }
 }
@@ -9,7 +10,7 @@
 .socialIcons {
   max-width: 100%;
 
-  @media only screen and (min-width: 640px) {
+  @media only screen and (min-width: 768px) {
     max-width: 20rem;
   }
 
@@ -17,5 +18,13 @@
     a:hover img {
       transform: rotate(45deg);
     }
+  }
+}
+
+.tagList {
+  @apply text-2xl flex flex-wrap font-mono;
+
+  li {
+    @apply text-ternary bg-ternary30 p-2 rounded-sm mr-4 mb-4 tracking-tight;
   }
 }
