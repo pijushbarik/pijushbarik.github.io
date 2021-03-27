@@ -9,7 +9,7 @@ const Container: React.FC<ContainerProps> = props => {
   return (
     <div
       className={classNames(
-        props.fluid ? "w-11/12 max-w-screen-xl mx-auto" : "w-full",
+        props.fluid ? "w-11/12 max-w-screen-lg mx-auto" : "w-full",
         props.className
       )}
     >

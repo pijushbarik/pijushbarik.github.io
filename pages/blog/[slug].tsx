@@ -1,23 +1,28 @@
 import { NextPage } from "next";
-import { useRouter } from "next/router";
 import Container from "@components/Container";
 import markdownToHtml from "@helpers/markdownToHtml";
 import axios from "@lib/axios";
 import IArticle from "@lib/types/article";
+import { ArticleBody } from "@components/Article";
+import Head from "next/head";
+import styles from "./styles.module.scss";
 
 type PageProps = {
   article: IArticle;
 };
 
 const Article: NextPage<PageProps> = props => {
-  const router = useRouter();
-
   return (
     <>
-      <Container fluid className="mt-10">
-        <h1 className="text-7xl font-serif font-bold mb-8">Blog title.</h1>
+      <Head>
+        <script src="/assets/prism.js" defer />
+        <link rel="stylesheet" href="/assets/prism.css" />
+      </Head>
 
-        <p>{JSON.stringify(props.article)}</p>
+      <Container fluid className="mt-10">
+        <article className={styles.article}>
+          <ArticleBody content={props.article.content} />
+        </article>
       </Container>
     </>
   );

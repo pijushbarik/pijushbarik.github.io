@@ -1,0 +1,11 @@
+.article {
+  @apply prose prose-xl leading-7;
+
+  table {
+    @apply block overflow-x-auto whitespace-nowrap;
+
+    @media only screen and (min-width: 768px) {
+      @apply table whitespace-normal overflow-x-auto;
+    }
+  }
+}
