@@ -12,9 +12,15 @@
 }
 
 .navigation {
-  $btn-dimension: 5rem;
-  $btn-offset-bottom: 4rem;
-  $btn-offset-right: 3rem;
+  --btn-dimension: 4rem;
+  --btn-offset-bottom: 3rem;
+  --btn-offset-right: 2rem;
+
+  @media screen and (min-width: 640px) {
+    --btn-dimension: 5rem;
+    --btn-offset-bottom: 4rem;
+    --btn-offset-right: 3rem;
+  }
 
   &__checkbox {
     @apply hidden;
@@ -22,50 +28,35 @@
 
   &__button {
     background-color: #494949;
-    height: $btn-dimension;
-    width: $btn-dimension;
-    border-radius: 50%;
-    position: fixed;
-    bottom: $btn-offset-bottom;
-    right: $btn-offset-right;
+    height: var(--btn-dimension);
+    width: var(--btn-dimension);
+    bottom: var(--btn-offset-bottom);
+    right: var(--btn-offset-right);
     z-index: 102;
     box-shadow: 0 1.2rem 2.5rem 2px rgba(#000, 0.5);
-    text-align: center;
-    cursor: pointer;
+    @apply fixed cursor-pointer text-center rounded-full;
   }
 
   &__background {
-    height: $btn-dimension - 1rem;
-    width: $btn-dimension - 1rem;
-    border-radius: 50%;
-    position: fixed;
-    bottom: $btn-offset-bottom + 0.5rem;
-    right: $btn-offset-right + 0.5rem;
-    background-color: #f4544e;
-    background-image: radial-gradient(#ff9591, #f7342d);
+    height: calc(var(--btn-dimension) - 1rem);
+    width: calc(var(--btn-dimension) - 1rem);
+    bottom: calc(var(--btn-offset-bottom) + 0.5rem);
+    right: calc(var(--btn-offset-right) + 0.5rem);
+    background-color: #7b2b28;
     z-index: 100;
     transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+    @apply rounded-full fixed;
   }
 
   &__nav {
-    height: 100vh;
-    width: 0;
-    position: fixed;
-    top: 0;
-    left: 0;
     z-index: -99; // 101 on checkbox checked
-    opacity: 0;
     transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    @apply h-screen w-0 fixed top-0 left-0 opacity-0;
   }
 
   &__list {
-    position: absolute;
-    top: 50%;
-    left: 50%;
     transform: translate(-50%, -50%);
-    list-style: none;
-    text-align: center;
-    width: 100%;
+    @apply absolute top-1/2 left-1/2 text-center list-none w-full;
   }
 
   &__item {
@@ -75,33 +66,32 @@
   &__link {
     &:link,
     &:visited {
-      display: inline-block;
-      font-size: 3rem;
+      font-size: 2.2rem;
       font-weight: 300;
-      padding: 1rem 2rem;
+      padding: 1rem 1.5rem;
       text-decoration: none;
-      text-transform: uppercase;
-      color: #ffffff;
       background-image: linear-gradient(
-        120deg,
+        110deg,
         transparent 0%,
         transparent 50%,
         #ffffff 50%
       );
       background-size: 225%;
       transition: all 0.4s;
+      @apply inline-block uppercase text-white font-mono;
 
       span {
-        display: inline-block;
+        @apply inline-block;
         margin-right: 1.5rem;
       }
     }
 
+    &__active,
     &:hover,
     &:active {
       background-position: 100%;
-      color: #f4544e;
       transform: translateX(1rem);
+      color: #f4544e !important;
     }
   }
 
@@ -111,18 +101,25 @@
 
   &__checkbox:checked ~ &__nav {
     z-index: 101;
-    opacity: 1;
-    width: 100vw;
+    @apply opacity-100 w-screen;
   }
 
   &__icon {
     position: relative;
-    margin-top: 2.5rem;
+    margin-top: 50%;
+
+    & {
+      width: 60%;
+    }
+
+    &::before,
+    &::after {
+      width: 100%;
+    }
 
     &,
     &::before,
     &::after {
-      width: 2.5rem;
       height: 2px;
       background-color: #fff;
       display: inline-block;
@@ -154,7 +151,7 @@
   }
 
   &__checkbox:checked + &__button &__icon {
-    background-color: transparent;
+    @apply bg-transparent;
   }
 
   &__checkbox:checked + &__button &__icon::before {

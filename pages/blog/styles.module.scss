@@ -1,6 +1,10 @@
 .article {
   @apply prose prose-xl leading-7;
 
+  pre code {
+    @apply font-mono;
+  }
+
   table {
     @apply block overflow-x-auto whitespace-nowrap;
 

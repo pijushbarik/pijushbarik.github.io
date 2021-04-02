@@ -4,8 +4,8 @@ module.exports = {
   theme: {
     fontFamily: {
       serif: ["Playfair Display", "serif"],
-      sans: ["Roboto", "sans-serif"],
-      mono: ["B612 Mono", "monospace"],
+      sans: ["Inter", "sans-serif"],
+      mono: ["Fira Code", "monospace"],
     },
     extend: {
       colors: {
@@ -51,6 +51,9 @@ module.exports = {
             strong: {
               color: theme("colors.secondary"),
             },
+            code: {
+              fontFamily: '"Fira Code"',
+            },
           },
         },
       }),
@@ -62,5 +65,8 @@ module.exports = {
       backgroundColor: ["active"],
     },
   },
-  plugins: [require("@tailwindcss/typography")],
+  plugins: [
+    require("@tailwindcss/typography"),
+    require("@tailwindcss/line-clamp"),
+  ],
 };

@@ -21,4 +21,5 @@ body {
   background-attachment: fixed;
   background-size: cover;
   color: #fff;
+  min-height: 100vh;
 }

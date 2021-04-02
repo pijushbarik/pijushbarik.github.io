@@ -8,7 +8,7 @@ import useMediaQuery from "@hooks/useMediaQuery";
 
 const Header: React.FC<{}> = () => {
   const [activeMenuItem, setActiveMenuItem] = useState("");
-  const [showMenuDrawer, setShowMenuDrawer] = useState(false);
+  const [menuInputChecked, setMenuInputChecked] = useState(false);
 
   const router = useRouter();
 
@@ -47,6 +47,8 @@ const Header: React.FC<{}> = () => {
               type="checkbox"
               id="navi-toggle"
               className={styles.navigation__checkbox}
+              checked={menuInputChecked}
+              onChange={e => setMenuInputChecked(e.target.checked)}
             />
             <label htmlFor="navi-toggle" className={styles.navigation__button}>
               <span className={styles.navigation__icon}>&nbsp;</span>
@@ -55,19 +57,46 @@ const Header: React.FC<{}> = () => {
             <nav className={styles.navigation__nav}>
               <ul className={styles.navigation__list}>
                 <li className={styles.navigation__item}>
-                  <a href="#" className={styles.navigation__link}>
-                    Blog
-                  </a>
+                  <Link href="/blog">
+                    <a
+                      className={classNames(
+                        styles.navigation__link,
+                        activeMenuItem === "blog" &&
+                          styles.navigation__link__active
+                      )}
+                      onClick={() => setMenuInputChecked(false)}
+                    >
+                      Blog
+                    </a>
+                  </Link>
                 </li>
                 <li className={styles.navigation__item}>
-                  <a href="#" className={styles.navigation__link}>
-                    Projects
-                  </a>
+                  <Link href="/projects">
+                    <a
+                      className={classNames(
+                        styles.navigation__link,
+                        activeMenuItem === "projects" &&
+                          styles.navigation__link__active
+                      )}
+                      onClick={() => setMenuInputChecked(false)}
+                    >
+                      Projects
+                    </a>
+                  </Link>
                 </li>
                 <li className={styles.navigation__item}>
-                  <a href="#" className={styles.navigation__link}>
-                    About Me
-                  </a>
+                  <Link href="/about">
+                    <a
+                      className={classNames(
+                        styles.navigation__link,
+                        activeMenuItem === "about" &&
+                          styles.navigation__link__active
+                      )}
+                      onClick={() => setMenuInputChecked(false)}
+                    >
+                      About Me
+                    </a>
+                  </Link>
                 </li>
               </ul>
             </nav>

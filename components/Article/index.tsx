@@ -1,3 +1,4 @@
 import ArticleBody from "./Body";
+import ArticleCard from "./Card";
 
-export { ArticleBody };
+export { ArticleBody, ArticleCard };
