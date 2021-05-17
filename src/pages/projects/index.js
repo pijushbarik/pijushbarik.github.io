@@ -10,6 +10,13 @@ import styles from "./styles.module.scss"
 const ProjectPage = () => {
   const data = useStaticQuery(graphql`
     query {
+      wellsoul: file(relativePath: { eq: "wellsoul.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 600, maxHeight: 300) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
       pvs: file(relativePath: { eq: "proficientvision.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 600, maxHeight: 300) {
@@ -60,6 +67,15 @@ const ProjectPage = () => {
         </h1>
 
         <div className={`text-3xl leading-snug ${styles.projects}`}>
+          <ProjectCard
+            imgFluid={data.wellsoul.childImageSharp.fluid}
+            title="WellSoul"
+            description="Online Healthcare Service with Test Booking"
+            tags={["Next.js", "GraphQL", "Strapi", "AntD"]}
+            link="https://wellsoul.in"
+            className={styles.projectCard}
+          />
+
           <ProjectCard
             imgFluid={data.pvs.childImageSharp.fluid}
             title="Proficient Vision Solutions"
