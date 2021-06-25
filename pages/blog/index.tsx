@@ -3,22 +3,36 @@ import Container from "@components/Container";
 import IArticle, { IArticleCard } from "@lib/types/article";
 import axios from "@lib/axios";
 import { ArticleCard } from "@components/Article";
+import { useEffect } from "react";
+import styles from "./styles.module.scss";
+import classNames from "@helpers/classNames";
 
 type PageProps = {
   articles: IArticleCard[];
 };
 
 const Blog: NextPage<PageProps> = props => {
+  useEffect(() => {
+    const container = document.getElementById("articles-container");
+    // @ts-ignore
+    new Masonry(container, {
+      itemSelector: ".article-card",
+      columnWidth: ".article-card",
+      percentPosition: true,
+      gutter: 24,
+    });
+  }, []);
+
   return (
     <>
       <Container fluid className="mt-10">
         <h1 className="text-7xl font-serif font-bold mb-8">Blog.</h1>
 
-        <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <ul className="" id="articles-container">
           {props.articles.map(article => (
             <li
               key={article.slug}
-              className="w-full rounded-lg bg-gray-900 p-6 shadow-lg h-96"
+              className={classNames(styles.article_card, "article-card")}
             >
               <ArticleCard article={article} />
             </li>

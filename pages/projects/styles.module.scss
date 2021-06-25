@@ -1,7 +1,7 @@
 .projects {
   display: grid;
   max-width: 100%;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  @apply grid-cols-1 md:grid-cols-2 lg:grid-cols-3;
   align-items: start;
   justify-items: center;
   gap: 13rem 3rem;

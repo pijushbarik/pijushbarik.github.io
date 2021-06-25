@@ -2,6 +2,7 @@ import { AppProps } from "next/app";
 import "@styles/index.css";
 import dynamic from "next/dynamic";
 import HeaderPlaceholder from "@components/Layout/HeaderPlaceholder";
+import "rc-dropdown/assets/index.css";
 
 const Layout = dynamic(() => import("@components/Layout"), {
   ssr: false,

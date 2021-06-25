@@ -11,9 +11,7 @@ const ArticleCard: React.FC<ArticleCardProps> = props => {
     <Link href={`/blog/${props.article.slug}`}>
       <a className="h-full flex flex-col justify-between space-y-4">
         <div className="flex flex-col">
-          <h2 className="text-3xl line-clamp-4 leading-7">
-            {props.article.title}
-          </h2>
+          <h2 className="text-3xl line-clamp-4">{props.article.title}</h2>
 
           <p className="line-clamp-4 mt-4 leading-5">{props.article.excerpt}</p>
         </div>

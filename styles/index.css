@@ -23,3 +23,19 @@ body {
   color: #fff;
   min-height: 100vh;
 }
+
+.article-card {
+  @apply w-1/3;
+}
+
+@media screen and (max-width: 768px) {
+  .article-card {
+    @apply w-1/2;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .article-card {
+    @apply w-full;
+  }
+}

@@ -10,6 +10,7 @@ export default class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Inter&family=Fira+Code&display=swap"
             rel="stylesheet"
           />
+          <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
         </Head>
         <body>
           <Main />
