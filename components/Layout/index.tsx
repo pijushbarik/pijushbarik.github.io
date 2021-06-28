@@ -5,7 +5,7 @@ import Footer from "./Footer";
 
 type LayoutProps = {};
 
-const Layout: React.FC<LayoutProps> = props => {
+const Layout: React.FC<LayoutProps> = (props) => {
   return (
     <>
       <Meta />

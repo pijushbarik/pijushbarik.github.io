@@ -1,9 +1,9 @@
 import { useState } from "react";
 import styles from "./styles.module.scss";
 
-const encode = data =>
+const encode = (data) =>
   Object.keys(data)
-    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .map((key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
     .join("&");
 
 const ContactCard = () => {
@@ -14,11 +14,11 @@ const ContactCard = () => {
     "bot-field": "",
   });
 
-  const handleChange = e => {
+  const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = e => {
+  const handleSubmit = (e) => {
     e.preventDefault();
 
     const form = e.target;

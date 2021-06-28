@@ -19,7 +19,7 @@ export type IArticleCard = {
   title: string;
   excerpt: string;
   author: IAuthor;
-  published_at: string;
+  date: string;
   slug: string;
   tags: ITag[];
 };

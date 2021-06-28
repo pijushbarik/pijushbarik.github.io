@@ -12,7 +12,7 @@ type ProjectCardProps = {
   tags: string[];
 };
 
-const ProjectCard: React.FC<ProjectCardProps> = props => {
+const ProjectCard: React.FC<ProjectCardProps> = (props) => {
   return (
     <div
       className={classNames(styles.projectCard, props.className)}
@@ -40,7 +40,7 @@ const ProjectCard: React.FC<ProjectCardProps> = props => {
           {props.description}
         </p>
         <div className="mt-4">
-          {props.tags.map(tag => (
+          {props.tags.map((tag) => (
             <span className={styles.projectCard__tag} key={tag}>
               {tag}
             </span>

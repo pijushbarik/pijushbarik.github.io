@@ -14,17 +14,20 @@ const Header: React.FC<{}> = () => {
 
     let activePath = "";
 
-    if (path.includes("/about")) activePath = "about";
-    if (path.includes("/projects")) activePath = "projects";
-    if (path.includes("/blog")) activePath = "blog";
-    if (path.includes("/contact")) activePath = "contact";
+    if (path.includes("about")) activePath = "about";
+    if (path.includes("works")) activePath = "works";
+    if (path.includes("blog")) activePath = "blog";
+    // if (path.includes("contact")) activePath = "contact";
 
     setActiveMenuItem(activePath);
   }, [router]);
 
   return (
     <header>
-      <Container fluid className="flex items-center justify-between py-4">
+      <Container
+        fluid
+        className="flex items-center justify-between space-x-4 py-4"
+      >
         <Link href="/">
           <a>
             <span className="text-4xl font-mono tracking-tighter text-ternary">
@@ -42,23 +45,23 @@ const Header: React.FC<{}> = () => {
               activeKey: activeMenuItem,
             },
             {
-              name: "Projects",
-              key: "projects",
-              path: "/projects",
+              name: "Works",
+              key: "works",
+              path: "#works",
               activeKey: activeMenuItem,
             },
             {
               name: "About Me",
               key: "about",
-              path: "/about",
+              path: "#about",
               activeKey: activeMenuItem,
             },
-            {
-              name: "Contact",
-              key: "contact",
-              path: "/contact",
-              activeKey: activeMenuItem,
-            },
+            // {
+            //   name: "Contact",
+            //   key: "contact",
+            //   path: "#contact",
+            //   activeKey: activeMenuItem,
+            // },
           ]}
         />
       </Container>

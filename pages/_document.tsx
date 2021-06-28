@@ -11,6 +11,8 @@ export default class MyDocument extends Document {
             rel="stylesheet"
           />
           <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+          <script src="/assets/prism.js" defer />
+          <link rel="stylesheet" href="/assets/prism.css" />
         </Head>
         <body>
           <Main />

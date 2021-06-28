@@ -5,7 +5,7 @@ type ContainerProps = {
   className?: string;
 };
 
-const Container: React.FC<ContainerProps> = props => {
+const Container: React.FC<ContainerProps> = (props) => {
   return (
     <div
       className={classNames(

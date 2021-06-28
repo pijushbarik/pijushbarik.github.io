@@ -5,7 +5,7 @@ type HiThereSVGProps = {
   style?: React.CSSProperties;
 };
 
-const HiThereSVG: React.FC<HiThereSVGProps> = props => (
+const HiThereSVG: React.FC<HiThereSVGProps> = (props) => (
   <svg
     className={classNames(props.className)}
     style={props.style || {}}

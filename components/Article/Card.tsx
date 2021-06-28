@@ -6,7 +6,8 @@ type ArticleCardProps = {
   article: IArticleCard;
 };
 
-const ArticleCard: React.FC<ArticleCardProps> = props => {
+const ArticleCard: React.FC<ArticleCardProps> = (props) => {
+  console.log("tags", props.article.tags);
   return (
     <Link href={`/blog/${props.article.slug}`}>
       <a className="h-full flex flex-col justify-between space-y-4">
@@ -18,19 +19,19 @@ const ArticleCard: React.FC<ArticleCardProps> = props => {
 
         <div className="flex flex-col">
           <ul className="line-clamp-2">
-            {props.article.tags.map(tag => (
+            {props.article.tags.map((tag) => (
               <li
                 className="mr-2 mb-2 bg-ternary30 py-1 px-2 rounded-sm inline-block text-sm"
-                key={tag.name}
+                key={tag}
               >
-                {tag.name}
+                {tag}
               </li>
             ))}
           </ul>
 
           <div className="flex items-center justify-between space-x-4">
             <span className="text-gray-500 text-sm">
-              {formatDistanceToNow(new Date(props.article.published_at))} ago
+              {formatDistanceToNow(new Date(props.article.date))} ago
             </span>
             <span className="text-secondary">View Post {"->"}</span>
           </div>

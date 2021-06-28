@@ -14,7 +14,7 @@ module.exports = {
         ternary: "#E36506",
         ternary30: "#E3650630",
       },
-      typography: theme => ({
+      typography: (theme) => ({
         DEFAULT: {
           css: {
             color: theme("colors.white"),

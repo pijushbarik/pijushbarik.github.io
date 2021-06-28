@@ -12,7 +12,8 @@
     "build": "next build",
     "start": "next start",
     "export": "next export",
-    "typecheck": "tsc"
+    "typecheck": "tsc",
+    "prettier": "prettier --write ."
   },
   "dependencies": {
     "@tailwindcss/line-clamp": "^0.2.0",
@@ -20,6 +21,7 @@
     "axios": "^0.21.1",
     "classnames": "2.2.6",
     "date-fns": "^2.19.0",
+    "gray-matter": "^4.0.3",
     "next": "^10.0.9",
     "rc-dropdown": "^3.2.0",
     "react": "^17.0.1",

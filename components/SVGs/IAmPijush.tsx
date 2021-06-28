@@ -5,7 +5,7 @@ type IAmPijushSVGProps = {
   style?: React.CSSProperties;
 };
 
-const IAmPijushSVG: React.FC<IAmPijushSVGProps> = props => (
+const IAmPijushSVG: React.FC<IAmPijushSVGProps> = (props) => (
   <svg
     className={classNames(props.className)}
     style={props.style || {}}
