@@ -1,7 +1,10 @@
 ---
 title: "Learn How to Pre-render Pages Using Static Generation with Next.js"
 excerpt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus."
-coverImage: "/assets/blog/hello-world/cover.jpg"
+coverImage:
+  url: "/assets/blog/hello-world/cover.jpg"
+  alt: "Learn How to Pre-render Pages Using Static Generation with Next.js"
+  title: 'Photo by <a href="https://unsplash.com/@lifeof_peter_?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Peter Thomas</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>'
 date: "2020-03-16T05:35:07.322Z"
 author:
   name: Tim Neutkens

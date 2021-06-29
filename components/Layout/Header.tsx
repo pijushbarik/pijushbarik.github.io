@@ -56,12 +56,6 @@ const Header: React.FC<{}> = () => {
               path: "/#about",
               activeKey: activeMenuItem,
             },
-            // {
-            //   name: "Contact",
-            //   key: "contact",
-            //   path: "#contact",
-            //   activeKey: activeMenuItem,
-            // },
           ]}
         />
       </Container>

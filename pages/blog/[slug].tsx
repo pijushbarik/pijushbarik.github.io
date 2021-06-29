@@ -12,7 +12,7 @@ type PageProps = {
 };
 
 const Article: NextPage<PageProps> = (props) => {
-  console.log(props.article);
+  console.log(props);
   return (
     <>
       <Head>
@@ -22,6 +22,19 @@ const Article: NextPage<PageProps> = (props) => {
       <Container fluid className="mt-10">
         <article className={styles.article}>
           <h1 className="font-serif font-bold mb-8">{props.article.title}</h1>
+          <div className="flex flex-col items-center">
+            <img
+              src={props.article.coverImage.url}
+              alt={props.article.coverImage.alt}
+            />
+            <span
+              className="text-sm text-gray-300"
+              dangerouslySetInnerHTML={{
+                __html: props.article.coverImage.title,
+              }}
+            />
+          </div>
+
           <ArticleBody content={props.article.content} />
         </article>
       </Container>

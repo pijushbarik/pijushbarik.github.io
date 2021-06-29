@@ -1,4 +1,5 @@
 export type Media = {
-  id: string;
   url: string;
+  alt: string;
+  title: string;
 };

@@ -10,7 +10,7 @@ type Article = {
   published_at: string;
   slug: string;
   excerpt: string;
-  cover: Media;
+  coverImage: Media;
   tags: Tag[];
   keywords: string[];
 };

@@ -135,7 +135,6 @@ $color-secondary: #feaa00;
 
 .projects {
   display: grid;
-  // max-width: 100%;
   @apply grid-cols-1 md:grid-cols-2 lg:grid-cols-3;
   align-items: start;
   justify-items: center;
