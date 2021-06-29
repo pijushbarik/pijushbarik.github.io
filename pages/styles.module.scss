@@ -129,7 +129,7 @@ $color-secondary: #feaa00;
   @apply text-2xl flex flex-wrap font-mono;
 
   li {
-    @apply text-white bg-yellow-700 p-2 rounded-sm mr-4 mb-4 tracking-tight;
+    @apply text-white bg-ternary30 p-2 rounded-sm mr-4 mb-4 tracking-tight;
   }
 }
 

@@ -47,13 +47,13 @@ const Header: React.FC<{}> = () => {
             {
               name: "Works",
               key: "works",
-              path: "#works",
+              path: "/#works",
               activeKey: activeMenuItem,
             },
             {
               name: "About Me",
               key: "about",
-              path: "#about",
+              path: "/#about",
               activeKey: activeMenuItem,
             },
             // {

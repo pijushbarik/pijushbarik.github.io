@@ -16,18 +16,20 @@ const Index: NextPage<PageProps> = () => {
         <title>Pijush Barik</title>
       </Head>
 
-      <Container className="pt-24 pb-60 space-y-28 md:space-y-32">
-        <Container fluid>
-          <div>
-            <HiThere className={styles.hiThere} />
-            <IAmPijush className={styles.iAmPijush} />
-            <p className={styles.subtitle}>
-              I help people make the world better through quality softwares.
-            </p>
-          </div>
-        </Container>
+      <Container>
+        <section className="py-28">
+          <Container fluid>
+            <div>
+              <HiThere className={styles.hiThere} />
+              <IAmPijush className={styles.iAmPijush} />
+              <p className={styles.subtitle}>
+                I help people make the world better through quality softwares.
+              </p>
+            </div>
+          </Container>
+        </section>
 
-        <section id="about" className="bg-yellow-900 py-20">
+        <section id="about" className="bg-yellow-900 py-28">
           <Container fluid className="space-y-10">
             <h2 className="text-5xl font-serif font-bold mb-8">About Me.</h2>
 
@@ -63,16 +65,6 @@ const Index: NextPage<PageProps> = () => {
                 </p>
 
                 <p className="mt-12">
-                  I did intership and worked for a short time in the prestigious{" "}
-                  <strong>Indian Institute of Technology Kharagpur</strong>. I
-                  was there responsible for developing a software product for{" "}
-                  <strong>real time image processing with NVIDIA GPUs</strong>.
-                  I have written codes in <strong>C++</strong> &amp;{" "}
-                  <strong>CUDA</strong>. Implemented cross-OS C++ build tool
-                  with <strong>CMake</strong>.
-                </p>
-
-                <p className="mt-12">
                   I am very fortunate that I chose coding as my hobby &amp;
                   career too. It feels so grateful to think that things I
                   learned and did for fun in college is now my profession.
@@ -81,9 +73,8 @@ const Index: NextPage<PageProps> = () => {
                 </p>
 
                 <p className="mt-12">
-                  Alongside coding I love to read story books, watching crime
-                  thriller movies and TV series. When not doing anything, I
-                  sleep. I sleep a lot.
+                  Alongside coding I love to ride my bike, read story books,
+                  watching crime thriller movies and TV series.
                 </p>
 
                 <p className="mt-12">
@@ -99,63 +90,10 @@ const Index: NextPage<PageProps> = () => {
                 </p>
               </div>
             </div>
-
-            <div className="mt-16">
-              <div className="w-full mb-5">
-                <p className="text-5xl capitalize font-serif text-center">
-                  My Tech Stacks
-                </p>
-              </div>
-
-              <div>
-                <div className="font-serif text-4xl mb-6">
-                  <span>Languages</span>
-                </div>
-
-                <ul className={styles.tagList}>
-                  <li>JavaScript</li>
-                  <li>Node.js</li>
-                  <li>HTML</li>
-                  <li>CSS</li>
-                  <li>SCSS</li>
-                  <li>Python</li>
-                  <li>C</li>
-                  <li>C++</li>
-                  <li>CUDA</li>
-                  <li>Java</li>
-                </ul>
-              </div>
-
-              <div className="mt-12">
-                <div className="font-serif text-4xl mb-6">
-                  <span>Technologies</span>
-                </div>
-                <ul className={styles.tagList}>
-                  <li>ReactJS</li>
-                  <li>Next.js</li>
-                  <li>Redux</li>
-                  <li>REST API</li>
-                  <li>GraphQL</li>
-                  <li>Gatsby.js</li>
-                  <li>Express</li>
-                  <li>Tailwind CSS</li>
-                  <li>Git</li>
-                  <li>Bootstrap</li>
-                  <li>MaterialUI</li>
-                  <li>jQuery</li>
-                  <li>Mongoose</li>
-                  <li>Jest</li>
-                  <li>Mocha</li>
-                  <li>MongoDB</li>
-                  <li>MySQL</li>
-                  <li>Heroku</li>
-                </ul>
-              </div>
-            </div>
           </Container>
         </section>
 
-        <section id="works" className="">
+        <section id="works" className="py-28">
           <Container fluid className="space-y-10">
             <h2 className="text-5xl font-serif font-bold mb-8">Works.</h2>
 
@@ -209,6 +147,59 @@ const Index: NextPage<PageProps> = () => {
                 link="https://codepen.io/heisenberg-pb/pen/ajvmoq"
                 className={styles.projectCard}
               />
+            </div>
+          </Container>
+        </section>
+
+        <section id="tech-stacks" className="bg-gray-900 py-28">
+          <Container fluid className="space-y-10">
+            <h2 className="text-5xl font-serif font-bold">My Tech Stacks.</h2>
+
+            <div>
+              <div>
+                <div className="font-serif text-4xl mb-6">
+                  <span>Languages</span>
+                </div>
+
+                <ul className={styles.tagList}>
+                  <li>JavaScript</li>
+                  <li>Node.js</li>
+                  <li>HTML</li>
+                  <li>CSS</li>
+                  <li>SCSS</li>
+                  <li>Python</li>
+                  <li>C</li>
+                  <li>C++</li>
+                  <li>CUDA</li>
+                  <li>Java</li>
+                </ul>
+              </div>
+
+              <div className="mt-12">
+                <div className="font-serif text-4xl mb-6">
+                  <span>Technologies</span>
+                </div>
+                <ul className={styles.tagList}>
+                  <li>ReactJS</li>
+                  <li>Next.js</li>
+                  <li>Redux</li>
+                  <li>REST API</li>
+                  <li>GraphQL</li>
+                  <li>Gatsby.js</li>
+                  <li>Express</li>
+                  <li>Tailwind CSS</li>
+                  <li>Git</li>
+                  <li>Bootstrap</li>
+                  <li>MaterialUI</li>
+                  <li>jQuery</li>
+                  <li>Mongoose</li>
+                  <li>Jest</li>
+                  <li>Mocha</li>
+                  <li>MongoDB</li>
+                  <li>MySQL</li>
+                  <li>Heroku</li>
+                </ul>
+              </div>
             </div>
           </Container>
         </section>
