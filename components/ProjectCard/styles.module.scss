@@ -1,135 +1,42 @@
 .projectCard {
   width: 100%;
-  height: 100%;
-  z-index: 1;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+  border-radius: 7px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  padding: 2rem;
+  padding-top: 7rem;
   display: flex;
   flex-direction: column;
-  position: relative;
+  @apply space-y-4;
 
-  &:hover::after {
-    clip-path: inset(0 0 0 0 round 10px);
+  &_tags {
+    display: flex;
+    flex-wrap: wrap;
+
+    li {
+      @apply bg-ternary30;
+      color: #fff;
+      margin-bottom: 0.5rem;
+      padding: 0.5rem;
+      border-radius: 3px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+
+      &:not(:last-child) {
+        margin-right: 0.5rem;
+      }
+    }
   }
 
-  &::after {
-    content: "";
+  &_visitLink {
     position: absolute;
     top: 0;
     right: 0;
-    bottom: -10rem;
-    left: 0;
-    margin: -1rem;
-    border-radius: 1rem;
-    overflow: hidden;
-    clip-path: inset(2rem 0 10rem 2rem round 10px);
-    transition: clip-path 0.4s ease 0.1s;
-    background-color: #3b3b3b;
-    z-index: -1;
-  }
-
-  &__header {
-    margin-top: 1rem;
-    order: 3;
-    width: 90%;
-  }
-
-  &__footer {
-    order: 4;
-    position: absolute;
-    left: 0;
-    bottom: -9rem;
-    z-index: 1;
-    width: 90%;
-    transform: translateY(-50%);
-    opacity: 0;
-    transition: all 0.1s linear 0.2s;
-  }
-
-  &:hover &__footer {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  &__img {
-    border-radius: 6px;
-    @apply h-48 w-full overflow-hidden;
-  }
-
-  &__tag {
-    @apply text-ternary bg-ternary30 rounded-md p-1 text-lg font-mono select-none shadow-md;
-    display: inline-block;
-    transform: translateY(50%);
-    transition: all 0.3s ease-in-out;
-
-    $transitionDelay: 0.1s;
-
-    &:nth-child(1) {
-      transition-delay: $transitionDelay;
-    }
-
-    &:nth-child(2) {
-      transition-delay: $transitionDelay + 0.05s;
-    }
-
-    &:nth-child(3) {
-      transition-delay: $transitionDelay + 0.1s;
-    }
-
-    &:nth-child(4) {
-      transition-delay: $transitionDelay + 0.15s;
-    }
-
-    &:nth-child(5) {
-      transition-delay: $transitionDelay + 0.2s;
-    }
-
-    &:not(:last-child) {
-      margin-right: 0.5rem;
-    }
-  }
-
-  &:hover &__tag {
-    transform: translateY(0);
-  }
-
-  &__link {
-    position: absolute;
-    top: 2rem;
-    right: 2rem;
-    opacity: 0;
-    transform: translateX(50%);
-    transition: all 0.1s ease-out 0.15s;
-    @apply bg-ternary30 flex justify-center items-center rounded-md h-10 w-10 px-2 py-1 shadow-lg;
-
-    &:hover {
-      top: calc(2rem - 2px);
-    }
-  }
-
-  &:hover &__link {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-// If hover not available, like in touch screen devices
-@media all and (hover: none) {
-  .projectCard {
-    &::after {
-      clip-path: inset(0 0 0 0 round 10px);
-    }
-
-    &__footer {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    &__tag {
-      transform: translateY(0);
-    }
-
-    &__link {
-      opacity: 1;
-      transform: translateX(0);
-    }
+    @apply bg-ternary;
+    padding: 0.2rem 0.8rem;
+    border-bottom-left-radius: 7px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
   }
 }

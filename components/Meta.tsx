@@ -1,11 +1,10 @@
 import Head from "next/head";
 
-const CMS_NAME = "",
-  HOME_OG_IMAGE_URL = "";
-
 const Meta = () => {
   return (
     <Head>
+      <title>Pijush Barik | Web Developer</title>
+
       <link
         rel="apple-touch-icon"
         sizes="180x180"
@@ -27,18 +26,21 @@ const Meta = () => {
       <link
         rel="mask-icon"
         href="/favicon/safari-pinned-tab.svg"
-        color="#000000"
+        color="#343434"
       />
       <link rel="shortcut icon" href="/favicon/favicon.ico" />
-      <meta name="msapplication-TileColor" content="#000000" />
+      <meta name="msapplication-TileColor" content="#343434" />
       <meta name="msapplication-config" content="/favicon/browserconfig.xml" />
-      <meta name="theme-color" content="#000" />
-      <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
+      <meta name="theme-color" content="#343434" />
       <meta
         name="description"
-        content={`A statically generated blog example using Next.js and ${CMS_NAME}.`}
+        content="Personal website and blog of Pijush Barik"
       />
-      <meta property="og:image" content={HOME_OG_IMAGE_URL} />
+      <meta property="og:image" content="/pijushbarik.com.jpg" />
+      <meta
+        name="keywords"
+        content="pijush barik, web developer, full stack web developer, javascript, typescript, react, nextjs, frontend development, web development, blog, developer blog"
+      />
     </Head>
   );
 };

@@ -2,9 +2,7 @@ import { Media } from "./commons";
 
 type Author = {
   name: string;
-  avatar?: Media;
-  twitter_handle?: string;
-  description: string;
+  picture: string;
 };
 
 export default Author;

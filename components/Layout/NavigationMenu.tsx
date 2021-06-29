@@ -4,7 +4,6 @@ import classNames from "@helpers/classNames";
 import useMediaQuery from "@hooks/useMediaQuery";
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
-import Dropdown from "rc-dropdown";
 
 type NavigationMenuItem = {
   name: string;

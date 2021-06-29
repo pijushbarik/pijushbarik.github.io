@@ -1,7 +1,7 @@
 {
   "name": "pijushbarik.github.io",
   "private": true,
-  "description": "Portfolio and blog web app of Pijush Barik",
+  "description": "Personal website and blog of Pijush Barik",
   "author": {
     "name": "Pijush Barik",
     "email": "pijush.barik8@gmail.com"
@@ -16,14 +16,13 @@
     "prettier": "prettier --write ."
   },
   "dependencies": {
+    "@babel/runtime": "^7.14.6",
     "@tailwindcss/line-clamp": "^0.2.0",
     "@tailwindcss/typography": "^0.4.0",
-    "axios": "^0.21.1",
     "classnames": "2.2.6",
     "date-fns": "^2.19.0",
     "gray-matter": "^4.0.3",
     "next": "^10.0.9",
-    "rc-dropdown": "^3.2.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-masonry-css": "^1.0.16",

@@ -45,15 +45,15 @@ const Header: React.FC<{}> = () => {
               activeKey: activeMenuItem,
             },
             {
-              name: "Works",
-              key: "works",
-              path: "/#works",
-              activeKey: activeMenuItem,
-            },
-            {
               name: "About Me",
               key: "about",
               path: "/#about",
+              activeKey: activeMenuItem,
+            },
+            {
+              name: "Works",
+              key: "works",
+              path: "/#works",
               activeKey: activeMenuItem,
             },
           ]}

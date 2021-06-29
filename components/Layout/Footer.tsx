@@ -80,7 +80,7 @@ const Footer: React.FC<{}> = () => {
         </ul>
       </Container>
 
-      <p className="text-center mt-16 mb-0 text-xs">
+      <p className="text-center mt-16 mb-0 text-xs font-light">
         Handcrafted with <span className="text-red-600">❤️</span> by me. Source
         code on{" "}
         <a

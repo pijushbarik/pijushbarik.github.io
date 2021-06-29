@@ -4,9 +4,8 @@ import classNames from "@helpers/classNames";
 type ProjectCardProps = {
   className?: string;
   style?: React.CSSProperties;
-  title: string;
-  src: string;
-  alt: string;
+  name: string;
+  coverSrc: string;
   description: string;
   link: string;
   tags: string[];
@@ -15,38 +14,31 @@ type ProjectCardProps = {
 const ProjectCard: React.FC<ProjectCardProps> = (props) => {
   return (
     <div
-      className={classNames(styles.projectCard, props.className)}
-      style={props.style || {}}
+      className={styles.projectCard}
+      style={{
+        backgroundImage: `linear-gradient(
+          to top, rgba(0, 0, 0, 1),
+          rgba(0, 0, 0, 0.8) 40%,
+          rgba(0,0,0,0.7) 60%,
+          transparent 85%
+        ), url(${props.coverSrc})`,
+      }}
     >
-      <div className={`ml-12 ${styles.projectCard__header}`}>
-        <h2 className="font-mono text-2xl">{props.title}</h2>
-      </div>
-
-      <img
-        className={styles.projectCard__img}
-        src={props.src}
-        alt={props.alt}
-      />
       <a
         target="_blank"
         rel="noopener noreferrer"
+        className={styles.projectCard_visitLink}
         href={props.link}
-        className={styles.projectCard__link}
       >
-        <img src="/assets/icon-eye.png" alt="" />
+        View
       </a>
-      <div className={`ml-12 ${styles.projectCard__footer}`}>
-        <p className={`text-xl ${styles.projectCard__description}`}>
-          {props.description}
-        </p>
-        <div className="mt-4">
-          {props.tags.map((tag) => (
-            <span className={styles.projectCard__tag} key={tag}>
-              {tag}
-            </span>
-          ))}
-        </div>
-      </div>
+      <h3 className="text-5xl font-extralight">{props.name}</h3>
+      <p>{props.description}</p>
+      <ul className={styles.projectCard_tags}>
+        {props.tags.map((tag) => (
+          <li>{tag}</li>
+        ))}
+      </ul>
     </div>
   );
 };

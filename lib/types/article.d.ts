@@ -7,7 +7,7 @@ type Article = {
   title: string;
   content: string;
   author: Author;
-  published_at: string;
+  date: string;
   slug: string;
   excerpt: string;
   coverImage: Media;

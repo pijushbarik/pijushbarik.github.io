@@ -6,6 +6,7 @@ import { ArticleBody } from "@components/Article";
 import Head from "next/head";
 import styles from "./styles.module.scss";
 import { getAllPosts, getPostBySlug } from "@lib/api";
+import { formatDistanceToNow } from "date-fns";
 
 type PageProps = {
   article: IArticle;
@@ -16,12 +17,26 @@ const Article: NextPage<PageProps> = (props) => {
   return (
     <>
       <Head>
-        <title>{props.article.title} - Pijush Barik</title>
+        <title>{props.article.title} | Blog - Pijush Barik</title>
       </Head>
 
-      <Container fluid className="mt-10">
+      <Container fluid className="mt-10 pb-28">
         <article className={styles.article}>
           <h1 className="font-serif font-bold mb-8">{props.article.title}</h1>
+
+          <div className={styles.article_meta}>
+            <img
+              src={props.article.author.picture}
+              alt={props.article.author.name}
+            />
+            <div>
+              <span>{props.article.author.name}</span>
+              <span className="text-gray-400 text-sm">
+                {formatDistanceToNow(new Date(props.article.date))} ago
+              </span>
+            </div>
+          </div>
+
           <div className="flex flex-col items-center">
             <img
               src={props.article.coverImage.url}

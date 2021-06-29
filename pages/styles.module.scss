@@ -180,3 +180,29 @@ $color-secondary: #feaa00;
     transform: translateY(0);
   }
 }
+
+.masonryGrid {
+  display: flex;
+  margin-left: -30px;
+  width: auto;
+
+  &_column {
+    padding-left: 30px;
+    background-clip: padding-box;
+
+    & > div {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.experienceList {
+  @apply space-y-10;
+
+  &_item {
+    display: flex;
+    flex-direction: column;
+    @apply space-y-4;
+    max-width: 40rem;
+  }
+}
