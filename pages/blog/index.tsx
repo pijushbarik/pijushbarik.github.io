@@ -6,7 +6,7 @@ import styles from "./styles.module.scss";
 import classNames from "@helpers/classNames";
 import { getAllPosts } from "@lib/api";
 import Masonry from "react-masonry-css";
-import Head from "next/head";
+import Meta from "@components/Meta";
 
 type PageProps = {
   articles: IArticleCard[];
@@ -15,9 +15,7 @@ type PageProps = {
 const Blog: NextPage<PageProps> = (props) => {
   return (
     <>
-      <Head>
-        <title>Blog - Pijush Barik</title>
-      </Head>
+      <Meta title="Blog" />
 
       <Container fluid className="mt-10 pb-28">
         <h1 className="text-7xl font-serif font-bold mb-8">Blog.</h1>

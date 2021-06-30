@@ -1,9 +1,22 @@
 import Head from "next/head";
 
-const Meta = () => {
+type MetaProps = {
+  keywords?: string[];
+  title?: string;
+  ogImage?: string;
+};
+
+const Meta: React.FC<MetaProps> = (props) => {
+  const commonKeywords =
+    "pijush barik, web developer, full stack web developer, javascript, typescript, react, nextjs, frontend development, web development, blog, developer blog";
+
   return (
     <Head>
-      <title>Pijush Barik | Web Developer</title>
+      <title>
+        {props.title
+          ? `${props.title} - Pijush Barik`
+          : "Pijush Barik | Web Developer"}
+      </title>
 
       <link
         rel="apple-touch-icon"
@@ -22,7 +35,6 @@ const Meta = () => {
         sizes="16x16"
         href="/favicon/favicon-16x16.png"
       />
-      <link rel="manifest" href="/favicon/site.webmanifest" />
       <link
         rel="mask-icon"
         href="/favicon/safari-pinned-tab.svg"
@@ -36,10 +48,18 @@ const Meta = () => {
         name="description"
         content="Personal website and blog of Pijush Barik"
       />
-      <meta property="og:image" content="/pijushbarik.com.jpg" />
+      <meta
+        property="og:image"
+        content={`https://pijushbarik.com${
+          props.ogImage ? props.ogImage : "/og.jpg"
+        }`}
+      />
       <meta
         name="keywords"
-        content="pijush barik, web developer, full stack web developer, javascript, typescript, react, nextjs, frontend development, web development, blog, developer blog"
+        content={
+          (props.keywords ? `${props.keywords.join(", ")}, ` : "") +
+          commonKeywords
+        }
       />
     </Head>
   );

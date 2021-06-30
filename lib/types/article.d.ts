@@ -12,7 +12,11 @@ type Article = {
   excerpt: string;
   coverImage: Media;
   tags: Tag[];
-  keywords: string[];
+  meta: {
+    keywords: string[];
+    title: string;
+    ogImage: string;
+  };
 };
 
 export type IArticleCard = {

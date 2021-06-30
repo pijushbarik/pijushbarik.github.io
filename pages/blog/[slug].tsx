@@ -7,18 +7,20 @@ import Head from "next/head";
 import styles from "./styles.module.scss";
 import { getAllPosts, getPostBySlug } from "@lib/api";
 import { formatDistanceToNow } from "date-fns";
+import Meta from "@components/Meta";
 
 type PageProps = {
   article: IArticle;
 };
 
 const Article: NextPage<PageProps> = (props) => {
-  console.log(props);
   return (
     <>
-      <Head>
-        <title>{props.article.title} | Blog - Pijush Barik</title>
-      </Head>
+      <Meta
+        title={`${props.article.meta.title} | Blog`}
+        keywords={props.article.meta.keywords}
+        ogImage={props.article.meta.ogImage}
+      />
 
       <Container fluid className="mt-10 pb-28">
         <article className={styles.article}>
@@ -72,8 +74,8 @@ export async function getStaticProps({ params }: Params) {
     "slug",
     "author",
     "content",
-    "ogImage",
     "coverImage",
+    "meta",
   ]);
   const content = await markdownToHtml(post.content || "");
 
