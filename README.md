@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://pijushbarik.com">
-    <img alt="Brace Yourself" src="./src/images/logo.svg" width="60" />
+    <img alt="Pijush Barik" src="./public/favicon/favicon-96x96.png" width="60" />
   </a>
 </p>
 <h1 align="center">
@@ -16,40 +16,23 @@ This repo contains the codebase for my personal website <a href="https://pijushb
 1.  **Start developing**
 
     ```shell
-    npm run develop
-    # or
-    npm start
+    yarn dev
     ```
 
-    Webpack will start with hot reloading in `http://localhost:8000`
+    Next dev server will start with in `http://localhost:3000`
 
 <br />
 
-2.  **Make a production build**
+1.  **Make a production build**
 
     ```shell
-    npm run build
+    yarn build && yarn export
     ```
 
-    A production build will be created in `public` directory
+    A production static build will be created in `out` directory
 
     <br />
 
-3.  **Other `NPM` commands**
-
-    ```shell
-    # to clean the cache and build directory
-    npm run clean
-
-    # to format the codebase with Prettier
-    npm run format
-
-    # to serve a compiled production build
-    npm run serve
-    ```
-
 ## 💡 Future plans
 
-- Add blog to the website
-
-<br />
+- [x] Add blog to the website
