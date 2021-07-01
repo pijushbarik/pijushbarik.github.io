@@ -1,6 +1,5 @@
 import styles from "./styles.module.scss";
 import Container from "@components/Container";
-import ContactCard from "@components/ContactCard";
 
 const Footer: React.FC<{}> = () => {
   return (
