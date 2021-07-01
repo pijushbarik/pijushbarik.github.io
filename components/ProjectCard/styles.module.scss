@@ -1,0 +1,42 @@
+.projectCard {
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+  border-radius: 7px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  padding: 2rem;
+  padding-top: 7rem;
+  display: flex;
+  flex-direction: column;
+  @apply space-y-4;
+
+  &_tags {
+    display: flex;
+    flex-wrap: wrap;
+
+    li {
+      @apply bg-ternary30;
+      color: #fff;
+      margin-bottom: 0.5rem;
+      padding: 0.5rem;
+      border-radius: 3px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+
+      &:not(:last-child) {
+        margin-right: 0.5rem;
+      }
+    }
+  }
+
+  &_visitLink {
+    position: absolute;
+    top: 0;
+    right: 0;
+    @apply bg-ternary;
+    padding: 0.2rem 0.8rem;
+    border-bottom-left-radius: 7px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  }
+}

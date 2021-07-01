@@ -1,51 +1,56 @@
 {
   "name": "pijushbarik.github.io",
   "private": true,
-  "description": "Portfolio and blog web app of Pijush Barik",
-  "version": "0.1.0",
+  "description": "Personal website and blog of Pijush Barik",
   "author": {
     "name": "Pijush Barik",
     "email": "pijush.barik8@gmail.com"
   },
+  "version": "2.0.0",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "export": "next export",
+    "typecheck": "tsc",
+    "prettier": "prettier --write ."
+  },
   "dependencies": {
-    "autoprefixer": "^10.1.0",
-    "gatsby": "^2.29.2",
-    "gatsby-image": "^2.8.0",
-    "gatsby-plugin-manifest": "^2.9.1",
-    "gatsby-plugin-offline": "^3.7.1",
-    "gatsby-plugin-postcss": "^3.4.0",
-    "gatsby-plugin-react-helmet": "^3.7.0",
-    "gatsby-plugin-sass": "^2.8.0",
-    "gatsby-plugin-sharp": "^2.11.2",
-    "gatsby-plugin-sitemap": "^2.9.0",
-    "gatsby-source-filesystem": "^2.8.1",
-    "gatsby-transformer-sharp": "^2.9.0",
-    "postcss": "^8.2.1",
-    "prop-types": "^15.7.2",
+    "@babel/runtime": "^7.14.6",
+    "@tailwindcss/line-clamp": "^0.2.0",
+    "@tailwindcss/typography": "^0.4.0",
+    "classnames": "2.2.6",
+    "date-fns": "^2.19.0",
+    "gray-matter": "^4.0.3",
+    "next": "^10.0.9",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "react-helmet": "^6.1.0",
-    "tailwindcss": "^2.0.2"
+    "react-masonry-css": "^1.0.16",
+    "remark": "^13.0.0",
+    "remark-html": "^13.0.1",
+    "remark-prism": "^1.3.4",
+    "sass": "^1.32.8",
+    "typescript": "^4.2.3"
   },
   "devDependencies": {
-    "node-sass": "^4.14.1",
-    "prettier": "^2.2.1"
+    "@types/classnames": "^2.2.10",
+    "@types/jest": "^25.2.2",
+    "@types/node": "^14.0.1",
+    "@types/react": "^16.9.35",
+    "@types/react-dom": "^16.9.8",
+    "autoprefixer": "^10.2.1",
+    "postcss": "^8.2.4",
+    "prettier": "^2.2.1",
+    "stylelint": "^13.12.0",
+    "stylelint-config-standard": "^21.0.0",
+    "tailwindcss": "^2.0.2"
   },
+  "license": "MIT",
   "keywords": [
     "gatsby",
     "portfolio",
     "blog"
   ],
-  "license": "MIT",
-  "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop",
-    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
-    "start": "npm run develop",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/pijushbarik/pijushbarik.github.io"

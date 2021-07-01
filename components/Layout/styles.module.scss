@@ -1,0 +1,108 @@
+.linkBtn {
+  @apply p-2 rounded-none md:rounded-sm bg-transparent hover:bg-ternary30 transition-all duration-200 w-full block md:inline;
+
+  &.active {
+    @apply bg-ternary30;
+  }
+}
+
+.footer {
+  background-color: #2c2c2c;
+  @apply py-24;
+}
+
+.navigationBtn {
+  width: 2.8rem;
+  height: 2.8rem;
+  outline: none;
+
+  &:active,
+  &:focus {
+    outline: none;
+  }
+
+  div {
+    height: 2px;
+    background-color: #fafafa;
+
+    &::after {
+      content: "";
+      display: block;
+      transform: translateY(-1rem);
+    }
+
+    &::before {
+      content: "";
+      display: block;
+      transform: translateY(1rem);
+    }
+
+    &::after,
+    &::before {
+      height: 2px;
+      width: 100%;
+      background-color: #fafafa;
+    }
+  }
+}
+
+.navigationBtnClose {
+  width: 2.8rem;
+  height: 2.8rem;
+  outline: none;
+  margin: 1rem 1rem 0 0;
+
+  &:active,
+  &:focus {
+    outline: none;
+  }
+
+  div {
+    height: 2px;
+    background-color: #fafafa;
+    transform: rotate(45deg);
+    transform-origin: center;
+
+    &::after {
+      content: "";
+      display: block;
+      transform: rotate(90deg);
+      height: 2px;
+      width: 100%;
+      background-color: #fafafa;
+    }
+  }
+}
+
+.navMenuItems {
+  @apply flex space-x-2 text-ternary font-mono tracking-tighter rounded-none text-xl;
+}
+
+.drawer {
+  position: fixed;
+  width: calc(100vw - 20%);
+  height: 100vh;
+  top: 0;
+  left: 20%;
+  background-color: rgb(22, 22, 22);
+  margin-left: 100%;
+  transition: margin-left 0.3s ease;
+  z-index: 20;
+  @apply flex flex-col space-y-6 items-end;
+
+  nav {
+    @apply w-full;
+
+    .navMenuItems {
+      @apply flex-col w-full space-x-0 space-y-4;
+
+      li a {
+        padding: 1.2rem 2rem;
+      }
+    }
+  }
+}
+
+.drawerVisible {
+  margin-left: 0;
+}

@@ -1,2 +1,6 @@
 [build.environment]
 NODE_VERSION = "12.18.3"
+
+[build]
+command = "next build && next export"
+publish = "out/"
