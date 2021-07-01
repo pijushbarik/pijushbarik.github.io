@@ -3,7 +3,6 @@ import Container from "@components/Container";
 import markdownToHtml from "@helpers/markdownToHtml";
 import IArticle from "@lib/types/article";
 import { ArticleBody } from "@components/Article";
-import Head from "next/head";
 import styles from "./styles.module.scss";
 import { getAllPosts, getPostBySlug } from "@lib/api";
 import { formatDistanceToNow } from "date-fns";

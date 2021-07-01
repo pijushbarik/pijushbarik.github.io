@@ -7,7 +7,6 @@ type ArticleCardProps = {
 };
 
 const ArticleCard: React.FC<ArticleCardProps> = (props) => {
-  console.log("tags", props.article.tags);
   return (
     <Link href={`/blog/${props.article.slug}`}>
       <a className="h-full flex flex-col justify-between space-y-4">

@@ -111,73 +111,11 @@ $color-secondary: #feaa00;
   }
 }
 
-.socialIcons {
-  max-width: 100%;
-
-  @media only screen and (min-width: 768px) {
-    max-width: 20rem;
-  }
-
-  @media all and (hover: hover) {
-    a:hover img {
-      transform: rotate(45deg);
-    }
-  }
-}
-
 .tagList {
   @apply text-2xl flex flex-wrap font-mono;
 
   li {
     @apply text-white bg-ternary30 p-2 rounded-sm mr-4 mb-4 tracking-tight;
-  }
-}
-
-.projects {
-  display: grid;
-  @apply grid-cols-1 md:grid-cols-2 lg:grid-cols-3;
-  align-items: start;
-  justify-items: center;
-  gap: 13rem 3rem;
-
-  @media screen and (max-width: 400px) {
-    grid-template-columns: repeat(auto-fit, minmax(95vw, 1fr));
-  }
-}
-
-.projectCard {
-  transform: translateY(50%);
-  animation: card-slide-animation 0.5s ease-out forwards;
-  animation-delay: 0s;
-
-  &:nth-child(2) {
-    animation-delay: 0.2s;
-  }
-
-  &:nth-child(3) {
-    animation-delay: 0.3s;
-  }
-
-  &:nth-child(4) {
-    animation-delay: 0.4s;
-  }
-
-  &:nth-child(5) {
-    animation-delay: 0.5s;
-  }
-
-  &:nth-child(6) {
-    animation-delay: 0.6s;
-  }
-
-  &:nth-child(7) {
-    animation-delay: 0.7s;
-  }
-}
-
-@keyframes card-slide-animation {
-  to {
-    transform: translateY(0);
   }
 }
 

@@ -1,5 +1,4 @@
 import Container from "@components/Container";
-import styles from "./styles.module.scss";
 
 const Header: React.FC<{}> = () => {
   return (

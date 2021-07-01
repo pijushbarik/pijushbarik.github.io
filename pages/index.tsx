@@ -21,7 +21,7 @@ const Works: Work[] = [
     name: "WellSoul",
     description:
       "Online Healthcare Service. Managing the project with it's admin submodule from scratch.",
-    tags: ["Next.js", "GraphQL", "Strapi", "AntD", "Less"],
+    tags: ["Next.js", "GraphQL", "Strapi", "Ant Design", "Less"],
     link: "https://wellsoul.in",
     coverSrc: "/assets/projects/wellsoul-pijush-barik.jpg",
   },
@@ -257,10 +257,10 @@ const Index: NextPage<PageProps> = () => {
                   <li>Node.js</li>
                   <li>Express</li>
                   <li>Tailwind CSS</li>
-                  <li>Git</li>
                   <li>Bootstrap</li>
                   <li>Ant Design</li>
                   <li>MaterialUI</li>
+                  <li>Git</li>
                 </ul>
               </div>
             </div>

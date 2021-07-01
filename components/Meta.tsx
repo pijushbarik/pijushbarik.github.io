@@ -54,6 +54,21 @@ const Meta: React.FC<MetaProps> = (props) => {
           props.ogImage ? props.ogImage : "/og.jpg"
         }`}
       />
+      <meta property="og:url" content="https://pijushbarik.com" />
+      <meta property="og:type" content="website" />
+      <meta
+        property="og:description"
+        content="Personal website and blog of Pijush Barik"
+      />
+      <meta
+        property="og:title"
+        content={
+          props.title
+            ? `${props.title} - Pijush Barik`
+            : "Pijush Barik | Web Developer"
+        }
+      />
+      <meta property="og:site_name" content="Pijush Barik | Web Developer" />
       <meta
         name="keywords"
         content={
@@ -61,6 +76,7 @@ const Meta: React.FC<MetaProps> = (props) => {
           commonKeywords
         }
       />
+      {props.children}
     </Head>
   );
 };
