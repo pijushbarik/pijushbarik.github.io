@@ -1,0 +1,61 @@
+.article {
+  @apply prose prose-xl leading-7;
+
+  pre code {
+    @apply font-mono;
+  }
+
+  table {
+    @apply block overflow-x-auto whitespace-nowrap;
+
+    @media only screen and (min-width: 768px) {
+      @apply table whitespace-normal overflow-x-auto;
+    }
+  }
+
+  &_card {
+    @apply rounded-lg bg-gray-900 p-6 shadow-lg w-full;
+  }
+
+  h1 {
+    margin-bottom: 1rem;
+  }
+
+  &_meta {
+    display: flex;
+    align-items: center;
+    @apply space-x-4;
+
+    img {
+      border-radius: 50%;
+      height: 100%;
+      width: 4rem;
+      margin: 0;
+    }
+
+    &_link {
+      @apply text-sm;
+      text-decoration: none !important;
+    }
+
+    & > div {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
+
+.masonryGrid {
+  display: flex;
+  margin-left: -30px;
+  width: auto;
+
+  &_column {
+    padding-left: 30px;
+    background-clip: padding-box;
+
+    & > div {
+      margin-bottom: 30px;
+    }
+  }
+}
