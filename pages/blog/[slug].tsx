@@ -31,10 +31,23 @@ const Article: NextPage<PageProps> = (props) => {
               alt={props.article.author.name}
             />
             <div>
-              <span>{props.article.author.name}</span>
-              <span className="text-gray-400 text-sm">
+              <div className="flex items-center space-x-2">
+                <span>{props.article.author.name}</span>
+                <a
+                  href={`https://twitter.com/${props.article.author.twitter}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.article_meta_link}
+                >
+                  @{props.article.author.twitter}
+                </a>
+              </div>
+              <time
+                dateTime={props.article.date}
+                className="text-gray-400 text-sm"
+              >
                 {formatDistanceToNow(new Date(props.article.date))} ago
-              </span>
+              </time>
             </div>
           </div>
 

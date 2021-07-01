@@ -17,8 +17,21 @@ const Blog: NextPage<PageProps> = (props) => {
     <>
       <Meta title="Blog" />
 
-      <Container fluid className="mt-10 pb-28">
-        <h1 className="text-7xl font-serif font-bold mb-8">Blog.</h1>
+      <Container fluid className="mt-10 pb-28 space-y-8">
+        <h1 className="text-7xl font-serif font-bold">Blog.</h1>
+
+        <div className="space-y-1 max-w-3xl">
+          <p>
+            Hello. Wellcome to my blog. I am writing this blog as a memoir or
+            like a diary. I will mostly write here to keep note of a solutions
+            of problems I faced while working. Also this was a dream project of
+            mine to setup and write a blog of mine from start of my coding
+            journey. I am not a professional writer or blogger, so I hope along
+            the way this will improve my writing skills too.
+          </p>
+
+          <p>So, let's do it!</p>
+        </div>
 
         <Masonry
           breakpointCols={{

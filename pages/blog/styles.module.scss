@@ -33,6 +33,11 @@
       margin: 0;
     }
 
+    &_link {
+      @apply text-sm;
+      text-decoration: none !important;
+    }
+
     & > div {
       display: flex;
       flex-direction: column;

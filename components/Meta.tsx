@@ -17,7 +17,6 @@ const Meta: React.FC<MetaProps> = (props) => {
           ? `${props.title} - Pijush Barik`
           : "Pijush Barik | Web Developer"}
       </title>
-
       <link
         rel="apple-touch-icon"
         sizes="180x180"
@@ -40,9 +39,9 @@ const Meta: React.FC<MetaProps> = (props) => {
         href="/favicon/safari-pinned-tab.svg"
         color="#343434"
       />
-      <link rel="shortcut icon" href="/favicon/favicon.ico" />
+      <link rel="shortcut icon" href="/favicon/favicon.ico?v=2" />
       <meta name="msapplication-TileColor" content="#343434" />
-      <meta name="msapplication-config" content="/favicon/browserconfig.xml" />
+      <meta name="msapplication-config" content="/browserconfig.xml" />
       <meta name="theme-color" content="#343434" />
       <meta
         name="description"
@@ -76,6 +75,7 @@ const Meta: React.FC<MetaProps> = (props) => {
           commonKeywords
         }
       />
+      <link rel="manifest" href="/site.webmanifest" />
       {props.children}
     </Head>
   );

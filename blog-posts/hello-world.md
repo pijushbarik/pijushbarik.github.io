@@ -9,6 +9,7 @@ date: "2021-06-29T18:26:45.432Z"
 author:
   name: Pijush Barik
   picture: /assets/blog/authors/pijush-barik.jpeg
+  twitter: "pijushbarik"
 tags:
   - Welcome
 meta:
