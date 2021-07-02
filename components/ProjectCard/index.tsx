@@ -35,8 +35,8 @@ const ProjectCard: React.FC<ProjectCardProps> = (props) => {
       <h3 className="text-5xl font-extralight">{props.name}</h3>
       <p>{props.description}</p>
       <ul className={styles.projectCard_tags}>
-        {props.tags.map((tag) => (
-          <li>{tag}</li>
+        {props.tags.map((tag, i) => (
+          <li key={i}>{tag}</li>
         ))}
       </ul>
     </div>
