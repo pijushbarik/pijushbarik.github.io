@@ -22,9 +22,9 @@ meta:
 
 Wellcome to my first ever blog post.
 
-I am going to write this blog as a memoir or lika a diary for me to keep notes in a single place. Here I will post about tips and tricks, and mostly about prgramming problems solution I face while solving some fix or implementing a feature.
+I am going to write this blog as a memoir or lika a diary for me to keep notes in a single place. Here I will post about tips and tricks, and mostly about prgramming problems &amp; stuffs I come across while fixing or implementing a feature.
 
-Let me test my hightlighting and formatting. _(test in production)_ 🤫
+Let me test my highlighting and formatting. _(test in production)_ 🤫
 
 ---
 
@@ -32,9 +32,10 @@ Except coding I like to...
 
 - Reading books
 - Riding my bike
-- ... and doing coding 😐
+- Watching crime thriller movies and TV series
+- ... and doing more coding 😐
 
-Here is a photo my cat, Suji
+Meet my cat, Suji
 ![Suji](/assets/blog/hello-world/suji.jpg "Suji")
 
 Here is a quote from me,
@@ -43,7 +44,7 @@ Here is a quote from me,
 
 [Here is something to make your day](https://www.youtube.com/watch?v=dQw4w9WgXcQ "Here is something to make your day")
 
-And, let's not forget my (and almost everyone's) first written **Hello World** program from where begin my journey
+And, let's not forget my (and almost everyone's) first written **Hello World** program from where I begin my journey
 
 ```c
 #include <stdio.h>
