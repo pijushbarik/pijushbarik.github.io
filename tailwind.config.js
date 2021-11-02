@@ -1,6 +1,6 @@
 module.exports = {
   purge: ["./pages/**/*.tsx", "./components/**/*.tsx"],
-  darkMode: false,
+  darkMode: "class",
   theme: {
     fontFamily: {
       serif: ["Playfair Display", "serif"],
@@ -53,6 +53,15 @@ module.exports = {
             },
             code: {
               fontFamily: '"Fira Code"',
+              backgroundColor: "#a9a9a9",
+              borderRadius: "5px",
+              padding: "0.1rem 0.35rem",
+            },
+            "code::before": {
+              content: '""',
+            },
+            "code::after": {
+              content: '""',
             },
           },
         },
