@@ -26,6 +26,13 @@ const Works: Work[] = [
     coverSrc: "/assets/projects/wellsoul-pijush-barik.jpg",
   },
   {
+    name: "AiHouse India",
+    description: "AiHouse India portfolio website.",
+    tags: ["Gatsby", "Chakra UI", "TailwindCSS"],
+    link: "https://aihouseindia.com",
+    coverSrc: "/assets/projects/aihouse-india-pijush-barik.jpg",
+  },
+  {
     name: "Proficient Vision Solutions",
     description: "Product showcase website",
     tags: ["HTML", "SCSS", "jQuery"],
