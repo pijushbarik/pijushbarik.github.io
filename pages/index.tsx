@@ -7,6 +7,7 @@ import classNames from "@lib/helpers/classNames";
 import ProjectCard from "@components/ProjectCard";
 import Masonry from "react-masonry-css";
 import Meta from "@components/Meta";
+import CareerCard from "@components/CareerCard";
 
 type Work = {
   coverSrc: string;
@@ -21,9 +22,16 @@ const Works: Work[] = [
     name: "WellSoul",
     description:
       "Online Healthcare Service. Managing the project with it's admin submodule from scratch.",
-    tags: ["Next.js", "GraphQL", "Strapi", "Ant Design", "Less"],
+    tags: ["Next.js", "GraphQL", "Strapi", "AntD", "TailwindCSS"],
     link: "https://wellsoul.in",
     coverSrc: "/assets/projects/wellsoul-pijush-barik.jpg",
+  },
+  {
+    name: "AiHouse India",
+    description: "AiHouse India portfolio website.",
+    tags: ["Gatsby", "Chakra UI", "TailwindCSS"],
+    link: "https://aihouseindia.com",
+    coverSrc: "/assets/projects/aihouse-india-pijush-barik.jpg",
   },
   {
     name: "Proficient Vision Solutions",
@@ -62,7 +70,7 @@ const Index: NextPage<PageProps> = () => {
               <HiThere className={styles.hiThere} />
               <IAmPijush className={styles.iAmPijush} />
               <p className={styles.subtitle}>
-                I help people make the world better through quality softwares.
+                Helping people writing quality code &amp; softwares.
               </p>
             </div>
           </Container>
@@ -70,7 +78,7 @@ const Index: NextPage<PageProps> = () => {
 
         <section id="about" className="bg-yellow-900 py-28">
           <Container fluid className="space-y-10">
-            <h2 className="text-5xl font-serif font-bold mb-8">Prototype.</h2>
+            <h2 className="text-5xl font-serif font-bold mb-8">About.</h2>
 
             <div className="flex flex-col md:flex-row space-y-10 md:space-y-0 space-x-0 md:space-x-10">
               <div className="w-full md:w-4/12">
@@ -86,7 +94,7 @@ const Index: NextPage<PageProps> = () => {
 
               <div className="w-full md:w-8/12 leading-snug text-2xl">
                 <h2 className="text-5xl font-serif">
-                  Hi there. I am Pijush Barik. I am a web developer.
+                  Hi there. I am Pijush Barik. I am a full stack web developer.
                 </h2>
 
                 <p className="mt-12">
@@ -107,13 +115,11 @@ const Index: NextPage<PageProps> = () => {
                   I am very fortunate that I chose coding as my hobby &amp;
                   career too. It feels so grateful to think that things I
                   learned and did for fun in college is now my profession.
-                  I&apos;m the type of person who keep awake late night to fix a
-                  bug.
                 </p>
 
                 <p className="mt-12">
-                  Alongside coding I love to ride my bike, read story books,
-                  watching crime thriller movies and TV series.
+                  Alongside coding I love to ride my bike, read books (mostly
+                  fiction), watching crime thriller movies and TV series.
                 </p>
 
                 <p className="mt-12">
@@ -134,7 +140,7 @@ const Index: NextPage<PageProps> = () => {
 
         <section id="works" className="py-28">
           <Container fluid className="space-y-10">
-            <h2 className="text-5xl font-serif font-bold mb-8">Functions.</h2>
+            <h2 className="text-5xl font-serif font-bold mb-8">Works.</h2>
 
             <Masonry
               breakpointCols={{
@@ -156,64 +162,43 @@ const Index: NextPage<PageProps> = () => {
 
         <section id="experience" className="bg-gray-900 py-28">
           <Container fluid className="space-y-10">
-            <h2 className="text-5xl font-serif font-bold">Flowchart.</h2>
+            <h2 className="text-5xl font-serif font-bold">Career.</h2>
 
             <div>
               <ul className={styles.experienceList}>
                 <li className={styles.experienceList_item}>
-                  <h4 className="text-3xl font-light">Full Stack Developer</h4>
-
-                  <div className="flex flex-col space-y-1">
-                    <span className="font-semibold">CBNITS</span>
-                    <span className="text-sm text-gray-400">
-                      October, 2019 - Present
-                    </span>
-                    <span className="leading-tight max-w-5xl">
-                      Creating responsive and interactive UI with React.
-                      Developing feature-rich web application on NextJS and
-                      AntD. Managing and developing backend APIs with Strapi.
-                    </span>
-                  </div>
+                  <CareerCard
+                    title="Full Stack Developer"
+                    comapny="CBNITS, Kolkata"
+                    period="October, 2019 - Present"
+                    jobDescription="Creating responsive and interactive UI with React.
+                    Developing feature-rich web application on NextJS and
+                    AntD. Managing and developing backend APIs with Strapi."
+                  />
                 </li>
 
                 <li className={styles.experienceList_item}>
-                  <h4 className="text-3xl font-light">
-                    C++ &amp; CUDA Developer
-                  </h4>
-
-                  <div className="flex flex-col space-y-1">
-                    <span className="font-semibold">
-                      Department of Electronics &amp; Electrical Communication
-                      Engineering, Indian Institute of Technology, Kharagpur
-                    </span>
-                    <span className="text-sm text-gray-400">
-                      July, 2019 - September, 2019
-                    </span>
-                    <span className="leading-tight">
-                      Developing real time, multithreaded image processing
-                      application with C++, CUDA and OpenCV. Creating build
-                      tools with CMAKE for easy code compilation.
-                    </span>
-                  </div>
+                  <CareerCard
+                    title="C++ &amp; CUDA Developer"
+                    comapny="Department of Electronics &amp; Electrical Communication
+                    Engineering, Indian Institute of Technology, Kharagpur"
+                    period="July, 2019 - September, 2019"
+                    jobDescription="Developing real time, multithreaded image processing
+                    application with C++, CUDA and OpenCV. Creating build
+                    tools with CMAKE for easy code compilation."
+                  />
                 </li>
 
                 <li className={styles.experienceList_item}>
-                  <h4 className="text-3xl font-light">Project Intern</h4>
-
-                  <div className="flex flex-col space-y-1">
-                    <span className="font-semibold">
-                      Department of Electronics &amp; Electrical Communication
-                      Engineering, Indian Institute of Technology, Kharagpur
-                    </span>
-                    <span className="text-sm text-gray-400">
-                      March, 2019 - June, 2019
-                    </span>
-                    <span className="leading-tight">
-                      Migrating Matlab prototype codebase into C++ and CUDA.
-                      Worked with OpenCV for image processing. Developing
-                      product showcase website.
-                    </span>
-                  </div>
+                  <CareerCard
+                    title="Project Intern"
+                    comapny="Department of Electronics &amp; Electrical Communication
+                    Engineering, Indian Institute of Technology, Kharagpur"
+                    period="March, 2019 - June, 2019"
+                    jobDescription=" Migrating Matlab prototype codebase into C++ and CUDA.
+                    Worked with OpenCV for image processing. Developing
+                    product showcase website."
+                  />
                 </li>
               </ul>
             </div>
@@ -222,7 +207,7 @@ const Index: NextPage<PageProps> = () => {
 
         <section id="tech-stacks" className="py-28">
           <Container fluid className="space-y-10">
-            <h2 className="text-5xl font-serif font-bold">Core Libs.</h2>
+            <h2 className="text-5xl font-serif font-bold">Tech Stack.</h2>
 
             <div>
               <div>
@@ -233,13 +218,12 @@ const Index: NextPage<PageProps> = () => {
                 <ul className={styles.tagList}>
                   <li>TypeScript</li>
                   <li>JavaScript</li>
+                  <li>SQL</li>
                   <li>HTML</li>
                   <li>CSS</li>
-                  <li>SCSS</li>
                   <li>Python</li>
                   <li>C</li>
                   <li>C++</li>
-                  <li>CUDA</li>
                 </ul>
               </div>
 
@@ -250,17 +234,26 @@ const Index: NextPage<PageProps> = () => {
                 <ul className={styles.tagList}>
                   <li>ReactJS</li>
                   <li>Next.js</li>
-                  <li>Redux</li>
-                  <li>REST API</li>
-                  <li>GraphQL</li>
                   <li>Gatsby</li>
+                  <li>Ant Design</li>
+                  <li>Material UI</li>
+                  <li>Chakra UI</li>
+                  <li>TailwindCSS</li>
+                  <li>Bootstrap</li>
+                  <li>SCSS</li>
+                  <li>LESS</li>
+                  <li>Redux</li>
                   <li>Node.js</li>
                   <li>Express</li>
-                  <li>Tailwind CSS</li>
-                  <li>Bootstrap</li>
-                  <li>Ant Design</li>
-                  <li>MaterialUI</li>
+                  <li>REST API</li>
+                  <li>GraphQL</li>
+                  <li>MySQL</li>
+                  <li>MongoDB</li>
+                  <li>Strapi</li>
                   <li>Git</li>
+                  <li>CUDA</li>
+                  <li>OpenCV</li>
+                  <li>AWS</li>
                 </ul>
               </div>
             </div>
