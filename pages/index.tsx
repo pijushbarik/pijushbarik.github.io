@@ -168,9 +168,17 @@ const Index: NextPage<PageProps> = () => {
               <ul className={styles.experienceList}>
                 <li className={styles.experienceList_item}>
                   <CareerCard
+                    title="Associate Consultant"
+                    comapny="Infosys"
+                    period="May, 2022 - Present"
+                  />
+                </li>
+
+                <li className={styles.experienceList_item}>
+                  <CareerCard
                     title="Full Stack Developer"
                     comapny="CBNITS, Kolkata"
-                    period="October, 2019 - Present"
+                    period="October, 2019 - April, 2022"
                     jobDescription="Creating responsive and interactive UI with React.
                     Developing feature-rich web application on NextJS and
                     AntD. Managing and developing backend APIs with Strapi."
