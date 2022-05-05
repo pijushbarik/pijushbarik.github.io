@@ -1,7 +1,7 @@
 type CareerCardProps = {
   title: string;
   comapny: string;
-  jobDescription: string;
+  jobDescription?: string;
   period: string;
 };
 
@@ -13,7 +13,8 @@ const CareerCard: React.FC<CareerCardProps> = (props) => {
       <div className="flex flex-col space-y-4">
         <span className="font-semibold text-xl">{props.comapny}</span>
         <span className="text-sm text-gray-400">{props.period}</span>
-        <span className="leading-tight max-w-5xl">{props.jobDescription}</span>
+        {props.jobDescription && (
+          <span className="leading-tight max-w-5xl">{props.jobDescription}</span>)}
       </div>
     </>
   );
