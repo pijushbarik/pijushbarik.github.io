@@ -168,9 +168,17 @@ const Index: NextPage<PageProps> = () => {
               <ul className={styles.experienceList}>
                 <li className={styles.experienceList_item}>
                   <CareerCard
+                    title="Senior Associate Consultant"
+                    comapny="Infosys"
+                    period="July, 2022 - Present"
+                  />
+                </li>
+
+                <li className={styles.experienceList_item}>
+                  <CareerCard
                     title="Associate Consultant"
                     comapny="Infosys"
-                    period="May, 2022 - Present"
+                    period="May, 2022 - June, 2023"
                   />
                 </li>
 
