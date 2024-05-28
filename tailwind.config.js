@@ -1,5 +1,6 @@
+/** @type {import('tailwindcss').Config} */
 module.exports = {
-  purge: ["./pages/**/*.tsx", "./components/**/*.tsx"],
+  content: ["./pages/**/*.tsx", "./components/**/*.tsx"],
   darkMode: "class",
   theme: {
     fontFamily: {
@@ -76,6 +77,5 @@ module.exports = {
   },
   plugins: [
     require("@tailwindcss/typography"),
-    require("@tailwindcss/line-clamp"),
   ],
 };

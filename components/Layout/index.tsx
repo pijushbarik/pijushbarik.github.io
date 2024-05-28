@@ -2,7 +2,9 @@ import Container from "@components/Container";
 import Header from "./Header";
 import Footer from "./Footer";
 
-type LayoutProps = {};
+type LayoutProps = {
+  children: React.ReactNode
+};
 
 const Layout: React.FC<LayoutProps> = (props) => {
   return (

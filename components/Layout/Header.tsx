@@ -29,11 +29,9 @@ const Header: React.FC<{}> = () => {
         className="flex items-center justify-between space-x-4 py-4"
       >
         <Link href="/">
-          <a>
             <span className="text-4xl font-mono tracking-tighter text-ternary">
               Pijush Barik
             </span>
-          </a>
         </Link>
 
         <NavigationMenu
