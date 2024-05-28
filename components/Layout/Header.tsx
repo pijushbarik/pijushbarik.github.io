@@ -38,12 +38,12 @@ const Header: React.FC<{}> = () => {
 
         <NavigationMenu
           items={[
-            {
-              name: "Blog",
-              key: "blog",
-              path: "/blog",
-              activeKey: activeMenuItem,
-            },
+            // {
+            //   name: "Blog",
+            //   key: "blog",
+            //   path: "/blog",
+            //   activeKey: activeMenuItem,
+            // },
             {
               name: "About Me",
               key: "about",
