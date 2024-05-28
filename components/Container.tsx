@@ -3,6 +3,7 @@ import classNames from "@helpers/classNames";
 type ContainerProps = {
   fluid?: boolean;
   className?: string;
+  children: React.ReactNode
 };
 
 const Container: React.FC<ContainerProps> = (props) => {

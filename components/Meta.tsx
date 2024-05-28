@@ -4,6 +4,7 @@ type MetaProps = {
   keywords?: string[];
   title?: string;
   ogImage?: string;
+  children?: React.ReactNode
 };
 
 const Meta: React.FC<MetaProps> = (props) => {

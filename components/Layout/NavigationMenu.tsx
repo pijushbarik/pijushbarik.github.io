@@ -41,15 +41,13 @@ const NavigationMenu: React.FC<NavigationMenuProps> = (props) => {
     <ul className={styles.navMenuItems}>
       {props.items.map((item) => (
         <li key={item.name}>
-          <Link href={item.path}>
-            <a
-              className={classNames(
+          <Link href={item.path}
+          className={classNames(
                 styles.linkBtn,
                 item.activeKey === item.key && styles.active
               )}
-            >
+          >
               {item.name}
-            </a>
           </Link>
         </li>
       ))}

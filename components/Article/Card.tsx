@@ -8,8 +8,7 @@ type ArticleCardProps = {
 
 const ArticleCard: React.FC<ArticleCardProps> = (props) => {
   return (
-    <Link href={`/blog/${props.article.slug}`}>
-      <a className="h-full flex flex-col justify-between space-y-4">
+    <Link href={`/blog/${props.article.slug}`}className="h-full flex flex-col justify-between space-y-4">
         <div className="flex flex-col">
           <h2 className="text-3xl line-clamp-4">{props.article.title}</h2>
 
@@ -35,7 +34,6 @@ const ArticleCard: React.FC<ArticleCardProps> = (props) => {
             <span className="text-secondary">View Post {"->"}</span>
           </div>
         </div>
-      </a>
     </Link>
   );
 };
