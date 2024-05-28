@@ -5,7 +5,7 @@ const Footer: React.FC<{}> = () => {
   return (
     <footer className={styles.footer}>
       <Container fluid className="flex justify-center">
-        <ul className="grid grid-cols-5 grid-rows-1 gap-2 md:gap-4 lg:gap-6 justify-center">
+        <ul className="grid grid-cols-4 grid-rows-1 gap-2 md:gap-4 lg:gap-6 justify-center">
           <li className="flex justify-center">
             <a
               className="p-2 rounded-full bg-white transition-colors inline-block"
@@ -14,20 +14,6 @@ const Footer: React.FC<{}> = () => {
               <img
                 src="/assets/github.svg"
                 alt="GitHub profile link"
-                height="64px"
-                width="64px"
-                className="h-6 w-6"
-              />
-            </a>
-          </li>
-          <li className="flex justify-center">
-            <a
-              className="p-2 rounded-full bg-white transition-colors inline-block"
-              href="https://codepen.io/heisenberg-pb"
-            >
-              <img
-                src="/assets/codepen.svg"
-                alt="Codepen profile link"
                 height="64px"
                 width="64px"
                 className="h-6 w-6"

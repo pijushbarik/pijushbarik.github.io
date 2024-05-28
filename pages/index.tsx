@@ -166,26 +166,26 @@ const Index: NextPage<PageProps> = () => {
 
             <div>
               <ul className={styles.experienceList}>
-                <li className={styles.experienceList_item}>
+              <li className={styles.experienceList_item}>
                   <CareerCard
-                    title="Senior Associate Consultant"
-                    comapny="Infosys"
-                    period="July, 2022 - Present"
+                    title="Software Engineer"
+                    company="EPAM Anywhere"
+                    period="May, 2024 - Present"
                   />
                 </li>
 
                 <li className={styles.experienceList_item}>
                   <CareerCard
-                    title="Associate Consultant"
-                    comapny="Infosys"
-                    period="May, 2022 - June, 2023"
+                    title="Senior Associate Consultant"
+                    company="Infosys"
+                    period="May, 2022 - April, 2024"
                   />
                 </li>
 
                 <li className={styles.experienceList_item}>
                   <CareerCard
                     title="Full Stack Developer"
-                    comapny="CBNITS, Kolkata"
+                    company="CBNITS, Kolkata"
                     period="October, 2019 - April, 2022"
                     jobDescription="Creating responsive and interactive UI with React.
                     Developing feature-rich web application on NextJS and
@@ -196,7 +196,7 @@ const Index: NextPage<PageProps> = () => {
                 <li className={styles.experienceList_item}>
                   <CareerCard
                     title="C++ &amp; CUDA Developer"
-                    comapny="Department of Electronics &amp; Electrical Communication
+                    company="Department of Electronics &amp; Electrical Communication
                     Engineering, Indian Institute of Technology, Kharagpur"
                     period="July, 2019 - September, 2019"
                     jobDescription="Developing real time, multithreaded image processing
@@ -208,10 +208,10 @@ const Index: NextPage<PageProps> = () => {
                 <li className={styles.experienceList_item}>
                   <CareerCard
                     title="Project Intern"
-                    comapny="Department of Electronics &amp; Electrical Communication
+                    company="Department of Electronics &amp; Electrical Communication
                     Engineering, Indian Institute of Technology, Kharagpur"
                     period="March, 2019 - June, 2019"
-                    jobDescription=" Migrating Matlab prototype codebase into C++ and CUDA.
+                    jobDescription="Migrating Matlab prototype codebase into C++ and CUDA.
                     Worked with OpenCV for image processing. Developing
                     product showcase website."
                   />
@@ -234,10 +234,10 @@ const Index: NextPage<PageProps> = () => {
                 <ul className={styles.tagList}>
                   <li>TypeScript</li>
                   <li>JavaScript</li>
+                  <li>Python</li>
                   <li>SQL</li>
                   <li>HTML</li>
                   <li>CSS</li>
-                  <li>Python</li>
                   <li>C</li>
                   <li>C++</li>
                 </ul>
@@ -256,12 +256,14 @@ const Index: NextPage<PageProps> = () => {
                   <li>Chakra UI</li>
                   <li>TailwindCSS</li>
                   <li>Bootstrap</li>
-                  <li>SCSS</li>
+                  <li>SASS/SCSS</li>
                   <li>LESS</li>
                   <li>Redux</li>
+                  <li>ChartJS</li>
+                  <li>AG Grid</li>
                   <li>Node.js</li>
                   <li>Express</li>
-                  <li>REST API</li>
+                  <li>REST</li>
                   <li>GraphQL</li>
                   <li>MySQL</li>
                   <li>MongoDB</li>
@@ -270,6 +272,11 @@ const Index: NextPage<PageProps> = () => {
                   <li>CUDA</li>
                   <li>OpenCV</li>
                   <li>AWS</li>
+                  <li>GCP</li>
+                  <li>Vite</li>
+                  <li>Vitest</li>
+                  <li>Jest</li>
+                  <li>Testing Library</li>
                 </ul>
               </div>
             </div>
