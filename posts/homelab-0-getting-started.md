@@ -1,8 +1,9 @@
 ---
 title: Homelab - getting started
-slug: homelab-getting-started
+slug: homelab-0-getting-started
 publishDate: 22 Nov 2025
 description: My homelab setup journey and documentation
+nextPost: "homelab-1-additional-configuration"
 tags: ["homelab"]
 ---
 
@@ -36,15 +37,18 @@ For the computer part, there are several ways to set up one:
 
 For option 1, accessing your server from the internet is easy. Directly access with the VPS's associated IP address or install a reverse proxy if you have a domain. For options 2 and 3, getting your server to the internet is a little tricky and which I will discuss later. Initially, I will set up everything locally before getting it accessible via the internet with a domain.
 
-I decided to go with option 3 as I already have an old laptop with a broken screen, and except that my laptop specification is pretty decent with an Intel i3 5th generation chip, 8 GB of RAM, 2 GB AMD graphics card (which could be useful for hardware acceleration in video transcoding) and an internal SSD.
+I decided to go with option 3, as I already have an old laptop with a broken screen. Except for that, my laptop's specifications are pretty decent, with an Intel i3 5th-generation chip, 8 GB of RAM, and an internal SSD of 240GB. 
+
+For storage, I replaced the old DVD drive with an old 1TB hard disk with a caddy, and added my external 2TB portable SSD (which already contains old photos, movies and other backups) via USB. The internal SSD will work as an OS drive and internal Docker volumes data. I plan to expand the storage with a reliable mirror backup solution in the future.
 
 ## Getting the laptop ready
 
-First, I removed the LCD screen from the laptop and made it headless. For OS, I decided to go with Ubuntu Server 24.04.03 LTS. Ubuntu Desktop works as well, but as I intend to use the server without any GUI and SSH from my other systems to work on, I decided on the non-GUI server version. Also, GUI plugins consume more resources, and we need all the resources to be allocated doing all other important tasks.
+First, I removed the LCD screen from the laptop and made it headless. For OS, I decided to go with Ubuntu Server 24.04.03 LTS.
+
+Here's how it looks as of now
+![Homelab server](../src/assets/blog/media/homelab-server.jpg)
 
 #### OS installation
-
-Installing Ubuntu server is pretty similar to installing Ubuntu desktop, except it all happens on the terminal. 
 
 Created the bootable Ubuntu USB with [Balena Etcher](https://etcher.balena.io/) from my Mac. I won't go into details about how to install Ubuntu Server; there are a lot of guides available on the internet. But here is the disk partition size I decided to go with.
 
@@ -81,9 +85,7 @@ Then we will log in through the new user account.
 
 #### Docker
 
-We will containerise all of our services with Docker. It will be easier to manage them instead of installing everything on the host.
-
-Let's install Docker
+We will containerise all of our services with Docker. Let's install Docker
 
 ```sh
 sudo apt update
@@ -92,7 +94,7 @@ sudo apt install docker.io
 sudo apt install docker-compose-v2
 ```
 
-Once installed Docker we need to add the current user to the `docker` group so that running Docker commands every time does not require adding sudo.
+Once Docker is installed, we need to add the current user to the `docker` group so that running Docker commands every time does not require adding sudo.
 
 ```sh
 # create the docker group
@@ -101,4 +103,4 @@ sudo groupadd docker
 sudo usermod -aG docker $USER
 ```
 
-That's it.
+Next, I will setup my self-hosted services like PiHole, NextCloud, Jellyfin etc. in this server.
