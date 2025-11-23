@@ -39,10 +39,18 @@ const { Content } = await render(post);
 
     <div class="post-navigation">
       <div>
-        {post.data.prevPost && <a href={post.data.prevPost}>Previous post</a>}
+        {
+          post.data.prevPost && (
+            <a href={`/blog/${post.data.prevPost}`}>Previous post</a>
+          )
+        }
       </div>
       <div>
-        {post.data.nextPost && <a href={post.data.nextPost}>Next post</a>}
+        {
+          post.data.nextPost && (
+            <a href={`/blog/${post.data.nextPost}`}>Next post</a>
+          )
+        }
       </div>
     </div>
   </div>
