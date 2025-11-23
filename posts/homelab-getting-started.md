@@ -1,6 +1,6 @@
 ---
 title: Homelab - getting started
-slug: getting-started
+slug: homelab-getting-started
 publishDate: 22 Nov 2025
 description: My homelab setup journey and documentation
 tags: ["homelab"]

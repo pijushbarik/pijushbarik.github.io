@@ -5,6 +5,8 @@
   --primary-color: #548e9b;
   --font-family-serif: Merriweather, serif;
   --font-family-sans: 'Fira Sans', sans-serif;
+
+  --about-illustration-color-invert: 0;
 }
 
 :root.theme-dark {
@@ -12,6 +14,8 @@
   --text-main: #fff;
   --text-secondary: #ccc;
   --primary-color: #548e9b;
+
+  --about-illustration-color-invert: 1;
 }
 
 html {
