@@ -4,11 +4,18 @@ import readingTime from "reading-time";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 
 export async function getStaticPaths() {
-  const posts = await getCollection("posts");
-  return posts.map((p) => ({
-    params: { slug: p.data.slug },
-    props: { post: p },
-  }));
+  const data = await getCollection("data");
+
+  return await Promise.all(
+    data.map(async (d) => {
+      const post = await getEntry("posts", d.id);
+
+      return {
+        params: { slug: d.data.slug },
+        props: { post: post, data: d.data },
+      };
+    }),
+  );
 }
 
 async function getPostTitleFromId(id) {
@@ -21,9 +28,18 @@ async function getPostTitleFromId(id) {
   }
 }
 
-const { post } = Astro.props;
+const { post, data } = Astro.props;
 const { title, slug, description, publishDate, tags, prevPost, nextPost } =
-  post.data;
+  data;
+console.log({
+  title,
+  slug,
+  description,
+  publishDate,
+  tags,
+  prevPost,
+  nextPost,
+});
 const readingTimeEstimate = readingTime(post.body).text;
 const permalink = `${Astro.site.href}blog/${slug}`;
 

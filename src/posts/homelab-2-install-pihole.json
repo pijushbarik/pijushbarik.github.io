@@ -1,0 +1,16 @@
+{
+    "title": "Homelab - Install Pi-hole",
+    "slug": "homelab-2-install-pihole",
+    "publishDate": "29 Nov 2025",
+    "description": "Installing and setup Pi-hole for network-wide ad-blocking.",
+    "prevPost": "homelab-1-additional-configuration",
+    "tags": [
+        "homelab",
+        "selfhosted",
+        "linux",
+        "ubuntu-server",
+        "docker",
+        "pi-hole",
+        "ad blocker"
+    ]
+}

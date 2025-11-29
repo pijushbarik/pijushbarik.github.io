@@ -6,7 +6,7 @@ const title = "Blog - Pijush Barik";
 const description = "Blog posts from Pijush";
 const permalink = `${Astro.site.href}blog`;
 
-let allPosts = await getCollection("posts");
+let allPosts = await getCollection("data");
 allPosts = allPosts.sort(
   (a, b) =>
     new Date(b.data.publishDate).valueOf() -
@@ -71,6 +71,7 @@ allPosts = allPosts.sort(
   }
 
   .post-item-tags span {
+    font-size: 14px;
     padding: 2px 6px;
     border-radius: 3px;
     background-color: var(--tag-bg-color);
