@@ -66,13 +66,15 @@ allPosts = allPosts.sort(
 
   .post-item-tags {
     display: flex;
-    gap: 14px;
+    flex-wrap: wrap;
+    gap: 8px;
   }
 
   .post-item-tags span {
     padding: 2px 6px;
     border-radius: 3px;
-    background-color: rgba(81, 81, 81, 0.5);
+    background-color: var(--tag-bg-color);
+    color: var(--tag-color);
   }
 
   hr {

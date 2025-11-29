@@ -7,6 +7,8 @@
   --font-family-sans: 'Fira Sans', sans-serif;
 
   --about-illustration-color-invert: 0;
+  --tag-bg-color: rgba(154, 154, 154, 0.2);
+  --tag-color: #111;
 }
 
 :root.theme-dark {
@@ -16,6 +18,8 @@
   --primary-color: #548e9b;
 
   --about-illustration-color-invert: 1;
+  --tag-bg-color: rgba(81, 81, 81, 0.5);
+  --tag-color: #ddd;
 }
 
 html {

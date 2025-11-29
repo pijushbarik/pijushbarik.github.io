@@ -1,5 +1,5 @@
 ---
-import { getCollection, render } from "astro:content";
+import { getCollection, getEntry, render } from "astro:content";
 import readingTime from "reading-time";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import Bio from "../../components/Bio.astro";
@@ -12,10 +12,25 @@ export async function getStaticPaths() {
   }));
 }
 
+async function getPostTitleFromId(id) {
+  try {
+    if (!id) return null;
+    const post = await getEntry("posts", id);
+    return post.data.title;
+  } catch (e) {
+    return null;
+  }
+}
+
 const { post } = Astro.props;
-const { title, slug, description, publishDate } = post.data;
+const { title, slug, description, publishDate, tags, prevPost, nextPost } =
+  post.data;
 const readingTimeEstimate = readingTime(post.body).text;
 const permalink = `${Astro.site.href}blog/${slug}`;
+
+const prevPostTitle = await getPostTitleFromId(prevPost);
+const nextPostTitle = await getPostTitleFromId(nextPost);
+
 const { Content } = await render(post);
 ---
 
@@ -37,18 +52,24 @@ const { Content } = await render(post);
     <hr />
     <Bio />
 
+    <div class="tags">
+      {tags.map((tag) => <span>{tag}</span>)}
+    </div>
+
     <div class="post-navigation">
       <div>
         {
-          post.data.prevPost && (
-            <a href={`/blog/${post.data.prevPost}`}>Previous post</a>
+          prevPost && (
+            <a href={`/blog/${prevPost}`}>
+              &larr; {prevPostTitle || "Previous"}
+            </a>
           )
         }
       </div>
       <div>
         {
-          post.data.nextPost && (
-            <a href={`/blog/${post.data.nextPost}`}>Next post</a>
+          nextPost && (
+            <a href={`/blog/${nextPost}`}>{nextPostTitle || "Next"} &rarr;</a>
           )
         }
       </div>
@@ -82,5 +103,18 @@ const { Content } = await render(post);
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .tags span {
+    padding: 2px 6px;
+    border-radius: 3px;
+    background-color: var(--tag-bg-color);
+    color: var(--tag-color);
   }
 </style>
