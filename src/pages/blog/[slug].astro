@@ -21,8 +21,8 @@ export async function getStaticPaths() {
 async function getPostTitleFromId(id) {
   try {
     if (!id) return null;
-    const post = await getEntry("posts", id);
-    return post.data.title;
+    const data = await getEntry("data", id);
+    return data.data.title;
   } catch (e) {
     return null;
   }
@@ -31,15 +31,6 @@ async function getPostTitleFromId(id) {
 const { post, data } = Astro.props;
 const { title, slug, description, publishDate, tags, prevPost, nextPost } =
   data;
-console.log({
-  title,
-  slug,
-  description,
-  publishDate,
-  tags,
-  prevPost,
-  nextPost,
-});
 const readingTimeEstimate = readingTime(post.body).text;
 const permalink = `${Astro.site.href}blog/${slug}`;
 
