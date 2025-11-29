@@ -9,6 +9,7 @@
   --about-illustration-color-invert: 0;
   --tag-bg-color: rgba(154, 154, 154, 0.2);
   --tag-color: #111;
+  --code-color: #555;
 }
 
 :root.theme-dark {
@@ -20,6 +21,7 @@
   --about-illustration-color-invert: 1;
   --tag-bg-color: rgba(81, 81, 81, 0.5);
   --tag-color: #ddd;
+  --code-color: #ddd;
 }
 
 html {
@@ -148,7 +150,7 @@ hr {
 code {
   font-family: 'SF Mono', menlo, inconsolata, monospace;
   font-size: calc(1em - 2px);
-  color: #555;
+  color: var(--code-color);
   padding: 0.2em 0.4em;
   border-radius: 2px;
   -webkit-font-smoothing: antialiased;
