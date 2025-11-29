@@ -2,7 +2,6 @@
 import { getCollection, getEntry, render } from "astro:content";
 import readingTime from "reading-time";
 import BaseLayout from "../../layouts/BaseLayout.astro";
-import Bio from "../../components/Bio.astro";
 
 export async function getStaticPaths() {
   const posts = await getCollection("posts");
@@ -50,7 +49,6 @@ const { Content } = await render(post);
       <Content />
     </article>
     <hr />
-    <Bio />
 
     <div class="tags">
       {tags.map((tag) => <span>{tag}</span>)}
