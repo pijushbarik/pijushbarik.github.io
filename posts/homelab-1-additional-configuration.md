@@ -4,6 +4,7 @@ slug: homelab-1-additional-configuration
 publishDate: 24 Nov 2025
 description: My homelab setup journey and documentation
 prevPost: homelab-0-getting-started
+nextPost: homelab-2-install-pihole
 tags: ["homelab"]
 ---
 
