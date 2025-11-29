@@ -2,10 +2,10 @@
 title: Homelab - Additional configuration
 slug: homelab-1-additional-configuration
 publishDate: 24 Nov 2025
-description: My homelab setup journey and documentation
+description: My homelab setup journey and documentation. Applying additional configuration
 prevPost: homelab-0-getting-started
 nextPost: homelab-2-install-pihole
-tags: ["homelab"]
+tags: ["homelab", "selfhosted", "linux", "ubuntu-server", "docker"]
 ---
 
 ## Assign a fixed IP

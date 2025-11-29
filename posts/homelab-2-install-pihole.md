@@ -2,9 +2,9 @@
 title: Homelab - Install Pi-hole
 slug: homelab-2-install-pihole
 publishDate: 29 Nov 2025
-description: My homelab setup journey and documentation
+description: My homelab setup journey and documentation. Install and setup Pi-hole for network-wide ad-blocking
 prevPost: homelab-1-additional-configuration
-tags: ["homelab"]
+tags: ["homelab", "selfhosted", "linux", "ubuntu-server", "docker", "pi-hole", "ad blocker"]
 ---
 
 ![Pi-hole Dashboard](../src/assets/blog/media/pihole-dashboard.png)

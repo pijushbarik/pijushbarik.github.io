@@ -4,7 +4,7 @@ slug: homelab-0-getting-started
 publishDate: 22 Nov 2025
 description: My homelab setup journey and documentation
 nextPost: "homelab-1-additional-configuration"
-tags: ["homelab"]
+tags: ["homelab", "selfhosted", "linux", "ubuntu-server", "docker"]
 ---
 
 ## How it all started
