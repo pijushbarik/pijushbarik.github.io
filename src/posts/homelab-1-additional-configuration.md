@@ -1,18 +1,8 @@
----
-title: Homelab - Additional configuration
-slug: homelab-1-additional-configuration
-publishDate: 24 Nov 2025
-description: My homelab setup journey and documentation
-prevPost: homelab-0-getting-started
-nextPost: homelab-2-install-pihole
-tags: ["homelab"]
----
-
 ## Assign a fixed IP
 
 Once the server is ready, we need to assign a fixed IP to the server, as the router assigns IP addresses dynamically to connected devices, and we do not want to have a dynamic IP address to the server. So, we tell the router to allocate a fixed IP to the server by adding an Address Reservation entry in the router's DHCP Server settings. This will map the MAC address of the server to a fixed IP. I have assigned 192.168.0.153.
 
-![DHCP address reservation](../src/assets/blog/media/dhcp-server-settings.png)
+![DHCP address reservation](../assets/blog/media/dhcp-server-settings.png)
 
 ## Move Docker Volume
 
@@ -75,7 +65,7 @@ By default, Linux does not automount external drives. We can run `mount` command
 
    This will show all drives, including the unmounted ones.
 
-   ![output of lsblk -f](../src/assets/blog/media/lsblk-f.png)
+   ![output of lsblk -f](../assets/blog/media/lsblk-f.png)
 2. Grab the UUID of the drive (A12B-8FFC) and make an entry to fstab. Open the fstab file
 
    ```sh

@@ -1,13 +1,4 @@
----
-title: Homelab - Install Pi-hole
-slug: homelab-2-install-pihole
-publishDate: 29 Nov 2025
-description: My homelab setup journey and documentation
-prevPost: homelab-1-additional-configuration
-tags: ["homelab"]
----
-
-![Pi-hole Dashboard](../src/assets/blog/media/pihole-dashboard.png)
+![Pi-hole Dashboard](../assets/blog/media/pihole-dashboard.png)
 
 ## Install Pi-hole
 
@@ -64,6 +55,6 @@ We will use Docker and Docker Compose to set up Pi-hole and other services.
 
 In the router admin page, we need to set the DNS endpoint to our Pi-hole server.
 
-![Pi-hole server as DNS](../src/assets/blog/media/pihole-server-as-dns.png)
+![Pi-hole server as DNS](../assets/blog/media/pihole-server-as-dns.png)
 
 After applying, all the DNS queries will be handled by our Pi-hole server.
