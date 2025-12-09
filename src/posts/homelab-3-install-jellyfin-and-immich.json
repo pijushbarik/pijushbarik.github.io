@@ -1,0 +1,16 @@
+{
+    "title": "Homelab - Install Jellyfin and Immich",
+    "slug": "homelab-3-install-jellyfin-and-immich",
+    "publishDate": "07 Dec 2025",
+    "description": "Installing and setup Jellyfin and Immich",
+    "prevPost": "homelab-2-install-pihole",
+    "tags": [
+        "homelab",
+        "selfhosted",
+        "linux",
+        "ubuntu-server",
+        "docker",
+        "jellyfin",
+        "immich"
+    ]
+}

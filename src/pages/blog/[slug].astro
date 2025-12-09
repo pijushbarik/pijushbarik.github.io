@@ -5,17 +5,16 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 
 export async function getStaticPaths() {
   const data = await getCollection("data");
+  const allPosts = await getCollection("posts");
 
-  return await Promise.all(
-    data.map(async (d) => {
-      const post = await getEntry("posts", d.id);
+  return data.map((d) => {
+    const post = allPosts.find((p) => p.id === d.id);
 
-      return {
-        params: { slug: d.data.slug },
-        props: { post: post, data: d.data },
-      };
-    }),
-  );
+    return {
+      params: { slug: d.data.slug },
+      props: { post: post, data: d.data },
+    };
+  });
 }
 
 async function getPostTitleFromId(id) {
