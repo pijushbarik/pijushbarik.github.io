@@ -1,3 +1,17 @@
+---
+title: "Homelab - Additional configuration"
+publishDate: "24 Nov 2025"
+description: "Additional system configuration to auto mount drives, move Docker volumes to different drive."
+prevPost: "homelab-0-getting-started"
+nextPost: "homelab-2-install-pihole"
+tags:
+  - homelab
+  - selfhosted
+  - linux
+  - ubuntu-server
+  - docker
+---
+
 ## Assign a fixed IP
 
 Once the server is ready, we need to assign a fixed IP to the server, as the router assigns IP addresses dynamically to connected devices, and we do not want to have a dynamic IP address to the server. So, we tell the router to allocate a fixed IP to the server by adding an Address Reservation entry in the router's DHCP Server settings. This will map the MAC address of the server to a fixed IP. I have assigned 192.168.0.153.

@@ -1,3 +1,16 @@
+---
+title: "Homelab - getting started"
+publishDate: "22 Nov 2025"
+description: "Getting started with my homelab setup journey and documentation. Setting up hardware, OS and Docker."
+nextPost: "homelab-1-additional-configuration"
+tags:
+  - homelab
+  - selfhosted
+  - linux
+  - ubuntu-server
+  - docker
+---
+
 ## How it all started
 
 #### Ad blocking

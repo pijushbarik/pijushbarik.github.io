@@ -1,3 +1,18 @@
+---
+title: "Homelab - Install Jellyfin and Immich"
+publishDate: "07 Dec 2025"
+description: "Installing and setup Jellyfin and Immich"
+prevPost: "homelab-2-install-pihole"
+tags:
+  - homelab
+  - selfhosted
+  - linux
+  - ubuntu-server
+  - docker
+  - jellyfin
+  - immich
+---
+
 ## Installing Jellyfin
 
 Jellyfin is an open-source, self-hosted streaming platform. It has clients on the web, Android, and iOS to stream content on my other devices.

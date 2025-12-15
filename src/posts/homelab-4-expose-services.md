@@ -1,3 +1,21 @@
+---
+title: "Homelab - Expose services with a VPS using WireGuard and Nginx"
+publishDate: "13 Dec 2025"
+description: "Expose local services with a VPS running WireGuard VPN and Nginx reverse proxy."
+prevPost: "homelab-3-install-jellyfin-and-immich"
+tags:
+  - homelab
+  - selfhosted
+  - linux
+  - ubuntu-server
+  - docker
+  - vps
+  - vpn
+  - wireguard
+  - nginx
+  - wireguard with nginx
+---
+
 ## Available options
 
 Here are a few options I researched for accessing my services outside of my local network.

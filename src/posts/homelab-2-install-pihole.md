@@ -1,3 +1,19 @@
+---
+title: "Homelab - Install Pi-hole"
+publishDate: "29 Nov 2025"
+description: "Installing and setup Pi-hole for network-wide ad-blocking."
+nextPost: "homelab-3-install-jellyfin-and-immich"
+prevPost: "homelab-1-additional-configuration"
+tags:
+  - homelab
+  - selfhosted
+  - linux
+  - ubuntu-server
+  - docker
+  - pi-hole
+  - ad blocker
+---
+
 ![Pi-hole Dashboard](../assets/blog/media/pihole-dashboard.png)
 
 ## Install Pi-hole
