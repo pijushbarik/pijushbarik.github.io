@@ -50,7 +50,7 @@ For storage, I replaced the old DVD drive with an old 1TB hard disk with a caddy
 First, I removed the LCD screen from the laptop and made it headless. For OS, I decided to go with Ubuntu Server 24.04.03 LTS.
 
 Here's how it looks as of now
-![Homelab server](../assets/blog/media/homelab-server.jpg)
+![Homelab server](./assets/homelab-server.jpg)
 
 #### OS installation
 

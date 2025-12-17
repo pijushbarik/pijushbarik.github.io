@@ -14,7 +14,7 @@ tags:
   - ad blocker
 ---
 
-![Pi-hole Dashboard](../assets/blog/media/pihole-dashboard.png)
+![Pi-hole Dashboard](./assets/pihole-dashboard.png)
 
 ## Install Pi-hole
 
@@ -71,6 +71,6 @@ We will use Docker and Docker Compose to set up Pi-hole and other services.
 
 In the router admin page, we need to set the DNS endpoint to our Pi-hole server.
 
-![Pi-hole server as DNS](../assets/blog/media/pihole-server-as-dns.png)
+![Pi-hole server as DNS](./assets/pihole-server-as-dns.png)
 
 After applying, all the DNS queries will be handled by our Pi-hole server.

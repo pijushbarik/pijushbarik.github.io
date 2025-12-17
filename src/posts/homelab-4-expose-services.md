@@ -45,7 +45,7 @@ So, I went with renting a cheap VPS on AWS Lightsail, with 2 vCPUs, 512MB of RAM
 7. Give the instance a name (ubuntu)
 8. Click on “Create instance”
 
-![Create AWS Lightsail instance](../assets/blog/media/create-lightsail-instance.png)
+![Create AWS Lightsail instance](./assets/create-lightsail-instance.png)
 
 Once the instance is created, go to the instance dashboard and download the private key file; this will be needed to log in to the instance.
 
@@ -123,7 +123,7 @@ Once the VPS is ready, we will set up WireGuard VPN on both the VPS and the loca
 
     Should output like this 
 
-    ![Output of sudo wg command](../assets/blog/media/wg-vps.png)
+    ![Output of sudo wg command](./assets/wg-vps.png)
  7. \[Server\] Create/modify the WireGuard configuration file `/etc/wireguard/wg0.conf` and add this configuration 
 
     ```conf
@@ -153,7 +153,7 @@ Once the VPS is ready, we will set up WireGuard VPN on both the VPS and the loca
 
     Should output like this
 
-    ![Output of sudo wg command](../assets/blog/media/wg-server.png)
+    ![Output of sudo wg command](./assets/wg-server.png)
 10. We can verify the VPN connection by running the ping command from the VPS to the Server and vice versa
 
     ```sh
