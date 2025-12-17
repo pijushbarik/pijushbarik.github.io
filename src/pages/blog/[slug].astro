@@ -8,7 +8,7 @@ export async function getStaticPaths() {
 
   return allPosts.map((post) => {
     return {
-      params: { slug: post.data.slug },
+      params: { slug: post.id },
       props: { post: post },
     };
   });
@@ -25,10 +25,10 @@ async function getPostTitleFromId(id) {
 }
 
 const { post } = Astro.props;
-const { title, slug, description, publishDate, tags, prevPost, nextPost } =
+const { id, title, description, publishDate, tags, prevPost, nextPost } =
   post.data;
 const readingTimeEstimate = readingTime(post.body).text;
-const permalink = `${Astro.site.href}blog/${slug}`;
+const permalink = `${Astro.site.href}blog/${id}`;
 
 const prevPostTitle = await getPostTitleFromId(prevPost);
 const nextPostTitle = await getPostTitleFromId(nextPost);

@@ -24,7 +24,7 @@ allPosts = allPosts.sort(
     <h1>Blog</h1>
     {
       allPosts.map((post, index) => {
-        const href = `/blog/${post.data.slug}`;
+        const href = `/blog/${post.id}`;
         return (
           <div>
             {index !== 0 && <hr />}
