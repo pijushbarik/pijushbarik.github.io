@@ -1,40 +1,60 @@
 ---
-import { getCollection, getEntry, render } from "astro:content";
+import { render } from "astro:content";
+import { getAllPublishedPosts } from "../../scripts/helpers";
 import readingTime from "reading-time";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 
 export async function getStaticPaths() {
-  const data = await getCollection("data");
-  const allPosts = await getCollection("posts");
+  const allPosts = await getAllPublishedPosts();
 
-  return data.map((d) => {
-    const post = allPosts.find((p) => p.id === d.id);
-
+  return allPosts.map((post) => {
     return {
-      params: { slug: d.data.slug },
-      props: { post: post, data: d.data },
+      params: { slug: post.id },
+      props: { post: post },
     };
   });
 }
 
-async function getPostTitleFromId(id) {
-  try {
-    if (!id) return null;
-    const data = await getEntry("data", id);
-    return data.data.title;
-  } catch (e) {
-    return null;
+async function getNextAndPrevPost(id) {
+  const posts = await getAllPublishedPosts({
+    sort: true,
+    compareFn: (a, b) =>
+      new Date(a.data.publishDate).valueOf() -
+      new Date(b.data.publishDate).valueOf(),
+  });
+
+  const currentPostIndex = posts.findIndex((p) => p.id === id);
+
+  const data = {
+    next: null,
+    prev: null,
+  };
+
+  if (currentPostIndex > 0) {
+    const prevPost = posts[currentPostIndex - 1];
+    data.prev = {
+      title: prevPost.data.title,
+      href: prevPost.id,
+    };
   }
+
+  if (currentPostIndex < posts.length - 1) {
+    const nextPost = posts[currentPostIndex + 1];
+    data.next = {
+      title: nextPost.data.title,
+      href: nextPost.id,
+    };
+  }
+
+  return data;
 }
 
-const { post, data } = Astro.props;
-const { title, slug, description, publishDate, tags, prevPost, nextPost } =
-  data;
+const { post } = Astro.props;
+const { title, description, publishDate, lastModifiedDate, tags } = post.data;
 const readingTimeEstimate = readingTime(post.body).text;
-const permalink = `${Astro.site.href}blog/${slug}`;
+const permalink = `${Astro.site.href}blog/${post.id}`;
 
-const prevPostTitle = await getPostTitleFromId(prevPost);
-const nextPostTitle = await getPostTitleFromId(nextPost);
+const { next: nextPost, prev: prevPost } = await getNextAndPrevPost(post.id);
 
 const { Content } = await render(post);
 ---
@@ -47,6 +67,7 @@ const { Content } = await render(post);
 >
   <header>
     <p>{publishDate} ~ {readingTimeEstimate}</p>
+    <p>Last modified on {lastModifiedDate}</p>
     <h1>{title}</h1>
     <hr />
   </header>
@@ -64,8 +85,8 @@ const { Content } = await render(post);
       <div>
         {
           prevPost && (
-            <a href={`/blog/${prevPost}`}>
-              &larr; {prevPostTitle || "Previous"}
+            <a href={`/blog/${prevPost.href}`}>
+              &larr; {prevPost.title || "Previous"}
             </a>
           )
         }
@@ -73,7 +94,9 @@ const { Content } = await render(post);
       <div>
         {
           nextPost && (
-            <a href={`/blog/${nextPost}`}>{nextPostTitle || "Next"} &rarr;</a>
+            <a href={`/blog/${nextPost.href}`}>
+              {nextPost.title || "Next"} &rarr;
+            </a>
           )
         }
       </div>

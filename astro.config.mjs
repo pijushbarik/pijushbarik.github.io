@@ -6,10 +6,12 @@ import remarkSmartypants from 'remark-smartypants'
 import rehypeExternalLinks from 'rehype-external-links'
 import rehypeCopyButton from "./src/rehype/rehype-copy-button";
 
+import sitemap from '@astrojs/sitemap';
+
 // https://astro.build/config
 export default defineConfig({
   site: 'https://pijushbarik.com',
-  integrations: [mdx(), svelte()],
+  integrations: [mdx(), svelte(), sitemap()],
   markdown: {
     shikiConfig: {
       theme: 'nord',

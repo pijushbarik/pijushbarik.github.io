@@ -1,6 +1,22 @@
-## Installing Jellyfin
+---
+title: "Homelab/Jellyfin and Immich"
+description: "Installing and setup Jellyfin and Immich to host photos, movies, shows"
+tags:
+  - homelab
+  - selfhosted
+  - linux
+  - ubuntu-server
+  - docker
+  - jellyfin
+  - immich
+published: true
+publishDate: "07 Dec 2025"
+lastModifiedDate: "20 Dec 2025"
+---
 
 Jellyfin is an open-source, self-hosted streaming platform. It has clients on the web, Android, and iOS to stream content on my other devices.
+
+## Installing Jellyfin
 
 1. Create persistent volumes for Jellyfin config and cache
 
@@ -49,9 +65,11 @@ Jellyfin is an open-source, self-hosted streaming platform. It has clients on th
 5. Once Jellyfin is started, the UI can be accessed from `http://localhost:8096`
 6. Set up an admin account. Create libraries of Movies, Shows, Books, etc., Jellyfin will generate respective metadata and create a browsable library of contents.
 
-## Installing Immich
+---
 
-Immich is a self-hosted, open-source solution for photos/videos and backing up. Immich provides a Google Photos-like UI on Web, Android and iOS clients. It also provides features like auto sync and backup photos, organising, face recognition, search by face or text (OCR) and many more.
+Immich is a self-hosted, open-source solution for photos/videos and backing up. Immich provides a Google Photos-like UI on Web, Android, and iOS clients. It also provides features like auto sync and backup photos, organising, face recognition, search by face or text (OCR), and many more.
+
+## Installing Immich
 
 1. Create the PostgreSQL DB directory for Immich
 

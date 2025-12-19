@@ -1,8 +1,26 @@
-![Pi-hole Dashboard](../assets/blog/media/pihole-dashboard.png)
+---
+title: "Homelab/Install ad-blocker with Pi-hole"
+description: "Installing and setup Pi-hole for network-wide ad-blocking."
+tags:
+  - homelab
+  - selfhosted
+  - linux
+  - ubuntu-server
+  - docker
+  - pi-hole
+  - ad blocker
+published: true
+publishDate: "29 Nov 2025"
+lastModifiedDate: "20 Dec 2025"
+---
+
+![Pi-hole Dashboard](./assets/pihole-dashboard.png)
+
+Pi-hole is a great self-hosted network-wide ad blocker; it blocks ads on all devices connected, blocks malicious links, protects privacy, and is easy to set up and maintain.
 
 ## Install Pi-hole
 
-We will use Docker and Docker Compose to set up Pi-hole and other services.
+I will use Docker and Docker Compose to set up Pi-hole and other services.
 
 1. In the home directory, create a `docker` directory and `pihole` inside `docker`.
 
@@ -49,12 +67,12 @@ We will use Docker and Docker Compose to set up Pi-hole and other services.
    ```
 
    This will pull the Pi-hole Docker image and start the container.
-5. Once the service is up, we can verify by launching the admin panel from `192.168.0.153:8081/admin`. If everything is okay, we can see the login page.
+5. Once the service is up, you can verify by launching the admin panel from `192.168.0.153:8081/admin`. If everything is okay, we can see the login page.
 
 ## Set Pi-hole as the DNS resolver
 
-In the router admin page, we need to set the DNS endpoint to our Pi-hole server.
+In the router admin page, you need to set the DNS endpoint to our Pi-hole server.
 
-![Pi-hole server as DNS](../assets/blog/media/pihole-server-as-dns.png)
+![Pi-hole server as DNS](./assets/pihole-server-as-dns.png)
 
 After applying, all the DNS queries will be handled by our Pi-hole server.
