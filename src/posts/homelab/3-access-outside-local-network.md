@@ -1,8 +1,6 @@
 ---
-title: "Homelab - Expose services with a VPS using WireGuard and Nginx"
-publishDate: "13 Dec 2025"
+title: "Homelab/Access services outside of local network"
 description: "Expose local services with a VPS running WireGuard VPN and Nginx reverse proxy."
-prevPost: "homelab-3-install-jellyfin-and-immich"
 tags:
   - homelab
   - selfhosted
@@ -14,6 +12,8 @@ tags:
   - wireguard
   - nginx
   - wireguard with nginx
+published: true
+publishDate: "13 Dec 2025"
 ---
 
 ## Available options
@@ -89,7 +89,7 @@ Once the VPS is ready, we will set up WireGuard VPN on both the VPS and the loca
     ```
  3. \[VPS\] Create/modify the WireGuard configuration file `/etc/wireguard/wg0.conf` and add this configuration
 
-    ```conf
+    ```plaintext
     [Interface]
     Address = 10.0.0.1/24   # VPS VPN IP
     ListenPort = 51820
@@ -126,7 +126,7 @@ Once the VPS is ready, we will set up WireGuard VPN on both the VPS and the loca
     ![Output of sudo wg command](./assets/wg-vps.png)
  7. \[Server\] Create/modify the WireGuard configuration file `/etc/wireguard/wg0.conf` and add this configuration 
 
-    ```conf
+    ```plaintext
     [Interface]
     Address = 10.0.0.2/24   # Home server VPN IP
     PrivateKey = <Home server private key]

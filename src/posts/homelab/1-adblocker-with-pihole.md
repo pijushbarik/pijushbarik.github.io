@@ -1,9 +1,6 @@
 ---
-title: "Homelab - Install Pi-hole"
-publishDate: "29 Nov 2025"
+title: "Homelab/Install ad-blocker with Pi-hole"
 description: "Installing and setup Pi-hole for network-wide ad-blocking."
-nextPost: "homelab-3-install-jellyfin-and-immich"
-prevPost: "homelab-1-additional-configuration"
 tags:
   - homelab
   - selfhosted
@@ -12,6 +9,8 @@ tags:
   - docker
   - pi-hole
   - ad blocker
+published: true
+publishDate: "29 Nov 2025"
 ---
 
 ![Pi-hole Dashboard](./assets/pihole-dashboard.png)

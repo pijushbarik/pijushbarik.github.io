@@ -1,10 +1,11 @@
 ---
-import { getCollection, getEntry, render } from "astro:content";
+import { render } from "astro:content";
+import { getAllPublishedPosts } from "../../scripts/helpers";
 import readingTime from "reading-time";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 
 export async function getStaticPaths() {
-  const allPosts = await getCollection("posts");
+  const allPosts = await getAllPublishedPosts();
 
   return allPosts.map((post) => {
     return {
@@ -14,24 +15,46 @@ export async function getStaticPaths() {
   });
 }
 
-async function getPostTitleFromId(id) {
-  try {
-    if (!id) return null;
-    const data = await getEntry("posts", id);
-    return data.data.title;
-  } catch (e) {
-    return null;
+async function getNextAndPrevPost(id) {
+  const posts = await getAllPublishedPosts({
+    sort: true,
+    compareFn: (a, b) =>
+      new Date(a.data.publishDate).valueOf() -
+      new Date(b.data.publishDate).valueOf(),
+  });
+
+  const currentPostIndex = posts.findIndex((p) => p.id === id);
+
+  const data = {
+    next: null,
+    prev: null,
+  };
+
+  if (currentPostIndex > 0) {
+    const prevPost = posts[currentPostIndex - 1];
+    data.prev = {
+      title: prevPost.data.title,
+      href: prevPost.id,
+    };
   }
+
+  if (currentPostIndex < posts.length - 1) {
+    const nextPost = posts[currentPostIndex + 1];
+    data.next = {
+      title: nextPost.data.title,
+      href: nextPost.id,
+    };
+  }
+
+  return data;
 }
 
 const { post } = Astro.props;
-const { id, title, description, publishDate, tags, prevPost, nextPost } =
-  post.data;
+const { title, description, publishDate, tags } = post.data;
 const readingTimeEstimate = readingTime(post.body).text;
-const permalink = `${Astro.site.href}blog/${id}`;
+const permalink = `${Astro.site.href}blog/${post.id}`;
 
-const prevPostTitle = await getPostTitleFromId(prevPost);
-const nextPostTitle = await getPostTitleFromId(nextPost);
+const { next: nextPost, prev: prevPost } = await getNextAndPrevPost(post.id);
 
 const { Content } = await render(post);
 ---
@@ -61,8 +84,8 @@ const { Content } = await render(post);
       <div>
         {
           prevPost && (
-            <a href={`/blog/${prevPost}`}>
-              &larr; {prevPostTitle || "Previous"}
+            <a href={`/blog/${prevPost.href}`}>
+              &larr; {prevPost.title || "Previous"}
             </a>
           )
         }
@@ -70,7 +93,9 @@ const { Content } = await render(post);
       <div>
         {
           nextPost && (
-            <a href={`/blog/${nextPost}`}>{nextPostTitle || "Next"} &rarr;</a>
+            <a href={`/blog/${nextPost.href}`}>
+              {nextPost.title || "Next"} &rarr;
+            </a>
           )
         }
       </div>

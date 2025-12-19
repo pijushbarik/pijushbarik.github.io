@@ -1,17 +1,12 @@
 ---
-import { getCollection } from "astro:content";
+import { getAllPublishedPosts } from "../../scripts/helpers";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 
 const title = "Blog - Pijush Barik";
 const description = "Blog posts from Pijush";
 const permalink = `${Astro.site.href}blog`;
 
-let allPosts = await getCollection("posts");
-allPosts = allPosts.sort(
-  (a, b) =>
-    new Date(b.data.publishDate).valueOf() -
-    new Date(a.data.publishDate).valueOf(),
-);
+const allPosts = await getAllPublishedPosts({ sort: true });
 ---
 
 <BaseLayout

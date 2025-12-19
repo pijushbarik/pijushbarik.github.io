@@ -1,8 +1,6 @@
 ---
-title: "Homelab - Install Jellyfin and Immich"
-publishDate: "07 Dec 2025"
-description: "Installing and setup Jellyfin and Immich"
-prevPost: "homelab-2-install-pihole"
+title: "Homelab/Jellyfin and Immich"
+description: "Installing and setup Jellyfin and Immich to host photos, movies, shows"
 tags:
   - homelab
   - selfhosted
@@ -11,6 +9,8 @@ tags:
   - docker
   - jellyfin
   - immich
+published: true
+publishDate: "07 Dec 2025"
 ---
 
 ## Installing Jellyfin
