@@ -10,6 +10,7 @@ const posts = defineCollection({
 		relatedPosts: z.array(reference('posts')).optional(),
 		published: z.boolean(),
 		publishDate: z.union([z.string(), z.date()]),
+		lastModifiedDate: z.union([z.string(), z.date()]),
 	})
 });
 

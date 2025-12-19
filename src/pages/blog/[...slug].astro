@@ -50,7 +50,7 @@ async function getNextAndPrevPost(id) {
 }
 
 const { post } = Astro.props;
-const { title, description, publishDate, tags } = post.data;
+const { title, description, publishDate, lastModifiedDate, tags } = post.data;
 const readingTimeEstimate = readingTime(post.body).text;
 const permalink = `${Astro.site.href}blog/${post.id}`;
 
@@ -67,6 +67,7 @@ const { Content } = await render(post);
 >
   <header>
     <p>{publishDate} ~ {readingTimeEstimate}</p>
+    <p>Last modified on {lastModifiedDate}</p>
     <h1>{title}</h1>
     <hr />
   </header>
