@@ -1,16 +1,16 @@
 ---
-import { ClientRouter } from 'astro:transitions'
-import '../styles/fonts.css'
-import '../styles/global.css'
+import { ClientRouter } from "astro:transitions";
+import "../styles/fonts.css";
+import "../styles/global.css";
 
 export interface Props {
-  title: string
-  description: string
-  permalink: string
+  title: string;
+  description: string;
+  permalink: string;
 }
 
-const { title, description, permalink } = Astro.props
-const socialUrl = Astro.site.href + 'assets/social.png'
+const { title, description, permalink } = Astro.props;
+const socialUrl = Astro.site.href + "assets/social.png";
 ---
 
 <!-- Global Metadata -->
@@ -37,18 +37,21 @@ const socialUrl = Astro.site.href + 'assets/social.png'
 <meta property="twitter:description" content={description} />
 <meta property="twitter:image" content={socialUrl} />
 
+<!-- Sitemap -->
+<link rel="sitemap" href="/sitemap-index.xml" />
+
 <ClientRouter />
 
 <!-- This is intentionally inlined to avoid FOUC -->
 <script is:inline>
-  const root = document.documentElement
-  const theme = localStorage.getItem('theme')
+  const root = document.documentElement;
+  const theme = localStorage.getItem("theme");
   if (
-    theme === 'dark' ||
-    (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)
+    theme === "dark" ||
+    (!theme && window.matchMedia("(prefers-color-scheme: dark)").matches)
   ) {
-    root.classList.add('theme-dark')
+    root.classList.add("theme-dark");
   } else {
-    root.classList.remove('theme-dark')
+    root.classList.remove("theme-dark");
   }
 </script>
