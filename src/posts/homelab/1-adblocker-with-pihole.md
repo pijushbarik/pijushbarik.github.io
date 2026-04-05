@@ -7,8 +7,8 @@ tags:
   - linux
   - ubuntu-server
   - docker
-  - pi-hole
-  - ad blocker
+  - pihole
+  - ad-blocking
 published: true
 publishDate: "29 Nov 2025"
 lastModifiedDate: "20 Dec 2025"

@@ -11,7 +11,7 @@ tags:
   - vpn
   - wireguard
   - nginx
-  - wireguard with nginx
+  - reverse-proxy
 published: true
 publishDate: "13 Dec 2025"
 lastModifiedDate: "20 Dec 2025"
